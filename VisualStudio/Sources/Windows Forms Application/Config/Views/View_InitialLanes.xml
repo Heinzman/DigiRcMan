@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceGridSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GridColumnPropertiesList>
+    <GridColumnProperties>
+      <Name>ColumnID</Name>
+      <Position>0</Position>
+      <FontSize>30.75</FontSize>
+      <Width>66</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnDriver</Name>
+      <Position>1</Position>
+      <FontSize>39.75</FontSize>
+      <Width>237</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnCar</Name>
+      <Position>2</Position>
+      <FontSize>43.75</FontSize>
+      <Width>374</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnFuelConsumptionFactor</Name>
+      <Position>3</Position>
+      <FontSize>27.75</FontSize>
+      <Width>100</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnTankMaximumInLitres</Name>
+      <Position>4</Position>
+      <FontSize>27.75</FontSize>
+      <Width>100</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+  </GridColumnPropertiesList>
+  <HeaderHeight>77</HeaderHeight>
+</RaceGridSettings>

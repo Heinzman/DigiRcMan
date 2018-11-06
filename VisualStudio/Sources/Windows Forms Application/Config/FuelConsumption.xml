@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FuelConsumptionPerSpeed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FuelCalcDivider>560</FuelCalcDivider>
+  <LitresForTurboSpeed>200</LitresForTurboSpeed>
+  <LitresForSpeed12>126</LitresForSpeed12>
+  <LitresForSpeed11>96</LitresForSpeed11>
+  <LitresForSpeed10>71</LitresForSpeed10>
+  <LitresForSpeed9>66</LitresForSpeed9>
+  <LitresForSpeed8>45</LitresForSpeed8>
+  <LitresForSpeed7>35</LitresForSpeed7>
+  <LitresForSpeed6>24</LitresForSpeed6>
+  <LitresForSpeed5>13</LitresForSpeed5>
+  <LitresForSpeed4>6</LitresForSpeed4>
+  <LitresForSpeed3>3</LitresForSpeed3>
+  <LitresForSpeed2>2</LitresForSpeed2>
+  <LitresForSpeed1>1</LitresForSpeed1>
+  <LitresForSpeed0>0</LitresForSpeed0>
+  <ConsumptionFactorDueCars1>1.0</ConsumptionFactorDueCars1>
+  <ConsumptionFactorDueCars2>0.95</ConsumptionFactorDueCars2>
+  <ConsumptionFactorDueCars3>0.9</ConsumptionFactorDueCars3>
+  <ConsumptionFactorDueCars4>0.85</ConsumptionFactorDueCars4>
+  <ConsumptionFactorDueCars5>0.8</ConsumptionFactorDueCars5>
+  <ConsumptionFactorDueCars6>0.75</ConsumptionFactorDueCars6>
+</FuelConsumptionPerSpeed>

@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71B7E9A4-B5DE-44B2-A7B4-9681AF428EAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elreg.WindowsFormsPresenter</RootNamespace>
+    <AssemblyName>WindowsFormsPresenter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>http://localhost/Windows Forms Presenter/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|AnyCPU'">
+    <OutputPath>bin\Release Public\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|x64'">
+    <OutputPath>bin\x64\Release Public\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|x86'">
+    <OutputPath>bin\x86\Release Public\</OutputPath>
+    <DefineConstants>RestrictLaps</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutTests\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\WindowsFormsPresenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithoutTests\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugWithoutTests\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|AnyCPU'">
+    <OutputPath>bin\IsTrialVersion\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WindowsFormsPresenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|x64'">
+    <OutputPath>bin\x64\IsTrialVersion\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|x86'">
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>TRACE;IsProtectedVersion</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Windows Forms Presenter.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllersMockPresenter.cs" />
+    <Compile Include="GridHandler.cs" />
+    <Compile Include="GridPresenter.cs" />
+    <Compile Include="GridSettings.cs" />
+    <Compile Include="InitUpdateLanes\GridLaneHelper.cs" />
+    <Compile Include="InitUpdateLanes\InitLanesPresenter.cs" />
+    <Compile Include="InitUpdateLanes\GridLaneInitHelper.cs" />
+    <Compile Include="InitUpdateLanes\GridLaneUpdateHelper.cs" />
+    <Compile Include="InitUpdateLanes\UpdateLanesPresenter.cs" />
+    <Compile Include="ChampionshipPresenter.cs" />
+    <Compile Include="ChampionshipListPresenter.cs" />
+    <Compile Include="LoggerPresenter.cs" />
+    <Compile Include="MaintainCarsPresenter.cs" />
+    <Compile Include="MaintainDriversPresenter.cs" />
+    <Compile Include="MaintainSoundsPresenter.cs" />
+    <Compile Include="PortParserLogGuiPresenter.cs" />
+    <Compile Include="PortParserLogPresenter.cs" />
+    <Compile Include="RaceControl\FormHelper.cs" />
+    <Compile Include="RaceControl\PauseHandler.cs" />
+    <Compile Include="RaceControl\ChampionshipAdder.cs" />
+    <Compile Include="RaceControl\RaceControlPresenter.cs" />
+    <Compile Include="RaceControl\RaceFinishedHandler.cs" />
+    <Compile Include="RaceControl\ShortCutStringCreator.cs" />
+    <Compile Include="RaceReplay\ReplayByTimelineHandler.cs" />
+    <Compile Include="RaceReplay\IRaceReplayPresenter.cs" />
+    <Compile Include="RaceReplay\IReplayHandler.cs" />
+    <Compile Include="RaceReplay\RaceReplayPresenter.cs" />
+    <Compile Include="RaceGrid\GridPresenterForComp.cs" />
+    <Compile Include="RaceGrid\LapTime\ILaneLapTime.cs" />
+    <Compile Include="RaceGrid\LapTime\LaneLapTimeNullObject.cs" />
+    <Compile Include="RaceGrid\LapTime\LaneLapTime.cs" />
+    <Compile Include="RaceGrid\LapTime\LapTimeHandler.cs" />
+    <Compile Include="RaceGrid\PositionsCalculator.cs" />
+    <Compile Include="RaceGrid\RaceGridPresenter.cs" />
+    <Compile Include="RaceLogPresenter.cs" />
+    <Compile Include="RaceMainPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RacePresenter.cs" />
+    <Compile Include="RaceReplay\ReplayByEventHandler.cs" />
+    <Compile Include="RaceResultsListPresenter.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CountDownPresenter.cs" />
+    <Compile Include="RaceResultsPresenter.cs" />
+    <Compile Include="ResourceProxy.cs" />
+    <Compile Include="SoundOptionPresenter.cs" />
+    <Compile Include="StatisticsPresenter.cs" />
+    <Compile Include="TextToSpeechCreatorPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Objects\Business Objects.csproj">
+      <Project>{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}</Project>
+      <Name>Business Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{92CAFC9B-8236-4A04-AD4E-F68500C740C3}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain Models\Domain Models.csproj">
+      <Project>{1BF3C37B-0F6E-4714-A412-5321563204AC}</Project>
+      <Name>Domain Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Project>{25C84B8F-13BF-472C-8505-D7A06D818A81}</Project>
+      <Name>Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperClasses\HelperClasses.csproj">
+      <Project>{FC501078-0372-4F5E-B919-66DB7E41C2C8}</Project>
+      <Name>HelperClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{C6CF8B12-E155-4B4D-B37D-D69B96F1D155}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{162C39D1-33F8-4735-976B-C03842A17F33}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation Framework\WinForms Presentation Framework.csproj">
+      <Project>{AC3AE743-4EB0-47F7-A8E9-09389E8B6C4B}</Project>
+      <Name>WinForms Presentation Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceControlService\RaceControlService.csproj">
+      <Project>{62D510A4-5F11-4D5D-AFA0-350AE04911DA}</Project>
+      <Name>RaceControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceDataService\RaceDataService.csproj">
+      <Project>{AD0D45C2-8772-46A2-9C46-32854AB6D077}</Project>
+      <Name>RaceDataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceOptionsService\RaceOptionsService.csproj">
+      <Project>{4FD6E596-F31D-4E44-8FD6-7A782BA67C06}</Project>
+      <Name>RaceOptionsService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceSoundService\RaceSoundService.csproj">
+      <Project>{B9B311D8-F686-478E-AFA6-4752EF2CF399}</Project>
+      <Name>RaceSoundService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceStatisticsService\RaceStatisticsService.csproj">
+      <Project>{C92263FA-5CA9-4C1B-968B-38990AFA86B9}</Project>
+      <Name>RaceStatisticsService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResourcesService\ResourcesService.csproj">
+      <Project>{7C34F8FA-EF31-43C0-880A-54610B1C8AB0}</Project>
+      <Name>ResourcesService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serialization\Serialization.csproj">
+      <Project>{6AE39F00-BE56-4B1E-9CF0-666932B1FB61}</Project>
+      <Name>Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Forms View\Windows Forms View.csproj">
+      <Project>{E5C1C44E-03E1-462E-BD78-9516DF40C255}</Project>
+      <Name>Windows Forms View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty2_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty2_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty3_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty3_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty3_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty4_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty4_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty4_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty4_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty5_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty5_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty5_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty5_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PenaltyX_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PenaltyX_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PenaltyX_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PenaltyX_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedGas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkered_flag_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenGas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty1_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty1_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty1_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty1_X.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty2_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty3_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty4_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penalty5_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PenaltyX_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refuelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disqualified1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refueling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuelEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waitX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refuelingwaiting.png" />
+    <None Include="Resources\CrossHair.png" />
+    <None Include="Resources\Blank.png" />
+    <None Include="Resources\Blank_Jpg.jpg" />
+    <None Include="Resources\AlternatingBackground.jpg" />
+    <None Include="Resources\DefaultBackground.jpg" />
+    <Content Include="Resources\Explosion.png" />
+    <None Include="Resources\Rocket2.png" />
+    <None Include="Resources\Rockets_0.png" />
+    <None Include="Resources\Rockets_1.png" />
+    <None Include="Resources\Rockets_2.png" />
+    <Content Include="Resources\Rockets_3.png" />
+    <Content Include="Resources\Rockets_4.png" />
+    <Content Include="Resources\Rockets_5.png" />
+    <Content Include="Resources\Rockets_gt5.png" />
+    <Content Include="Resources\Screwdriver.png" />
+    <Content Include="Resources\Screwdriver2.png" />
+    <Content Include="Resources\White.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

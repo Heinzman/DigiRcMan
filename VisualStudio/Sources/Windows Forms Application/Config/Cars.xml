@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Car>
+    <Id>5</Id>
+    <Name>Truggy Black</Name>
+    <PictureFilename>\Pictures\MiniTruggyBlack.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>4</Id>
+    <Name>Truggy Red</Name>
+    <PictureFilename>\Pictures\MiniTruggyRed.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>2</Id>
+    <Name>Buggy Blue</Name>
+    <PictureFilename>\Pictures\RaceBuggyBlue.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>3</Id>
+    <Name>Buggy Pink</Name>
+    <PictureFilename>\Pictures\RaceBuggyPink.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>1</Id>
+    <Name>Buggy Orange</Name>
+    <PictureFilename>\Pictures\RaceBuggyOrange.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>6</Id>
+    <Name>Truggy Blue</Name>
+    <PictureFilename>\Pictures\MiniTruggyBlue.jpg</PictureFilename>
+  </Car>
+</ArrayOfCar>

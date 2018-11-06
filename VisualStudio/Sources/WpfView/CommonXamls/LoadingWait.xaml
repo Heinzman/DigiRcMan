@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Heinzman.WpfView.CommonXamls.LoadingWait"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            IsVisibleChanged="HandleVisibleChanged"
+             mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             d:DesignHeight="189" d:DesignWidth="304">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DefaultStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Viewbox MaxWidth="100" MaxHeight="100"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                 Grid.Row="1">
+            <Grid x:Name="LayoutRoot" 
+                    Background="Transparent"
+                    ToolTip="Daten werden ermittelt ..."
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">                                                                                                                                                                                                       
+                <Canvas RenderTransformOrigin="0.5,0.5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Width="120"
+                    Height="120" Loaded="HandleLoaded"
+                    Unloaded="HandleUnloaded"
+                    Grid.Row="0">
+                <Ellipse x:Name="C0" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="1.0"/>
+                <Ellipse x:Name="C1" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.9"/>
+                <Ellipse x:Name="C2" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.8"/>
+                <Ellipse x:Name="C3" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.7"/>
+                <Ellipse x:Name="C4" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.6"/>
+                <Ellipse x:Name="C5" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.5"/>
+                <Ellipse x:Name="C6" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.4"/>
+                <Ellipse x:Name="C7" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.3"/>
+                <Ellipse x:Name="C8" Width="20" Height="20"
+                         Canvas.Left="0"
+                         Canvas.Top="0" Stretch="Fill"
+                         Fill="{StaticResource LightColorBrush}" Opacity="0.2"/>
+                <Canvas.RenderTransform>
+                    <RotateTransform x:Name="SpinnerRotate"
+                         Angle="0" x:FieldModifier="private" />
+                </Canvas.RenderTransform>
+            </Canvas>
+            </Grid>
+        </Viewbox>
+        <TextBlock 
+            Grid.Row="2" 
+            HorizontalAlignment="Center"
+            Margin="10"
+            Text="Die Daten werden ermittelt..." 
+            FontSize="20" 
+            Foreground="{StaticResource SolidColorBrush}" />
+    </Grid>
+</UserControl>

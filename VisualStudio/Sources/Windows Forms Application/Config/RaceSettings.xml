@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PausePyParallelPortActivated>false</PausePyParallelPortActivated>
+  <LogForRecoveryActivated>true</LogForRecoveryActivated>
+  <SecondsForValidLap>7</SecondsForValidLap>
+  <QualificationMinutes>1</QualificationMinutes>
+  <CountDownCharsAnimated>false</CountDownCharsAnimated>
+  <PauseCharsAnimated>false</PauseCharsAnimated>
+  <CarSoundsActivated>false</CarSoundsActivated>
+  <FuelLevelInLitresToWarn>20</FuelLevelInLitresToWarn>
+  <NegativeFuelLevelEnabled>true</NegativeFuelLevelEnabled>
+  <FuelConsumptionCircaPerLap>10</FuelConsumptionCircaPerLap>
+  <TankMaximumInLitres>100</TankMaximumInLitres>
+  <LapsToDrive>4</LapsToDrive>
+  <LapsToStopForPenalty>4</LapsToStopForPenalty>
+  <IntervalInSecsForPenalty>2</IntervalInSecsForPenalty>
+  <ServingMultiplePenaltiesAllowed>true</ServingMultiplePenaltiesAllowed>
+  <StartCountDownRaceInitNo>5</StartCountDownRaceInitNo>
+  <StartCountDownRaceActivated>false</StartCountDownRaceActivated>
+  <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
+  <RestartCountDownRaceActivated>false</RestartCountDownRaceActivated>
+  <LitresRefuelingPer100ms>2</LitresRefuelingPer100ms>
+</RaceSettings>

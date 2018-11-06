@@ -1,0 +1,5 @@
+2010-12-15 23:37:13.375; Race Status: WaitingForStartByParallelPort; 
+2010-12-15 23:37:22.687; Race Status: Started; 
+2010-12-15 23:37:23.281; Lap added; Bernd; Laps: 0; Penalties: 0; Fuel: 100; Speed Sum: 40; LapTime: ; 
+2010-12-15 23:37:23.750; Lap added; Uwe; Laps: 0; Penalties: 0; Fuel: 99,95; Speed Sum: 44; LapTime: ; 
+2010-12-15 23:37:30.859; Race Status: Stopped; 

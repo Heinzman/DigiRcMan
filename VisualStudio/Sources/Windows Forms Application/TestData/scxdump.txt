@@ -1,0 +1,225 @@
+
+[16/01/2010 19:16:18] - Open port C
+
+[16/01/2010 19:16:18] - Read data
+ab ff ff e1 e1 e1 55 55 55 fb ff ab ff ff e1 e1 	л  сссUUU√ л  сс
+e1 55 55 55 fb ff ab ff ff e1 e1 e1 55 55 55 fb 	сUUU√ л  сссUUU√
+ff ab ff ff e1 e1 e1 55 55 55 fb ff ab ff ff e1 	 л  сссUUU√ л  с
+e1 e1 55 55 55 fb ff ab ff ff e1 e1 e1 55 55 55 	ссUUU√ л  сссUUU
+fb ff ab ff ff e1 e1 e1 55 55 55 fb ff ab ff ff 	√ л  сссUUU√ л  
+e1 e1 e1 55 55 55 fb ff ab ff e1 e1 e1 55 55 55 	сссUUU√ л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb                   	√л сссUUU√      
+
+[16/01/2010 19:16:47] - Close port COM1
+
+[16/01/2010 19:16:48] - Open port C
+
+[16/01/2010 19:16:48] - Read data
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab 	ссUUU√л сссUUU√л
+ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 	 сссUUU√л сссUUU
+fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 	√л сссUUU√л сссU
+55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 	UU√л сссUUU√л сс
+e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff 	сUUU√л сссUUU√л 
+e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb 	сссUUU√л сссUUU√
+ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 	л сссUUU√л сссUU
+55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 e1 e1 	U√л сссUUU√л ссс
+55 55 55 fb ab ff e1 e1 e1 55 55 55 fb ab ff e1 	UUU√л сссUUU√л с
+e1 e1 55 55 55 fb ab ff e1 e1 e1 55 55 55 fb    	ссUUU√л сссUUU√ 
+
+[16/01/2010 19:16:57] - Close port COM1
+
+[16/01/2010 19:18:13] - Open port C
+
+[16/01/2010 19:18:13] - Read data
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 0d e1 	UЭлU1.сссс'лU..с
+e1 e1 e1 f7 ab dd cf fd fd 55 55 55 53 ab dd cf 	сссўл▌╧¤¤UUUSл▌╧
+fd fd 55 55 55 53 ab 55 31 0d e1 e1 e1 e1 27 ab 	¤¤UUUSлU1.сссс'л
+55 19 0d e1 e1 e1 e1 f7 ab dd fd fd fd 55 55 55 	U..ссссўл▌¤¤¤UUU
+43 ab dd fd fd fd 55 55 55 43 ab ff a1 a1 a1 55 	Cл▌¤¤¤UUUCл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 0d e1 	UЭлU1.сссс'лU..с
+e1 e1 e1 f7 ab dd cf fd fd 55 55 55 53 ab dd cf 	сссўл▌╧¤¤UUUSл▌╧
+fd fd 55 55 55 53 ab 55 31 0d e1 e1 e1 e1 27 ab 	¤¤UUUSлU1.сссс'л
+55 19 0d e1 e1 e1 e1 f7 ab dd fd fd fd 55 55 55 	U..ссссўл▌¤¤¤UUU
+43 ab dd fd fd fd 55 55 55 43 ab ff a1 a1 a1 55 	Cл▌¤¤¤UUUCл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 0d e1 e1 e1 	лU1.сссс'лU..ссс
+e1 f7 ab dd fd cf fd 55 55 55 61 ab dd fd cf fd 	сўл▌¤╧¤UUUaл▌¤╧¤
+55 55 55 61 ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 	UUUaлU1.сссс'лU.
+0d e1 e1 e1 e1 f7 ab dd fd fd fd 55 55 55 43 ab 	.ссссўл▌¤¤¤UUUCл
+dd fd fd fd 55 55 55 43 ab ff a1 a1 a1 55 55 55 	▌¤¤¤UUUCл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+55 31 0d e1 e1 e1 e1 27 ab 55 19 0d e1 e1 e1 e1 	U1.сссс'лU..сссс
+f7 ab dd fd cf fd 55 55 55 61 ab dd fd cf fd 55 	ўл▌¤╧¤UUUaл▌¤╧¤U
+55 55 61 ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 0d 	UUaлU1.сссс'лU..
+e1 e1 e1 e1 f7 ab dd fd fd fd 55 55 55 43 ab dd 	ссссўл▌¤¤¤UUUCл▌
+fd fd fd 55 55 55 43 ab ff a1 a1 a1 55 55 55 9d 	¤¤¤UUUCл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 55 31 	UUUЭл бббUUUЭлU1
+0d e1 e1 e1 e1 27 ab 55 19 0d e1 e1 e1 e1 f7 ab 	.сссс'лU..ссссўл
+dd fd cf fd 55 55 55 61 ab dd fd cf fd 55 55 55 	▌¤╧¤UUUaл▌¤╧¤UUU
+61 ab 55 31 0d e1 e1 e1 e1 27 ab 55 19 0d e1 e1 	aлU1.сссс'лU..сс
+e1 e1 f7 ab dd fd fd fd 55 55 55 43 ab dd fd fd 	ссўл▌¤¤¤UUUCл▌¤¤
+fd 55 55 55 43 ab ff a1 a1 a1 55 55 55 9d ab ff 	¤UUUCл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab 55 31 0d e1 e1 e1 	л бббUUUЭлU1.ссс
+e1 27 ab 55 19 0d e1 e1 e1 e1 f7 ab dd fd cf fd 	с'лU..ссссўл▌¤╧¤
+55 55 55 61 ab dd fd cf fd 55 55 55 61 ab 55 31 	UUUaл▌¤╧¤UUUaлU1
+0d e1 e1 e1 e1 27 ab 55 19 0d e1 e1 e1 e1 f7 ab 	.сссс'лU..ссссўл
+dd fd fd fd 55 55 55 43 ab dd fd fd fd 55 55 55 	▌¤¤¤UUUCл▌¤¤¤UUU
+43 ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Cл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 	UUUЭл бббUUUЭл б
+a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab 	ббUUUЭл бббUUUЭл
+ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 	 бббUUUЭл бббUUU
+9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 	Эл бббUUUЭл бббU
+55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 	UUЭл бббUUUЭл бб
+a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d ab ff 	бUUUЭл бббUUUЭл 
+a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 55 9d 	бббUUUЭл бббUUUЭ
+ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 55 55 	л бббUUUЭл бббUU
+55 9d ab ff a1 a1 a1 55 55 55 9d ab ff a1 a1 a1 	UЭл бббUUUЭл ббб
+55 55 55 9d                                     	UUUЭ            
+
+[16/01/2010 19:18:32] - Close port COM1
+
+E1 11100001
+A1 10100001
+55 01010101 0 1 (Licht an) 0 (Taste gedr№ckt) 1010 Geschwindigkeit 1 (immer an)
+81 10000001 1 0 (Licht aus) 0 (Taste gedr№ckt) 0000 Geschwindigkeit 1 (immer an)
+BF 10111111 1 0 (Licht aus) 1 (Taste nicht gedr№ckt) 1111 Geschwindigkeit 1 (immer an)
+E1 11100001 1 1 (Licht an) 1 (Taste nicht gedr№ckt) 0000 Geschwindigkeit 1 (immer an)
+
+11101110 EE Slotbфr
+11011101 DD Elreg
+
+01010101 55 Slotbфr
+10101011 AB Elreg

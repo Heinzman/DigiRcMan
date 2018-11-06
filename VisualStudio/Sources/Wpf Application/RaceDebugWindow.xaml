@@ -1,0 +1,8 @@
+﻿<Window x:Class="Heinzman.WpfApplication.RaceDebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" FontSize="20">
+    <StackPanel>
+        <DataGrid ItemsSource="{Binding LaneSnapshotsView}" />
+    </StackPanel>
+</Window>

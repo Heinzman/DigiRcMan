@@ -1,0 +1,88 @@
+﻿<Window x:Class="Heinzman.WpfView.CommonXamls.SplashInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="229" Width="387"
+        WindowStyle="None" 
+        Topmost="True" 
+        WindowStartupLocation="CenterScreen" 
+        ShowInTaskbar="False" 
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DefaultStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border BorderBrush="{StaticResource SolidColorBrush}" BorderThickness="2">
+          <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="1,-0.05" EndPoint="1,1.05">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="{StaticResource VeryLightColor}" Offset="0.5" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="36*" />
+                    <RowDefinition Height="0*" />
+                    <RowDefinition Height="41*" />
+                    <RowDefinition Height="21*" />
+                    <RowDefinition Height="21*" />
+                    <RowDefinition Height="21*" />
+                    <RowDefinition Height="21*" />
+                    <RowDefinition Height="21*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Height="10"/>
+                    <TextBlock Style="{StaticResource ColoredTextBlock}" 
+                            Grid.Row="1" 
+                            TextAlignment="Center" 
+                            VerticalAlignment="Center" 
+                            FontWeight="Bold"
+                            FontSize="30" 
+                            Margin="5" 
+                            FontFamily="Constantia" 
+                            FontStyle="Normal" 
+                            Text="{Binding SplashTitle, FallbackValue='Digi Slot Man'}"/>
+                <TextBlock DockPanel.Dock="Top" Grid.Row="2" Height="4"/>
+
+                <Image DockPanel.Dock="Top" 
+                       Grid.Row="3" 
+                       Source="file:///D:/Tasks/LC2010/Sources/WpfView/Images/RedCar2.png" 
+                       Stretch="Uniform" />
+                
+                <TextBlock Style="{StaticResource ColoredTextBlock}" 
+                        Grid.Row="4"  
+                        FontSize="12"
+                        TextAlignment="Center" Text="{Binding VersionText}"/>
+                
+                <TextBlock Style="{StaticResource ColoredTextBlock}" 
+                        Grid.Row="5" 
+                        FontSize="12"
+                        TextAlignment="Center">Copyright: ebase GmbH 2013</TextBlock>
+                
+                <TextBlock DockPanel.Dock="Bottom" 
+                           Grid.Row="6" />
+                
+                <TextBlock Style="{StaticResource ColoredTextBlock}" 
+                           Grid.Row="7" 
+                           TextAlignment="Center" 
+                            Text="{Binding InfoText, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" 
+                            Visibility="{Binding VisibilityOfInfo}" />
+                
+                <Button Grid.Row="8" 
+                        Content="Schließen" Height="23" Width="98" HorizontalAlignment="Center"
+                        Visibility="{Binding VisibilityOfButton}" 
+                        Click="BtnCloseClick" IsCancel="True" IsDefault="True" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

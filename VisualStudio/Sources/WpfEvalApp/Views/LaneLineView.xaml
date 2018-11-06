@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Heinzman.WpfEvalApp.LaneLineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:WpfEvalApp="clr-namespace:Heinzman.WpfEvalApp" mc:Ignorable="d" 
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             >
+
+  <UserControl.Resources>
+        <WpfEvalApp:RelativeToAbsoluteWidthOrHeightConverter x:Key="RelativeToAbsoluteWidthOrHeightConverter" />
+  </UserControl.Resources>
+    
+  <Border>
+        <Canvas>
+
+            <Line X1="0" 
+                  X2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualWidth}"
+                  Stroke="Black" 
+                  StrokeThickness="1">
+
+                <Line.Y1>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="Line1YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Line.Y1>
+                <Line.Y2>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="Line1YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Line.Y2>
+            </Line>
+
+            <Line X1="0" 
+                  X2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualWidth}"
+                  Stroke="Black" 
+                  StrokeThickness="1">
+
+                <Line.Y1>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="Line2YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Line.Y1>
+                <Line.Y2>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="Line2YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Line.Y2>
+            </Line>
+
+            <Label Content="{Binding Caption, FallbackValue='Driver'}"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   Background="{Binding BackgroundBrush}"                   
+                   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualWidth}" 
+                   FontSize="{Binding FontSize, FallbackValue=15}"
+                   Canvas.ZIndex="4">
+                <Canvas.Top>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="Line1YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Canvas.Top>
+                <Label.Height>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="HeightPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Label.Height>
+            </Label>
+        </Canvas>
+    </Border>
+</UserControl>

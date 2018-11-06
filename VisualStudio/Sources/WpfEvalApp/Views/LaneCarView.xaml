@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Heinzman.WpfEvalApp.LaneCarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:WpfEvalApp="clr-namespace:Heinzman.WpfEvalApp" mc:Ignorable="d" 
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             >
+
+  <UserControl.Resources>
+        <WpfEvalApp:RelativeToAbsoluteWidthOrHeightConverter x:Key="RelativeToAbsoluteWidthOrHeightConverter" />
+  </UserControl.Resources>
+    
+  <Border>
+        <Canvas>
+
+            <Image Source="/WpfEvalApp;component/RedCarTopView.png"
+                   Stretch="Uniform"
+                   VerticalAlignment="Center"
+                   Canvas.ZIndex="10">
+                <Canvas.Left>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" FallbackValue="0" >
+                        <Binding Path="CarImageXPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Canvas.Left>
+                <Canvas.Top>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" FallbackValue="0">
+                        <Binding Path="CarImageTopPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Canvas.Top>
+                <Image.Height>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" FallbackValue="150">
+                        <Binding Path="CarImageHeightPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                    </MultiBinding>
+                </Image.Height>
+            </Image>
+            
+        </Canvas>
+    </Border>
+</UserControl>

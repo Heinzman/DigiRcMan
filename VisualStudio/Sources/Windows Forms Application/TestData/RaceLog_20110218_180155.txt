@@ -1,0 +1,7 @@
+2011-02-18 18:03:21.578; Race Status: Initialized; 
+2011-02-18 18:03:23.828; Race Status: Initialized; 
+2011-02-18 18:03:23.906; Race Status: WaitingForStartByParallelPort; 
+2011-02-18 18:03:30.937; Race Status: Started; 
+2011-02-18 18:03:31.500; Lap added; Mannie; Laps: 0; Penalties: 0; Fuel: 99,96; Speed Sum: 6; LapTime: ; 
+2011-02-18 18:03:31.578; Lap added; Uwe; Laps: 0; Penalties: 0; Fuel: 99,93; Speed Sum: 8; LapTime: ; 
+2011-02-18 18:03:33.968; Race Status: PausedByParallelPort; 

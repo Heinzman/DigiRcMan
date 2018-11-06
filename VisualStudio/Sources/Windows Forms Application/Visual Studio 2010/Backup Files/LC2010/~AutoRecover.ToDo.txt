@@ -1,0 +1,198 @@
+#####---- TODO ----#####
+
+Test Nach Raceende bleibt Prog stecken (Serial Port data werden gepuffert)
+* Aktueller dialog muss immer im Vordergrund sein
+* Bei Pause muss serial Port doch enabled sein
+* Beim Testcontroller muss serial Port enabled sein
+* Fuelwarning im Grid ist immer bei 20 L
+* Laptime erst nach Start nicht Countdown weiter laufen lassen.
+* Bei Quali ist nach Race-Laps anzahl finished, obwohl die Rundenzeit noch nicht erreicht.
+
+*- Music muss höhere Prio erhalten
+*- Music: Fading aktivieren
+*- Setting: RaceSound Flag entfernen
+*- Splash-Screen anzeigen
+*- Weniger Zeitabstand bei ActionSounds
+*- Fokus optimieren
+*- UnitTests
+*- Bei Actionsound eine Randomspalte einfügen
+*- SerializerService immer nur über ServiceBase verwenden
+*- Bei Qualifying auf Anzahl Runden einschränken
+*- Automatik-Gangschaltung
+
+ok Durchsagen müssen lauter sein
+ok Anzeige in RaceGridView mit grünem Hintergrund -> die Runde wurde erkannt.
+ok Bug: wenn Race init passiert, dann wird hymne abgebrochen
+ok Wenn Fehlstart, dann nicht Bestzeit ermitteln 
+ok pfade und xml-filenames in registry merken 
+ok Wenn User-Hymn nicht gesetzt ist, dann kommt auch nicht die Main-Musik
+ok Datums-Ordner bei Error-Logs
+ok Bug: Am Anfang des nächsten Rennens sind die alten Daten noch auf der RaceGrid-Anzeige
+ok Default bei RaceSettings/UseGear auf false setzen
+ok Bremsgeräusch immer wenn Reglerstellung 0 und davor >= 3 
+ok Go-Sound nach PitstopEnde ohne Tanken
+ok Gesamt ActionSound abspielen zum Test im SoundControl
+ok Bei Fehler in Action-Sound. Exceptions abfangen und Rest ausgeben.
+ok Starker Applause für ersten, weniger stark für folgende 
+ok Row-Wav abspielen zum Test im SoundControl
+ok Editor für Loggings implementieren
+ok Runden können auch heruntergezählt werden 
+ok FinalPosition
+ok pro User einen mp3-Song als Hymne verwenden
+ok Verbrauch auch in RaceSettings steuerbar
+ok Wenn manuelle Runde hinzugefügt wurde -> Rennzeit und Verbrauch nicht bei Statistik berücksichtigen
+ok Verbrauch bei Pitstoprunde schon ermitteln
+ok Fehlstart nach jeder Sekunde
+ok nur einmal pro Runde ist Pitstop möglich
+ok Sekunden für Pitstoperkennung zu RaceSettings hinzufügen.
+ok Refuelinggeschwindigkeit einstellbar machen
+ok Strafe in der letzten Runde absitzen -> Finish
+ok Rennende Muting of Carsounds
+ok Race Result topmost anzeigen
+ok Quali-> Reset Rennzeit
+ok Neues Project für CarSound
+ok Vertikaler Text beim Namen
+ok TtsSaveForm: Bei Save ins feld eintragen
+ok Championship speichern zulassen
+ok RaceSesult ändern und speichern zulassen
+ok Bei ausgeschaltetem CarSound ist trotzdem bei Unmute kurz ein Sound zu hören
+ok Logging als threads ausführen
+ok Nachfragen "Hinzufügen zu Championship" entfernen
+ok RaceView am Anfang unsichtbar machen
+ok Positionen berechnen ist falsch
+ok Nach letzter Runde nur Finish Actionsound ausgeben, nicht mehr Lap Actionsound
+ok SpecialSound Position einführen
+ok finish Du bist erster
+ok Defaultwerte für Carsounds ändern
+ok Volume-Additionswert bei Vollgas zu RaceSettings hinzufügen.
+ok Pitstopsound sofort beginnen, Abstand der Wrenches bei dem einen reduzieren
+ok In Settings das Recovery ausschaltbar machen
+ok Ursprünglich alle Fenster maximieren
+ok Finish eines Lanes als Sprache ausgeben.
+ok Wenn Race beendet ist: Alle CarSounds ausschalten
+ok Wenn Lane finished weiterspielen, erst bei Race-ende ausschalten.
+ok In Letzter (Finish-) Runde nicht mehr den Lap-Sound ansagen, sondern den Finish Sound
+ok Sprachtext Liter bei Event Lap hinzufügen
+ok Feature: TTS Ausgabe speichern und als wav verwenden
+ok Verbrauch als Sprache ausgeben
+ok Die drei Volume Änderungen der Autos sofort bemerkbar machen 
+ok Bug bei Musikwiedergabe; Trotzdem fortfahren
+ok CarSound auch im Countdown zulassen
+ok Bei Pause und vor CountDown bzw Start Idle-sound deaktivieren
+ok Brakes-sound war zu lang
+ok PitstopSound front left ist auch im Center zu hören
+ok Wenn Lane finished ist immer noch CarSound zu hören
+ok Music: Nächstes Lied spielen, Shortcut oder Gui
+ok Shortcuts ändern f10: Mixer
+ok Mixer: Falls <= -5000 auf Sound.Min einstellen
+ok Music Player implementieren
+ok Mixer für Pause Main Race
+ok MusicPlayer für Race implementieren
+ok RaceResults, Championship und UpdateRace -Serialialisierungen überprüfen
+ok Race-View soll immer maximiert sein, keine UserSettings persistieren
+ok Mixer implementieren
+ok RaceCarSound aktivieren
+	ok Änderungen der Sound-Einstellungen sofort bemerkbar machen	
+	ok Softes Ausblenden der Sounds bei Rennende und Pause
+	ok 3D-Sound
+	ok Bei einkommendem Actionsound RaceCarSound dämpfen
+	ok Bremssound hinzufügen
+	ok WheelSpin Sound hinzufügen
+	ok Pitstop Sound hinzufügen
+	ok Timer einsetzen für eine weichere Frequenzänderung, Abhängigkeit von Beschleunigung
+	ok add Release-Time 
+	ok Testbarkeit der Sounds mittles Pad-Tasten
+	ok Lautstärke abhängig von Geschwindigkeit
+	ok Lautstärke von Idle Engine und Engine getrennt einstellbar machen
+	ok Gesamtlautstärke der einstellbar machen
+ok Vordere Sounds etwas dämpfen
+ok Race-View sollte schließen-Button haben
+ok Wenn Frage kommt 'Rennen abbrechen', -> ja dann sofort Sound aus.
+ok Obwohl RacCarSound ausgeschaltet ist, erscheint der Idle-Sound
+ok 5.1 Surround Action Sound implementieren
+ok Test von 3D RaceCarSound
+ok ActionSound
+	- pro Driver eigenen ActionSoundHandler
+	- 3D-Soundok Bei Start mit ParallelPaused aber ohne Countdown, kann man das Rennen nicht starten, da Pause bleibt.
+ok Mittels Pad-Tasten Controller-Werte simulieren
+ok 0-Rundenzeiten --:--:-- darstellen
+ok 0 Spritverbrauch -- darstellen
+ok Tankanzeige absolut rot und gelb einstellbar machen
+ok Qualification nach Zeitablauf beenden
+ok RaceTime netto anzeigen
+ok AppLeiste entfernen
+ok Race Log anpassen: Alle Stati, alle wichtigen events
+ok Bei CountDown auch LapCount erlauben
+ok Bei Pause auch LapCount und Strafe mittels 3*Button erlauben
+ok CPU Last reduzieren
+ok Mockup für Parallel erweitern, so dass auch Timer verwendet wird
+ok Negativen Verbrauch abfangen
+ok Pitstop In TastenKombi
+ok Com Port Einstellungen unter Serial Config änderbar machen
+ok Icon festlegen
+ok Ende Taste alternativ zu f7.
+ok Topmost Windows einführen
+ok Vorm Beenden nochmal nachfragen.
+ok CarSound in Settings abschaltbar machen
+ok Bei Setup Race: Cars beibehalten, auch wenn Driver leer.
+ok Bei Setup Race: Driver Rotation implementieren
+ok Bei Setup Race: Driver Random implementieren
+ok Parallel Port alle Pins invertieren
+ok Wiederherstellen nach Programmabbruch
+ok Bei ungültiger Runde die Last Lap Time trotzdem berücksichtigen.
+ok automatisch Pause über Druckerport
+ok Wenn ParallelPortPause aktive -> normale Pause nicht aktiv
+ok Punktevergabe implementieren
+	ok Race Results Dialog
+	ok Championship Dialog
+ok Verbrauch (Tatsächlich und mit Factor) und Rundenzeiten protokollieren.
+ok Doppelte Rundenzählung debuggen
+ok Fehlstart überprüfen
+ok Bei Anzeige Ergebnis Qualifying/Training nur Schließen-Button
+ok Fenster von RaceGrid immer oben
+ok Button von RaceControl größer
+ok wenn runde nicht gezählt wurde, soll trotzdem die Rundenzeit gezählt werden, aber nicht als Best-Lap.
+ok Durchschnitts-Verbrauch stimmt nicht.
+ok Alle seriellen Bytes abhandeln
+ok Keine modale Dialoge
+ok Verbrauch beim Pitstop und manuellen Update nicht berücksichtigen
+ok Fürs Wiederherstellen nach Programmabbruch Renndaten speichern 
+ok Große Checkbox implementieren und einbauen
+ok Dialoge anzeigen für View speichern und laden
+ok Nach einem Rennen/Training und erneutem Start werden nicht alle Daten gelöscht.
+ok Anzeige Ergebnis Qualifying
+	Position, Name, #Runden, Bestzeit, #Strafen, #Pitstops, DurchschnittsVerbrauch
+ok Anzeige Ergebnis Training
+	Position, Name, #Runden, Bestzeit, #Strafen, #Pitstops, DurchschnittsVerbrauch
+ok Anzeige Ergebnis Race
+	Position, Name, Punkte, Bestzeit, #Strafen, #Pitstops, DurchschnittsVerbrauch
+ok Fehlstart überprüfen
+ok Mindest-Rundenzeit einstellbar machen
+ok Bug: Nach Race-Stop kommen keine Daten an RaceGridForm an
+ok Alle Dialoge prophylaktisch und unsichtbar laden.
+ok Qualifying implementieren (Zeitangabe)
+ok Positionsberechnung bei finished lanes überprüfen
+ok Messagebox 'Willst Du wirklich das Rennen abbrechen?'
+ok Pause-Form bei Race-Stop unsichtbar machen
+ok Button in RaceControlForm für PortParserLogGuiForm (Controller Daten) hinzufügen
+ok Com Port sofort starten
+ok Status Com Port in RaceControlForm anzeigen
+ok Qualifying implementieren
+ok Freies Training implementieren
+ok CountDown Flag: ohne Font-Resize
+ok MainSeite realisieren
+ok RaceSound aktivierbar machen
+ok Shortcuts 
+	- Strafe hinzu
+	- Strafe abziehen
+	- Runde hinzu
+	- Runde abziehen
+	- Fuel hinzu
+	- Fuel abziehen
+ok Lanes updaten mittels Dialog
+ok Logging
+	- RaceEvents mit dazugehörenden HexData (ok)
+	- RaceEvents (ok)
+	- Com-Data (ok)
+
+

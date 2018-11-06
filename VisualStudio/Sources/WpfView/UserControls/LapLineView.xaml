@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Heinzman.WpfView.UserControls.LapLineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:D="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Converters="clr-namespace:Heinzman.WpfView.Converters"
+             xmlns:UserControls="clr-namespace:Heinzman.WpfView.UserControls"
+             Mc:Ignorable="D" 
+             D:DesignHeight="300"
+             D:DesignWidth="300"
+             >
+
+    <UserControl.Resources>
+        <Converters:RelativeToAbsoluteWidthOrHeightConverter x:Key="RelativeToAbsoluteWidthOrHeightConverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <Border Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" >
+        <Canvas>
+
+            <Line Y1="0"                   
+                  Y2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualHeight}"
+                  Stroke="Black" 
+                  StrokeThickness="2">
+
+                <Line.X1>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Line.X1>
+                <Line.X2>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Line.X2>
+            </Line>
+            <ItemsControl ItemsSource="{Binding LapLineCaptions}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <UserControls:LapLineCaptionView 
+                            Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualHeight}"
+                            Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualWidth}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </Canvas>
+    </Border>
+</UserControl>

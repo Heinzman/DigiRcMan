@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61EABE74-772B-41AA-89A8-5D1630E438A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elreg.DigiRcMan</RootNamespace>
+    <AssemblyName>DigiRcMan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Output\Debug\TechAdmin.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\Output\Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TechAdmin.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Classic car red.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Obfuscated|x86'">
+    <OutputPath>..\..\Output\Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Output\Client\DigiSlotMan.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Obfuscated|AnyCPU'">
+    <OutputPath>bin\Obfuscated\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TechAdmin.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Catel.Core, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Catel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyResolver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Starter.cs" />
+    <Compile Include="Start\CarIdChecker.cs" />
+    <Compile Include="Start\DriverIdChecker.cs" />
+    <Compile Include="Start\Initializer.cs" />
+    <Compile Include="Start\SerialPortCreator.cs" />
+    <Compile Include="Start\SerialPortReaderCreator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Batches\PostBuildActions.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <AppDesigner Include="Properties\" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Libs\Catel.Core.dll">
+      <Link>Dlls\Catel.Core.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Libs\Catel.Extensions.Controls.dll">
+      <Link>Dlls\Catel.Extensions.Controls.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Libs\Catel.MVVM.dll">
+      <Link>Dlls\Catel.MVVM.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Libs\inpout32.dll">
+      <Link>Dlls\inpout32.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Libs\Newtonsoft.Json.dll">
+      <Link>Dlls\Newtonsoft.Json.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="..\..\Output\BusinessObjectContracts.dll">
+      <Link>DllsAsResource\BusinessObjectContracts.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\BusinessObjects.dll">
+      <Link>DllsAsResource\BusinessObjects.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\ComputerSpeech.dll">
+      <Link>DllsAsResource\ComputerSpeech.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Controls.dll">
+      <Link>DllsAsResource\Controls.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\DomainModels.dll">
+      <Link>DllsAsResource\DomainModels.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Exceptions.dll">
+      <Link>DllsAsResource\Exceptions.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\FrameworkContracts.dll">
+      <Link>DllsAsResource\FrameworkContracts.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\HelperClasses.dll">
+      <Link>DllsAsResource\HelperClasses.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\HelperLib.dll">
+      <Link>DllsAsResource\HelperLib.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Log.dll">
+      <Link>DllsAsResource\Log.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Logger.dll">
+      <Link>DllsAsResource\Logger.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\MockObjects.dll">
+      <Link>DllsAsResource\MockObjects.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\MouseKeyboardLibrary.dll">
+      <Link>DllsAsResource\MouseKeyboardLibrary.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\MusicPlayer.dll">
+      <Link>DllsAsResource\MusicPlayer.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Newtonsoft.Json.dll">
+      <Link>DllsAsResource\Newtonsoft.Json.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\PortDataParser.dll">
+      <Link>DllsAsResource\PortDataParser.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceActionSound.dll">
+      <Link>DllsAsResource\RaceActionSound.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceConsolidationService.dll">
+      <Link>DllsAsResource\RaceConsolidationService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceControlService.dll">
+      <Link>DllsAsResource\RaceControlService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceDataService.dll">
+      <Link>DllsAsResource\RaceDataService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceOptionsService.dll">
+      <Link>DllsAsResource\RaceOptionsService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceSound.dll">
+      <Link>DllsAsResource\RaceSound.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceSoundService.dll">
+      <Link>DllsAsResource\RaceSoundService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\RaceStatisticsService.dll">
+      <Link>DllsAsResource\RaceStatisticsService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\ResourcesService.dll">
+      <Link>DllsAsResource\ResourcesService.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\Serialization.dll">
+      <Link>DllsAsResource\Serialization.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\SerialPortReader.dll">
+      <Link>DllsAsResource\SerialPortReader.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\WindowsFormsApplication.dll">
+      <Link>DllsAsResource\WindowsFormsApplication.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\WindowsFormsPresenter.dll">
+      <Link>DllsAsResource\WindowsFormsPresenter.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\WindowsFormsView.dll">
+      <Link>DllsAsResource\WindowsFormsView.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Output\WinFormsPresentationFramework.dll">
+      <Link>DllsAsResource\WinFormsPresentationFramework.dll</Link>
+    </EmbeddedResource>
+    <Resource Include="Classic car red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Objects\Business Objects.csproj">
+      <Project>{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}</Project>
+      <Name>Business Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessObjectContracts\BusinessObjectContracts.csproj">
+      <Project>{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}</Project>
+      <Name>BusinessObjectContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{92CAFC9B-8236-4A04-AD4E-F68500C740C3}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain Models\Domain Models.csproj">
+      <Project>{1BF3C37B-0F6E-4714-A412-5321563204AC}</Project>
+      <Name>Domain Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameworkContracts\FrameworkContracts.csproj">
+      <Project>{C56D13CB-E380-49FF-8933-E244BE884BEF}</Project>
+      <Name>FrameworkContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperLib\HelperLib.csproj">
+      <Project>{A530AAED-C15B-416F-A7B5-CB99DFFEDB30}</Project>
+      <Name>HelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{C6CF8B12-E155-4B4D-B37D-D69B96F1D155}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{162C39D1-33F8-4735-976B-C03842A17F33}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MockObjects\MockObjects.csproj">
+      <Project>{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}</Project>
+      <Name>MockObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicPlayer\MusicPlayer.csproj">
+      <Project>{A3CDC6D4-64B0-4B38-AC0E-A9664986FB43}</Project>
+      <Name>MusicPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortDataParser\SerialPortDataParser.csproj">
+      <Project>{4D53C762-785A-469C-9D26-14645C862CD7}</Project>
+      <Name>SerialPortDataParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation Framework\WinForms Presentation Framework.csproj">
+      <Project>{AC3AE743-4EB0-47F7-A8E9-09389E8B6C4B}</Project>
+      <Name>WinForms Presentation Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceActionSound\RaceActionSound.csproj">
+      <Project>{8D094011-C8D7-48A5-A976-6DC47978A3F7}</Project>
+      <Name>RaceActionSound</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceControlService\RaceControlService.csproj">
+      <Project>{62D510A4-5F11-4D5D-AFA0-350AE04911DA}</Project>
+      <Name>RaceControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceDataService\RaceDataService.csproj">
+      <Project>{AD0D45C2-8772-46A2-9C46-32854AB6D077}</Project>
+      <Name>RaceDataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceOptionsService\RaceOptionsService.csproj">
+      <Project>{4FD6E596-F31D-4E44-8FD6-7A782BA67C06}</Project>
+      <Name>RaceOptionsService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceSoundService\RaceSoundService.csproj">
+      <Project>{B9B311D8-F686-478E-AFA6-4752EF2CF399}</Project>
+      <Name>RaceSoundService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceSound\RaceSound.csproj">
+      <Project>{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}</Project>
+      <Name>RaceSound</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceStatisticsService\RaceStatisticsService.csproj">
+      <Project>{C92263FA-5CA9-4C1B-968B-38990AFA86B9}</Project>
+      <Name>RaceStatisticsService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResourcesService\ResourcesService.csproj">
+      <Project>{7C34F8FA-EF31-43C0-880A-54610B1C8AB0}</Project>
+      <Name>ResourcesService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialPortReader\SerialPortReader.csproj">
+      <Project>{B548606A-961E-41DF-86A6-AEE67323AB9E}</Project>
+      <Name>SerialPortReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Forms Application\Windows Forms Application.csproj">
+      <Project>{45997DDD-FF80-49D9-90F3-0B8938AAF97B}</Project>
+      <Name>Windows Forms Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Forms Presenter\Windows Forms Presenter.csproj">
+      <Project>{71B7E9A4-B5DE-44B2-A7B4-9681AF428EAD}</Project>
+      <Name>Windows Forms Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Forms View\Windows Forms View.csproj">
+      <Project>{E5C1C44E-03E1-462E-BD78-9516DF40C255}</Project>
+      <Name>Windows Forms View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release Batches\PostBuildActions.bat</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

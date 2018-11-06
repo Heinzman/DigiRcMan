@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Heinzman.WpfEvalApp.LapLineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:WpfEvalApp="clr-namespace:Heinzman.WpfEvalApp" mc:Ignorable="d" 
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             >
+
+  <UserControl.Resources>
+        <WpfEvalApp:RelativeToAbsoluteWidthOrHeightConverter x:Key="RelativeToAbsoluteWidthOrHeightConverter" />
+  </UserControl.Resources>
+    
+  <Border>
+        <Canvas>
+
+            <Line Y1="0" 
+                  Y2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualHeight}"
+                  Stroke="Black" 
+                  StrokeThickness="2">
+
+                <Line.X1>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Line.X1>
+                <Line.X2>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Line.X2>
+            </Line>
+            <TextBlock Text="{Binding Caption, FallbackValue=0}" 
+                       FontSize="{Binding FontSize, FallbackValue=15}"
+                       Canvas.Top="0">
+              <Canvas.Left>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+              </Canvas.Left>
+            </TextBlock>
+            <TextBlock Text="{Binding Caption, FallbackValue=0}" 
+                       FontSize="{Binding FontSize, FallbackValue=15}"
+                       Canvas.Bottom="0">
+              <Canvas.Left>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+              </Canvas.Left>
+            </TextBlock>
+        </Canvas>
+    </Border>
+</UserControl>

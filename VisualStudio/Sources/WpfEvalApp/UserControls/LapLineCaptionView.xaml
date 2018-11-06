@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Elreg.WpfEvalApp.UserControls.LapLineCaptionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:D="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Converters="clr-namespace:Elreg.WpfEvalApp.Converters"
+             Mc:Ignorable="D" 
+             D:DesignHeight="300"
+             D:DesignWidth="300"
+             >
+
+    <UserControl.Resources>
+        <Converters:RelativeToAbsoluteWidthOrHeightConverter x:Key="RelativeToAbsoluteWidthOrHeightConverter" />
+    </UserControl.Resources>
+
+    <Border>
+        <Canvas ZIndex="1000">
+            <Border BorderThickness="1"
+                    BorderBrush="Black"
+                    CornerRadius="5"
+                    Background="White">
+                <TextBlock Text="{Binding Caption, FallbackValue=0}" 
+                       FontSize="{Binding FontSize, FallbackValue=15}"                       
+                       Margin="3,0">
+                </TextBlock>
+                <Canvas.Left>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="XPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualWidth" />
+                    </MultiBinding>
+                </Canvas.Left>
+                <Canvas.Top>
+                    <MultiBinding Converter="{StaticResource RelativeToAbsoluteWidthOrHeightConverter}" >
+                        <Binding Path="YPercentage"/>
+                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type UserControl}}" Path="ActualHeight" />
+                        <Binding Path="YAbsoluteOffset"/>
+                    </MultiBinding>
+                </Canvas.Top>
+            </Border>
+        </Canvas>
+    </Border>
+</UserControl>

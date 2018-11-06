@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E924C984-9248-49CD-808E-24F585934E07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heinzman.WpfView</RootNamespace>
+    <AssemblyName>WpfView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Catel.Core, Version=3.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Catel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Catel.Extensions.Controls, Version=3.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Catel.Extensions.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Catel.MVVM, Version=3.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Catel.MVVM.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonXamls\DescriptionBarView.xaml.cs">
+      <DependentUpon>DescriptionBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommonXamls\LoadingWait.xaml.cs">
+      <DependentUpon>LoadingWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommonXamls\SplashInfoWindow.xaml.cs">
+      <DependentUpon>SplashInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ImageToSourceConverter.cs" />
+    <Compile Include="Converters\FuelLevelToBackgroundColorConverter.cs" />
+    <Compile Include="Converters\FuelLevelToBackgroundHeightConverter.cs" />
+    <Compile Include="Converters\FuelLevelToForegroundHeightConverter.cs" />
+    <Compile Include="Converters\FuelLevelToForegroundColorConverter.cs" />
+    <Compile Include="Converters\EstimatedPositionToDisplayNameConverter.cs" />
+    <Compile Include="Converters\RelativeToAbsoluteRowHeightConverter.cs" />
+    <Compile Include="Converters\HeightToFontSizeConverter.cs" />
+    <Compile Include="Converters\RelativeToAbsoluteWidthConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\FuelGaugeView.xaml.cs">
+      <DependentUpon>FuelGaugeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LaneCarView.xaml.cs">
+      <DependentUpon>LaneCarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LaneLineView.xaml.cs">
+      <DependentUpon>LaneLineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LapLineCaptionsView.xaml.cs">
+      <DependentUpon>LapLineCaptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LapLineCaptionView.xaml.cs">
+      <DependentUpon>LapLineCaptionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LapLineView.xaml.cs">
+      <DependentUpon>LapLineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PositionsView.xaml.cs">
+      <DependentUpon>PositionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RaceDataGridView.xaml.cs">
+      <DependentUpon>RaceDataGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaceGridSettingsView.xaml.cs">
+      <DependentUpon>RaceGridSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaceGridView.xaml.cs">
+      <DependentUpon>RaceGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaceResultsView.xaml.cs">
+      <DependentUpon>RaceResultsView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CommonXamls\DefaultStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommonXamls\DescriptionBarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommonXamls\LoadingWait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommonXamls\SplashInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\FuelGaugeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\LaneCarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LaneLineView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LapLineCaptionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\LapLineCaptionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\LapLineView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PositionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RaceDataGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RaceGridSettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RaceGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RaceResultsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WpfControls\WpfControls.csproj">
+      <Project>{39FE2B46-0D9A-46C3-A4B2-4C3F754578FF}</Project>
+      <Name>WpfControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RedCarTopView1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RedCarTopView.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\BlueCarTopView.png" />
+    <Content Include="Images\GreenCarTopView.png" />
+    <Content Include="Images\PurpleCarTopView.png" />
+    <Content Include="Images\YellowCarTopView.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
