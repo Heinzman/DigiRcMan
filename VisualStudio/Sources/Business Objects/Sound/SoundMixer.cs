@@ -1,6 +1,4 @@
-﻿using Microsoft.DirectX.DirectSound;
-
-namespace Elreg.BusinessObjects.Sound
+﻿namespace Elreg.BusinessObjects.Sound
 {
     public class SoundMixer
     {
@@ -345,7 +343,7 @@ namespace Elreg.BusinessObjects.Sound
         private int Adapt(int volume)
         {
             if (volume <= NearlyMinimumVolume)
-                return (int) Volume.Min;
+                return (int) 0;
             else
                 return volume;
         }

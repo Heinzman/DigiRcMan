@@ -3,8 +3,6 @@ using System.Windows.Forms;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Sound;
 using Elreg.Log;
-using Elreg.ResourcesService;
-using Microsoft.DirectX.DirectSound;
 
 namespace Elreg.RaceSound
 {

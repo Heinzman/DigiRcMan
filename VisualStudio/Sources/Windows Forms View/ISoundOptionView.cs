@@ -2,7 +2,7 @@
 using Elreg.BusinessObjects.Options;
 using Elreg.BusinessObjects.Sound;
 using Elreg.RaceOptionsService;
-using Elreg.RaceSoundService;
+//using Elreg.RaceSoundService;
 
 namespace Elreg.WindowsFormsView
 {
@@ -10,7 +10,7 @@ namespace Elreg.WindowsFormsView
     {
         BindingSource BindingSource { get; }
         CheckBox ChkChangeFrequency { get; }
-        void Init(SoundOptionList soundOptionList, SoundSettings userSoundSettings, ActionSoundsService actionSoundsService, DriversService driversService, RaceSettings raceSettings);
+        //void Init(SoundOptionList soundOptionList, SoundSettings userSoundSettings, ActionSoundsService actionSoundsService, DriversService driversService, RaceSettings raceSettings);
         string Caption { set; }
     }
 }

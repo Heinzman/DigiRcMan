@@ -6,6 +6,7 @@ using Elreg.BusinessObjects.Sound;
 using Elreg.Log;
 using Elreg.RaceSoundService;
 using Microsoft.DirectX.DirectSound;
+using NAudio.Wave;
 
 namespace Elreg.RaceActionSound
 {
@@ -20,41 +21,39 @@ namespace Elreg.RaceActionSound
         private readonly Random _random = new Random(Guid.NewGuid().GetHashCode());
         private bool _nextSoundOfOneActionLoaded;
         private double _frequencyFactor = 1;
-        private readonly Device _device;
         private readonly SoundMixer _soundMixer;
         private SecondaryBuffer _currentSecondaryBuffer;
         private bool _isInWork;
         private bool _isDisposed;
         private readonly RaceSettings _raceSettings;
         private readonly object _isInWorkLock = new object();
+        private WaveOutEvent _waveOutEvent;
 
         private const int TimerIntervalBetweenActions = 2;
 
-        public SoundListHandler(IRaceModel raceModel, int stereoPan, Device device, SoundMixer soundMixer)
-            : this(raceModel, device, soundMixer)
+        public SoundListHandler(IRaceModel raceModel, int stereoPan, SoundMixer soundMixer)
+            : this(raceModel, soundMixer)
         {
             _stereoPan = stereoPan;
         }
 
-        private SoundListHandler(IRaceModel raceModel, Device device, SoundMixer soundMixer)
+        private SoundListHandler(IRaceModel raceModel, SoundMixer soundMixer)
         {
             _raceModel = raceModel;
             _raceSettings = _raceModel.RaceSettings;
-            _device = device;
             _soundMixer = soundMixer;
             InitTimer();
         }
 
-        public SoundListHandler(RaceSettings raceSettings, int stereoPan, Device device, SoundMixer soundMixer)
-            : this(raceSettings, device, soundMixer)
+        public SoundListHandler(RaceSettings raceSettings, int stereoPan, SoundMixer soundMixer)
+            : this(raceSettings, soundMixer)
         {
             _stereoPan = stereoPan;
         }
 
-        private SoundListHandler(RaceSettings raceSettings, Device device, SoundMixer soundMixer)
+        private SoundListHandler(RaceSettings raceSettings, SoundMixer soundMixer)
         {
             _raceSettings = raceSettings;
-            _device = device;
             _soundMixer = soundMixer;
             InitTimer();
         }
@@ -127,6 +126,7 @@ namespace Elreg.RaceActionSound
                 SetFrequency();
                 _currentSecondaryBuffer.Pan = _stereoPan;
                 _currentSecondaryBuffer.Volume = SoundVolume;
+                _waveOutEvent.Play();
                 _currentSecondaryBuffer.Play(0, BufferPlayFlags.Default);
             }
         }

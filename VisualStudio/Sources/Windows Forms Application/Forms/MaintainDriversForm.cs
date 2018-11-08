@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using Elreg.BusinessObjects.Options;
 using Elreg.Log;
 using Elreg.RaceOptionsService;
-using Elreg.RaceSoundService;
 using Elreg.WindowsFormsPresenter;
 using Elreg.WindowsFormsView;
 
@@ -13,10 +12,10 @@ namespace Elreg.WindowsFormsApplication.Forms
     {
         private readonly MaintainDriversPresenter _maintainDriversPresenter;
 
-        public MaintainDriversForm(DriversService driversService, ActionSoundsService actionSoundsService, RaceSettings raceSettings)
+        public MaintainDriversForm(DriversService driversService, RaceSettings raceSettings)
         {
             InitializeComponent();
-            _maintainDriversPresenter = new MaintainDriversPresenter(this, driversService, actionSoundsService, raceSettings);
+            _maintainDriversPresenter = new MaintainDriversPresenter(this, driversService, raceSettings);
             InitControls();
         }
 
@@ -92,7 +91,7 @@ namespace Elreg.WindowsFormsApplication.Forms
 
         public ISoundOptionView CtlLap
         {
-            get { return ctlLap; }
+            get { return null; } // todo
         }
 
         public TextBox TxtName

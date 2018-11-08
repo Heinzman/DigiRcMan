@@ -49,7 +49,7 @@ namespace Elreg.WindowsFormsApplication.Forms
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.grpDetails = new System.Windows.Forms.GroupBox();
-            this.ctlLap = new Elreg.WindowsFormsApplication.UserControls.CtlSoundOption();
+            //this.ctlLap = new Elreg.WindowsFormsApplication.UserControls.CtlSoundOption();
             this.chkActivated = new Elreg.Controls.ColoredCheckbox();
             this.btnOpenHymnFilename = new System.Windows.Forms.Button();
             this.btnCreateWav = new System.Windows.Forms.Button();
@@ -251,7 +251,7 @@ namespace Elreg.WindowsFormsApplication.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDetails.BackgroundImage = global::Elreg.WindowsFormsApplication.Properties.Resources.glossymetal;
-            this.grpDetails.Controls.Add(this.ctlLap);
+            //this.grpDetails.Controls.Add(this.ctlLap);
             this.grpDetails.Controls.Add(this.chkActivated);
             this.grpDetails.Controls.Add(this.btnOpenHymnFilename);
             this.grpDetails.Controls.Add(this.btnCreateWav);
@@ -272,14 +272,14 @@ namespace Elreg.WindowsFormsApplication.Forms
             // 
             // ctlLap
             // 
-            this.ctlLap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctlLap.Caption = "Runde gezählt";
-            this.ctlLap.Location = new System.Drawing.Point(6, 126);
-            this.ctlLap.Name = "ctlLap";
-            this.ctlLap.Size = new System.Drawing.Size(542, 364);
-            this.ctlLap.TabIndex = 15;
+            //this.ctlLap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            //| System.Windows.Forms.AnchorStyles.Left) 
+            //| System.Windows.Forms.AnchorStyles.Right)));
+            //this.ctlLap.Caption = "Runde gezählt";
+            //this.ctlLap.Location = new System.Drawing.Point(6, 126);
+            //this.ctlLap.Name = "ctlLap";
+            //this.ctlLap.Size = new System.Drawing.Size(542, 364);
+            //this.ctlLap.TabIndex = 15;
             // 
             // chkActivated
             // 
@@ -467,7 +467,7 @@ namespace Elreg.WindowsFormsApplication.Forms
         private System.Windows.Forms.TextBox txtWavName;
         private System.Windows.Forms.Label lblWavName;
         private System.Windows.Forms.Button btnOK;
-        private CtlSoundOption ctlLap;
+        //private CtlSoundOption ctlLap;
         private System.Windows.Forms.Button btnOpenHymnFilename;
         private System.Windows.Forms.TextBox txtHymnFilename;
         private System.Windows.Forms.Label lblHymn;

@@ -132,8 +132,7 @@ namespace Elreg.DomainModels
 
         private void RaiseCountDownChanged(CountDownEventArgs.TypeEnum type)
         {
-            if (CountDownChanged != null)
-                CountDownChanged(this, new CountDownEventArgs(type));
+            CountDownChanged?.Invoke(this, new CountDownEventArgs(type));
         }
     }
 }

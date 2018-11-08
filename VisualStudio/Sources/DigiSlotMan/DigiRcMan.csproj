@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Elreg.DigiRcMan</RootNamespace>
     <AssemblyName>DigiRcMan</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -40,6 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -50,6 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -65,6 +68,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>..\..\Output\Client\</OutputPath>
@@ -81,6 +85,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Classic car red.ico</ApplicationIcon>
@@ -98,6 +103,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Obfuscated|AnyCPU'">
     <OutputPath>bin\Obfuscated\</OutputPath>
@@ -112,14 +118,13 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Catel.Core, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Catel.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
-    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -155,7 +160,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,17 +237,11 @@
     <EmbeddedResource Include="..\..\Output\MouseKeyboardLibrary.dll">
       <Link>DllsAsResource\MouseKeyboardLibrary.dll</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\MusicPlayer.dll">
-      <Link>DllsAsResource\MusicPlayer.dll</Link>
-    </EmbeddedResource>
     <EmbeddedResource Include="..\..\Output\Newtonsoft.Json.dll">
       <Link>DllsAsResource\Newtonsoft.Json.dll</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Output\PortDataParser.dll">
       <Link>DllsAsResource\PortDataParser.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceActionSound.dll">
-      <Link>DllsAsResource\RaceActionSound.dll</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Output\RaceConsolidationService.dll">
       <Link>DllsAsResource\RaceConsolidationService.dll</Link>
@@ -256,12 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Output\RaceOptionsService.dll">
       <Link>DllsAsResource\RaceOptionsService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceSound.dll">
-      <Link>DllsAsResource\RaceSound.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceSoundService.dll">
-      <Link>DllsAsResource\RaceSoundService.dll</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Output\RaceStatisticsService.dll">
       <Link>DllsAsResource\RaceStatisticsService.dll</Link>
@@ -348,10 +340,6 @@
       <Project>{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}</Project>
       <Name>MockObjects</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MusicPlayer\MusicPlayer.csproj">
-      <Project>{A3CDC6D4-64B0-4B38-AC0E-A9664986FB43}</Project>
-      <Name>MusicPlayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PortDataParser\SerialPortDataParser.csproj">
       <Project>{4D53C762-785A-469C-9D26-14645C862CD7}</Project>
       <Name>SerialPortDataParser</Name>
@@ -359,10 +347,6 @@
     <ProjectReference Include="..\Presentation Framework\WinForms Presentation Framework.csproj">
       <Project>{AC3AE743-4EB0-47F7-A8E9-09389E8B6C4B}</Project>
       <Name>WinForms Presentation Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RaceActionSound\RaceActionSound.csproj">
-      <Project>{8D094011-C8D7-48A5-A976-6DC47978A3F7}</Project>
-      <Name>RaceActionSound</Name>
     </ProjectReference>
     <ProjectReference Include="..\RaceControlService\RaceControlService.csproj">
       <Project>{62D510A4-5F11-4D5D-AFA0-350AE04911DA}</Project>
@@ -375,14 +359,6 @@
     <ProjectReference Include="..\RaceOptionsService\RaceOptionsService.csproj">
       <Project>{4FD6E596-F31D-4E44-8FD6-7A782BA67C06}</Project>
       <Name>RaceOptionsService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RaceSoundService\RaceSoundService.csproj">
-      <Project>{B9B311D8-F686-478E-AFA6-4752EF2CF399}</Project>
-      <Name>RaceSoundService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RaceSound\RaceSound.csproj">
-      <Project>{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}</Project>
-      <Name>RaceSound</Name>
     </ProjectReference>
     <ProjectReference Include="..\RaceStatisticsService\RaceStatisticsService.csproj">
       <Project>{C92263FA-5CA9-4C1B-968B-38990AFA86B9}</Project>

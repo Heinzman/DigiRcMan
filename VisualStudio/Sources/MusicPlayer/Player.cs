@@ -4,8 +4,7 @@ using System.IO;
 using System.Timers;
 using Elreg.Log;
 using Elreg.RaceSoundService;
-using Microsoft.DirectX.AudioVideoPlayback;
-using Microsoft.DirectX.DirectSound;
+using NAudio.Wave;
 
 namespace Elreg.MusicPlayer
 {
@@ -13,7 +12,7 @@ namespace Elreg.MusicPlayer
     {
         private readonly string _directory;
         private int _volume;
-        private Audio _audio;
+        private WaveOutEvent _waveOutEvent = new WaveOutEvent();
         private List<string> _songFileNames;
         protected string SongFileName;
         private Status _status = Status.Stopped;
@@ -68,8 +67,7 @@ namespace Elreg.MusicPlayer
             try
             {
                 _status = Status.Paused;
-                if (_audio != null)
-                    _audio.Pause();
+                _waveOutEvent?.Pause();
             }
             catch (Exception ex)
             {
@@ -84,8 +82,8 @@ namespace Elreg.MusicPlayer
                 _volume = volume;
                 CheckToPauseOrRestartByVolume();
                 _wasInactiveByMinVolume = HasMinVolume;
-                if (_audio != null)
-                    _audio.Volume = SoundHelper.LimitVolume(volume);
+                if (_waveOutEvent != null)
+                    _waveOutEvent.Volume = SoundHelper.LimitVolume(volume);
             }
             catch (Exception ex)
             {
@@ -106,7 +104,7 @@ namespace Elreg.MusicPlayer
 
         private bool HasMinVolume
         {
-            get { return _volume == (int) Volume.Min; }
+            get { return _volume == 0; }
         }
 
         protected void Stop()
@@ -114,8 +112,7 @@ namespace Elreg.MusicPlayer
             try
             {
                 _status = Status.Stopped;
-                if (_audio != null)
-                    _audio.Stop();
+                _waveOutEvent?.Stop();
             }
             catch (Exception ex)
             {
@@ -130,12 +127,12 @@ namespace Elreg.MusicPlayer
 
         private bool IsAudioPaused
         {
-            get { return _audio != null && _audio.Paused; }
+            get { return _status == Status.Paused; }
         }
 
         private bool IsAudioPlaying
         {
-            get { return _audio != null && _audio.Playing; }
+            get { return _status == Status.Playing; }
         }
 
         protected bool IsAudioStopped
@@ -145,7 +142,7 @@ namespace Elreg.MusicPlayer
 
         private bool IsAudioAtEndPosition
         {
-            get { return _audio != null && _audio.CurrentPosition >= _audio.Duration; }
+            get { return _waveOutEvent != null && _waveOutEvent.GetPosition() >= _waveOutEvent.NumberOfBuffers; } // todo
         }
 
         private List<string> SongFileNames
@@ -163,7 +160,7 @@ namespace Elreg.MusicPlayer
             try
             {
                 _status = Status.Playing;
-                _audio.Play();
+                _waveOutEvent.Play();
             }
             catch (Exception ex)
             {
@@ -175,12 +172,13 @@ namespace Elreg.MusicPlayer
         {
             try
             {
-                if (_audio == null)
+                if (_waveOutEvent == null)
                 {
-                    _audio = new Audio(SongFileName);
-                    _audio.Ending += AudioEnding;
+                    _waveOutEvent = new WaveOutEvent();
+                    // todo _waveOutEvent.Ending += AudioEnding;
                 }
-                _audio.Open(SongFileName);
+                var audioFileReader = new AudioFileReader(SongFileName);
+                _waveOutEvent.Init(audioFileReader);
                 SetAudioVolume(_volume);
             }
             catch (Exception ex)

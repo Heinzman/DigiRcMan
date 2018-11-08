@@ -4,9 +4,9 @@ using Elreg.BusinessObjects.DerivedEventArgs;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Sound;
 using Elreg.ResourcesService;
-using Microsoft.DirectX.DirectSound;
 using Elreg.Log;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 namespace Elreg.RaceSound
 {
@@ -14,9 +14,8 @@ namespace Elreg.RaceSound
     {
         private readonly IRaceModel _raceModel;
         private readonly SoundMixer _soundMixer;
-        private readonly Device _device;
-        private BufferDescription _bufferDescription;
-        private readonly Dictionary<CountDownEventArgs.TypeEnum, SecondaryBuffer> _buffers = new Dictionary<CountDownEventArgs.TypeEnum, SecondaryBuffer>();
+        private WaveOutEvent _waveOutEvent;
+        private readonly Dictionary<CountDownEventArgs.TypeEnum, AudioFileReader> _buffers = new Dictionary<CountDownEventArgs.TypeEnum, AudioFileReader>();
 
         private const string Soundcountdownpath = @"\Sounds\CountDown\";
         private const string Soundfive = "five.wav";
@@ -26,11 +25,10 @@ namespace Elreg.RaceSound
         private const string Soundone = "one.wav";
         private const string Soundstart = "Start.wav";
 
-        public CountDownSoundHandler(IRaceModel raceModel, Device device, SoundMixer soundMixer)
+        public CountDownSoundHandler(IRaceModel raceModel, SoundMixer soundMixer)
         {
             _raceModel = raceModel;
             _soundMixer = soundMixer;
-            _device = device;
             _raceModel.CountDownModel.CountDownChanged += CountDownModelCountDownChanged;
             AttachToModelAsObserver();
         }
@@ -39,7 +37,7 @@ namespace Elreg.RaceSound
         {
             try
             {
-                InitBufferDescription();
+                InitWaveOutEvent();
                 CreateSoundBuffers();
             }
             catch (Exception ex)
@@ -53,14 +51,9 @@ namespace Elreg.RaceSound
             _raceModel.Attach(this);
         }
 
-        private void InitBufferDescription()
+        private void InitWaveOutEvent()
         {
-            _bufferDescription = new BufferDescription
-                                     {
-                                         Flags = BufferDescriptionFlags.ControlVolume | BufferDescriptionFlags.ControlFrequency |
-                                                 BufferDescriptionFlags.ControlPan,
-                                         GlobalFocus = true
-                                     };
+            _waveOutEvent = new WaveOutEvent();
         }
 
         private void CreateSoundBuffers()
@@ -78,9 +71,9 @@ namespace Elreg.RaceSound
         {
             try
             {
-                SecondaryBuffer buffer = CreateSoundBuffer(type);
-                if (buffer != null)
-                    _buffers.Add(type, buffer);
+                AudioFileReader audioFileReader = CreateAudioFileReader(type);
+                if (audioFileReader != null)
+                    _buffers.Add(type, audioFileReader);
             }
             catch (Exception ex)
             {
@@ -88,39 +81,39 @@ namespace Elreg.RaceSound
             }
         }
 
-        private SecondaryBuffer CreateSoundBuffer(CountDownEventArgs.TypeEnum type)
+        private AudioFileReader CreateAudioFileReader(CountDownEventArgs.TypeEnum type)
         {
-            SecondaryBuffer buffer;
+            AudioFileReader audioFileReader;
             switch (type)
             {
                 case CountDownEventArgs.TypeEnum.Count5:
-                    buffer = new SecondaryBuffer(FilePathFive, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathFive);
                     break;
                 case CountDownEventArgs.TypeEnum.Count4:
-                    buffer = new SecondaryBuffer(FilePathFour, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathFour);
                     break;
                 case CountDownEventArgs.TypeEnum.Count3:
-                    buffer = new SecondaryBuffer(FilePathThree, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathThree);
                     break;
                 case CountDownEventArgs.TypeEnum.Count2:
-                    buffer = new SecondaryBuffer(FilePathTwo, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathTwo);
                     break;
                 case CountDownEventArgs.TypeEnum.Count1:
-                    buffer = new SecondaryBuffer(FilePathOne, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathOne);
                     break;
                 case CountDownEventArgs.TypeEnum.Go:
-                    buffer = new SecondaryBuffer(FilePathStart, _bufferDescription, _device);
+                    audioFileReader = new AudioFileReader(FilePathStart);
                     break;
                 default:
-                    buffer = null;
+                    audioFileReader = null;
                     break;
             }
-            return buffer;
+            return audioFileReader;
         }
 
-        private SecondaryBuffer GetSoundBufferToPlay(CountDownEventArgs.TypeEnum type)
+        private AudioFileReader GetSoundBufferToPlay(CountDownEventArgs.TypeEnum type)
         {
-            SecondaryBuffer buffer;
+            AudioFileReader buffer;
 
             _buffers.TryGetValue(type, out buffer);
             return buffer;
@@ -135,11 +128,12 @@ namespace Elreg.RaceSound
         {
             try
             {
-                SecondaryBuffer buffer = GetSoundBufferToPlay(e.Type);
+                AudioFileReader buffer = GetSoundBufferToPlay(e.Type);
                 if (buffer != null)
                 {
                     buffer.Volume = _soundMixer.CountDownVolumeAdapted;
-                    buffer.Play(0, BufferPlayFlags.Default);
+                    _waveOutEvent.Init(buffer);
+                    _waveOutEvent.Play();
                 }
             }
             catch (Exception ex)

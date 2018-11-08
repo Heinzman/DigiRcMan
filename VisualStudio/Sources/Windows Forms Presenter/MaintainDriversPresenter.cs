@@ -7,7 +7,6 @@ using Elreg.BusinessObjects.Sound;
 using Elreg.HelperClasses;
 using Elreg.Log;
 using Elreg.RaceOptionsService;
-using Elreg.RaceSoundService;
 using Elreg.ResourcesService;
 using Elreg.WindowsFormsView;
 
@@ -17,20 +16,18 @@ namespace Elreg.WindowsFormsPresenter
     {
         private readonly IMaintainDriversView _maintainDriversView;
         private readonly OpenFileDialog _openFileDialog = new OpenFileDialog();
-        private readonly ActionSoundsService _actionSoundsService;
         private readonly DriversService _driversService;
         private readonly RaceSettings _raceSettings;
         private readonly Settings _settings = new Settings();
         private readonly SoundSettings _userSoundSettings = new SoundSettings(); 
         private readonly BindingSource _bindingSource = new BindingSource();
 
-        public MaintainDriversPresenter(IMaintainDriversView maintainDriversView, DriversService driversService, ActionSoundsService actionSoundsService, RaceSettings raceSettings)
+        public MaintainDriversPresenter(IMaintainDriversView maintainDriversView, DriversService driversService,RaceSettings raceSettings)
         {
             try
             {
                 _maintainDriversView = maintainDriversView;
                 _driversService = driversService;
-                _actionSoundsService = actionSoundsService;
                 _raceSettings = raceSettings;
                 _bindingSource.PositionChanged += BindingSource1PositionChanged;
                 _bindingSource.DataSourceChanged += BindingSource1CurrentChanged;
@@ -189,12 +186,12 @@ namespace Elreg.WindowsFormsPresenter
 
         private void InitSoundOptionControl()
         {
-            var driver = _bindingSource.Current as Driver;
-            if (driver != null)
-            {
-                SoundOptionList soundOptionList = driver.SoundOptionsLap;
-                _maintainDriversView.CtlLap.Init(soundOptionList, _userSoundSettings, _actionSoundsService, _driversService, _raceSettings);
-            }
+            //var driver = _bindingSource.Current as Driver; // todo
+            //if (driver != null)
+            //{
+            //    SoundOptionList soundOptionList = driver.SoundOptionsLap;
+            //    _maintainDriversView.CtlLap.Init(soundOptionList, _userSoundSettings, _driversService, _raceSettings);
+            //}
         }
 
         private void BindData()

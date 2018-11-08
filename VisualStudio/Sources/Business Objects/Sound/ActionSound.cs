@@ -1,3 +1,5 @@
+using NAudio.Wave;
+
 namespace Elreg.BusinessObjects.Sound
 {
     public class ActionSound
@@ -6,6 +8,6 @@ namespace Elreg.BusinessObjects.Sound
 
         public Specialsound Specialsound { get; set; }
 
-        public BufferSound BufferSound { get; set; }
+        public WaveOutEvent WaveOutEvent { get; set; }
     }
 }

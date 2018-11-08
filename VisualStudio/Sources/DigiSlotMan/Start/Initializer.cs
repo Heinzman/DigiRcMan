@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -16,14 +15,10 @@ using Elreg.DomainModels.Logs;
 using Elreg.DomainModels.RaceModel;
 using Elreg.HelperLib;
 using Elreg.Log;
-using Elreg.MusicPlayer;
 using Elreg.PortDataParser;
-using Elreg.RaceActionSound;
 using Elreg.RaceControlService;
 using Elreg.RaceDataService.RaceData;
 using Elreg.RaceOptionsService;
-using Elreg.RaceSound;
-using Elreg.RaceSoundService;
 using Elreg.RaceStatisticsService;
 using Elreg.ResourcesService;
 using Elreg.SerialPortReader.SerialPortReaders;
@@ -31,11 +26,7 @@ using Elreg.UnitTests.MockObjects.MockSerialPort;
 using Elreg.WindowsFormsApplication;
 using Elreg.WindowsFormsApplication.FormMocks;
 using Elreg.WindowsFormsApplication.Forms;
-using Elreg.WindowsFormsPresenter;
 using Elreg.WindowsFormsPresenter.RaceControl;
-using Microsoft.DirectX;
-using Microsoft.DirectX.DirectSound;
-using Buffer = Microsoft.DirectX.DirectSound.Buffer;
 
 namespace Elreg.DigiRcMan.Start
 {
@@ -55,11 +46,9 @@ namespace Elreg.DigiRcMan.Start
         protected VcuSerialPortService VcuSerialPortService;
         protected RfIdSettingsService RfIdSettingsService;
         private RaceProviderService _raceProviderService;
-        private ActionSoundsService _actionSoundsService;
-        private Device _device;
-        private BufferDescription _bufferDescription;
-        private readonly SoundMixerService _soundMixerService = new SoundMixerService();
-        private MusicHandler _musicHandler;
+        // private ActionSoundsService _actionSoundsService;
+        //private readonly SoundMixerService _soundMixerService = new SoundMixerService();
+        //private MusicHandler _musicHandler; todo
         private StatisticLogger _statisticLogger;
         private readonly Lazy<IPropertySettings> _propertySettingsLazy;
 
@@ -82,7 +71,6 @@ namespace Elreg.DigiRcMan.Start
                 InitMusicHandlerAndPlay();
                 InitSoundDevice();
                 InitBufferDescription();
-                InitListener();
                 InitActionSoundsService();
                 InitRaceActionSound();
                 InitLoggerModel();
@@ -140,25 +128,25 @@ namespace Elreg.DigiRcMan.Start
         {
             if (PropertySettings.SoundActivated)
             {
-                DevicesCollection devicesCollection = new DevicesCollection();
-                _device = new Device(devicesCollection[0].DriverGuid);
-                _device.SetCooperativeLevel(FormHandle, CooperativeLevel.Priority);
+                //DevicesCollection devicesCollection = new DevicesCollection();
+                //_device = new Device(devicesCollection[0].DriverGuid);
+                //_device.SetCooperativeLevel(FormHandle, CooperativeLevel.Priority);
             }
         }
 
         private void InitBufferDescription()
         {
-            const bool surroundSound = false;
-            if (PropertySettings.SoundActivated || PropertySettings.MusicActivated)
-                _bufferDescription = new BufferDescription
-                                     {
-                                         Control3D = surroundSound,
-                                         ControlEffects = false,
-                                         ControlPan = !surroundSound,
-                                         ControlFrequency = true,
-                                         ControlVolume = true,
-                                         GlobalFocus = true
-                                     };
+            //const bool surroundSound = false;
+            //if (PropertySettings.SoundActivated || PropertySettings.MusicActivated)
+            //    _bufferDescription = new BufferDescription
+            //                         {
+            //                             Control3D = surroundSound,
+            //                             ControlEffects = false,
+            //                             ControlPan = !surroundSound,
+            //                             ControlFrequency = true,
+            //                             ControlVolume = true,
+            //                             GlobalFocus = true
+            //                         };
         }
 
         protected virtual void InstantiateStartForm()
@@ -171,8 +159,8 @@ namespace Elreg.DigiRcMan.Start
                                             _soundOptionsService,
                                             _raceSettingsService,
                                             _raceKeyController,
-                                            _soundMixerService,
-                                            _actionSoundsService,
+                                            //_soundMixerService,
+                                            //_actionSoundsService,
                                             _statisticLogger,
                                             VcuSerialPortService,
                                             VcuSerialPortReader);
@@ -237,8 +225,8 @@ namespace Elreg.DigiRcMan.Start
             {
                 if (PropertySettings.MusicActivated)
                 {
-                    _musicHandler = new MusicHandler(RaceModel, _soundMixerService, _raceKeyController);
-                    _musicHandler.SetMainPlayerAndPlay();
+                    //_musicHandler = new MusicHandler(RaceModel, _soundMixerService, _raceKeyController); todo
+                    //_musicHandler.SetMainPlayerAndPlay();
                 }
             }
             catch (Exception ex)
@@ -261,8 +249,7 @@ namespace Elreg.DigiRcMan.Start
             {
                 string userId = string.Empty;
                 WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-                if (windowsIdentity != null)
-                    userId = windowsIdentity.Name;
+                userId = windowsIdentity.Name;
                 return userId;
             }
         }
@@ -386,10 +373,10 @@ namespace Elreg.DigiRcMan.Start
         {
             try
             {
-                if (PropertySettings.SoundActivated)
-                    _actionSoundsService = new ActionSoundsService(_soundOptionsService, _driversService, _device,
-                                                                   _bufferDescription, SoundMixer,
-                                                                   RaceModel);
+                //if (PropertySettings.SoundActivated) todo
+                    //_actionSoundsService = new ActionSoundsService(_soundOptionsService, _driversService, _device,
+                    //                                               _bufferDescription, SoundMixer,
+                    //                                               RaceModel);
             }
             catch (Exception ex)
             {
@@ -401,8 +388,8 @@ namespace Elreg.DigiRcMan.Start
         {
             try
             {
-                if (PropertySettings.SoundActivated)
-                    new RaceActionSoundHandler(RaceModel, _actionSoundsService, _raceSettingsService.RaceSettings);
+            //    if (PropertySettings.SoundActivated) todo
+            //        new RaceActionSoundHandler(RaceModel, _actionSoundsService, _raceSettingsService.RaceSettings);
             }
             catch (Exception ex)
             {
@@ -416,8 +403,8 @@ namespace Elreg.DigiRcMan.Start
             {
                 if (PropertySettings.SoundActivated)
                 {
-                    CountDownSoundHandler countDownSoundHandler = new CountDownSoundHandler(RaceModel, _device, SoundMixer);
-                    countDownSoundHandler.Init();
+                    //CountDownSoundHandler countDownSoundHandler = new CountDownSoundHandler(RaceModel, _device, SoundMixer); todo
+                    //countDownSoundHandler.Init();
                 }
             }
             catch (Exception ex)
@@ -432,38 +419,8 @@ namespace Elreg.DigiRcMan.Start
             {
                 if (PropertySettings.SoundActivated)
                 {
-                    PauseSoundHandler pauseSoundHandler = new PauseSoundHandler(RaceModel, _device, SoundMixer);
-                    pauseSoundHandler.Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                ErrorLog.LogError(false, ex);
-            }
-        }
-
-        private void InitListener()
-        {
-            try
-            {
-                if (PropertySettings.SoundActivated)
-                {
-                    BufferDescription bufferDescription = new BufferDescription
-                                                              {
-                                                                  PrimaryBuffer = true,
-                                                                  Control3D = true,
-                                                                  ControlEffects = false,
-                                                                  ControlPan = false,
-                                                                  Mute3DAtMaximumDistance = true,
-                                                                  StickyFocus = true
-                                                              };
-                    Listener3DOrientation orientation = new Listener3DOrientation
-                                                            {
-                                                                Front = new Vector3(0, 0, 5),
-                                                                Top = new Vector3(0, 5, 0)
-                                                            };
-                    Buffer buffer = new Buffer(bufferDescription, _device);
-                    new Listener3D(buffer) { Position = new Vector3(0, 0, 0), Orientation = orientation };
+                    //PauseSoundHandler pauseSoundHandler = new PauseSoundHandler(RaceModel, _device, SoundMixer); todo
+                    //pauseSoundHandler.Init();
                 }
             }
             catch (Exception ex)
@@ -483,10 +440,10 @@ namespace Elreg.DigiRcMan.Start
             get { return GetDesktopWindow(); }
         }
 
-        private SoundMixer SoundMixer
-        {
-            get { return _soundMixerService.SoundMixer; }
-        }
+        //private SoundMixer SoundMixer
+        //{
+        //    get { return _soundMixerService.SoundMixer; }
+        //}
 
         private IPropertySettings PropertySettings
         {

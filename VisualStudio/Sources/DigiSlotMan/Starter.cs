@@ -5,7 +5,6 @@ using Elreg.BusinessObjectContracts;
 using Elreg.BusinessObjects;
 using Elreg.DigiRcMan.Properties;
 using Elreg.DigiRcMan.Start;
-using Elreg.FrameworkContracts;
 
 namespace Elreg.DigiRcMan
 {

@@ -63,14 +63,12 @@ namespace Elreg.RaceDataService.RaceData
 
         private void RaiseEventAddLapForLane()
         {
-            if (AddLapForLane != null)
-                AddLapForLane(LaneId, _lapDetectionSingleAction.TimeStamp);
+            AddLapForLane?.Invoke(LaneId, _lapDetectionSingleAction.TimeStamp);
         }
 
         private void RaiseEventPenaltyAdditionForLane()
         {
-            if (PenaltyAdditionForLane != null)
-                PenaltyAdditionForLane(LaneId);
+            PenaltyAdditionForLane?.Invoke(LaneId);
         }
 
     }

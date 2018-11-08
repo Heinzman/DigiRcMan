@@ -6,7 +6,6 @@ using Elreg.Log;
 using Elreg.RaceControlService;
 using Elreg.RaceDataService.RaceData;
 using Elreg.RaceOptionsService;
-using Elreg.RaceSoundService;
 using Elreg.RaceStatisticsService;
 using Elreg.WindowsFormsPresenter.RaceControl;
 using Elreg.WindowsFormsView;
@@ -23,9 +22,9 @@ namespace Elreg.WindowsFormsApplication.Forms
         private readonly RaceSettingsService _raceSettingsService;
         private readonly ISerialPortParser _serialPortParser;
         private readonly RaceModel _raceModel;
-        private readonly SoundMixerService _soundMixerService;
-        private readonly SoundOptionsService _soundOptionsService;
-        private readonly ActionSoundsService _actionSoundsService;
+        //private readonly SoundMixerService _soundMixerService;
+        //private readonly SoundOptionsService _soundOptionsService;
+        //private readonly ActionSoundsService _actionSoundsService;
         private readonly StatisticLogger _statisticLogger;
         private readonly VcuSerialPortService _vcuSerialPortService;
         private readonly ISerialPortReader _vcuSerialPortReader;
@@ -47,8 +46,8 @@ namespace Elreg.WindowsFormsApplication.Forms
                                SoundOptionsService soundOptionsService,
                                RaceSettingsService raceSettingsService, 
                                RaceKeyController raceKeyController,
-                               SoundMixerService soundMixerService,
-                               ActionSoundsService actionSoundsService,
+                               //SoundMixerService soundMixerService,
+                               //ActionSoundsService actionSoundsService,
                                StatisticLogger statisticLogger,
                                VcuSerialPortService vcuSerialPortService, 
                                ISerialPortReader vcuSerialPortReader)
@@ -60,11 +59,11 @@ namespace Elreg.WindowsFormsApplication.Forms
             _raceDataProvider = raceDataProvider;
             _driversService = driversService;
             _carsService = carsService;
-            _soundOptionsService = soundOptionsService;
+            //_soundOptionsService = soundOptionsService;
             _raceSettingsService = raceSettingsService;
             _raceKeyController = raceKeyController;
-            _soundMixerService = soundMixerService;
-            _actionSoundsService = actionSoundsService;
+            //_soundMixerService = soundMixerService;
+            //_actionSoundsService = actionSoundsService;
             _statisticLogger = statisticLogger;
             _vcuSerialPortService = vcuSerialPortService;
             _vcuSerialPortReader = vcuSerialPortReader;
@@ -331,7 +330,7 @@ namespace Elreg.WindowsFormsApplication.Forms
         {
             try
             {
-                var view = new MaintainDriversForm(_driversService, _actionSoundsService, _raceModel.RaceSettings);
+                var view = new MaintainDriversForm(_driversService, _raceModel.RaceSettings);
                 view.ShowDialog();
             }
             catch (Exception ex)
@@ -357,8 +356,8 @@ namespace Elreg.WindowsFormsApplication.Forms
         {
             try
             {
-                var view = new MaintainSoundsForm(_soundOptionsService, _actionSoundsService, _driversService, _raceModel.RaceSettings);
-                view.ShowDialog();
+                //var view = new MaintainSoundsForm(_soundOptionsService, _actionSoundsService, _driversService, _raceModel.RaceSettings); todo
+                //view.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -424,8 +423,8 @@ namespace Elreg.WindowsFormsApplication.Forms
         {
             try
             {
-                var view = new SoundMixerForm(_soundMixerService);
-                view.ShowDialog();
+                //var view = new SoundMixerForm(_soundMixerService); todo
+                //view.ShowDialog();
             }
             catch (Exception ex)
             {

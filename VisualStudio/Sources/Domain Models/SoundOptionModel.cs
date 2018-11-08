@@ -55,15 +55,15 @@ namespace Elreg.DomainModels
             ActionSound actionSound = new ActionSound
                                           {
                                               Specialsound = (Specialsound)soundOption.SpecialSound,
-                                              BufferSound = GetActionBuffer(soundOption, varyFrequency),
+                                              WaveOutEvent = GetActionBuffer(soundOption, varyFrequency),
                                               VaryFrequency = varyFrequency
                                           };
             SpecialSoundHandler specialSoundHandler = new SpecialSoundHandler(_actionSoundsService, _driversService);
             specialSoundHandler.CreateBuffers();
             CreateRandomLane();
             specialSoundHandler.AddSpecialSounds(_soundOptionBufferQueue, actionSound, _randomLane);
-            if (actionSound.BufferSound != null)
-                _soundOptionBufferQueue.Enqueue(actionSound.BufferSound);
+            if (actionSound.WaveOutEvent != null)
+                _soundOptionBufferQueue.Enqueue(actionSound.WaveOutEvent);
         }
 
         private void CreateRandomLane()

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,13 +10,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Elreg.WindowsFormsApplication</RootNamespace>
     <AssemblyName>WindowsFormsApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation />
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <ApplicationIcon>Classic car red.ico</ApplicationIcon>
     <PublishUrl>http://localhost/Windows Forms Application/</PublishUrl>
     <Install>true</Install>
@@ -44,6 +45,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,6 +55,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +71,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -82,6 +86,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +103,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>..\..\Output\</OutputPath>
@@ -116,6 +122,7 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|AnyCPU'">
     <OutputPath>bin\Release Public\</OutputPath>
@@ -132,6 +139,7 @@
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|x64'">
     <OutputPath>bin\x64\Release Public\</OutputPath>
@@ -147,6 +155,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Public|x86'">
     <OutputPath>bin\x86\Release Public\</OutputPath>
@@ -163,6 +172,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -180,6 +190,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -196,6 +207,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutTests|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -212,6 +224,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|AnyCPU'">
     <OutputPath>bin\IsTrialVersion\</OutputPath>
@@ -226,6 +239,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|x64'">
     <OutputPath>bin\x64\IsTrialVersion\</OutputPath>
@@ -240,6 +254,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IsTrialVersion|x86'">
     <OutputPath>..\..\Output\</OutputPath>
@@ -257,6 +272,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -280,99 +296,135 @@
     <Compile Include="FormMocks\SerialPortMockForm.Designer.cs">
       <DependentUpon>SerialPortMockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VcuSettingsForm.cs" />
+    <Compile Include="Forms\VcuSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\VcuSettingsForm.Designer.cs">
       <DependentUpon>VcuSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ChampionshipForm.cs" />
+    <Compile Include="Forms\ChampionshipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ChampionshipForm.Designer.cs">
       <DependentUpon>ChampionshipForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ChampionshipListForm.cs" />
+    <Compile Include="Forms\ChampionshipListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ChampionshipListForm.Designer.cs">
       <DependentUpon>ChampionshipListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMocks\ControllersMockForm.cs" />
+    <Compile Include="FormMocks\ControllersMockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMocks\ControllersMockForm.Designer.cs">
       <DependentUpon>ControllersMockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceReplayForm.cs" />
+    <Compile Include="Forms\RaceReplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceReplayForm.Designer.cs">
       <DependentUpon>RaceReplayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceLogListForm.cs" />
+    <Compile Include="Forms\RaceLogListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceLogListForm.Designer.cs">
       <DependentUpon>RaceLogListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceDiagramForm.cs" />
+    <Compile Include="Forms\RaceDiagramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceDiagramForm.Designer.cs">
       <DependentUpon>RaceDiagramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StatisticsForm.cs" />
+    <Compile Include="Forms\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\StatisticsForm.Designer.cs">
       <DependentUpon>StatisticsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceGridWithPositionForm.cs" />
+    <Compile Include="Forms\RaceGridWithPositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceGridWithPositionForm.Designer.cs">
       <DependentUpon>RaceGridWithPositionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceResultsForm.cs" />
+    <Compile Include="Forms\RaceResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceResultsForm.Designer.cs">
       <DependentUpon>RaceResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceControlForm.cs" />
+    <Compile Include="Forms\RaceControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceControlForm.Designer.cs">
       <DependentUpon>RaceControlForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InitLanesForm.cs" />
+    <Compile Include="Forms\InitLanesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\InitLanesForm.Designer.cs">
       <DependentUpon>InitLanesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoggerForm.cs" />
+    <Compile Include="Forms\LoggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\LoggerForm.Designer.cs">
       <DependentUpon>LoggerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceResultsListForm.cs" />
+    <Compile Include="Forms\RaceResultsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceResultsListForm.Designer.cs">
       <DependentUpon>RaceResultsListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SoundMixerForm.cs" />
-    <Compile Include="Forms\SoundMixerForm.Designer.cs">
-      <DependentUpon>SoundMixerForm.cs</DependentUpon>
+    <Compile Include="Forms\TtsSaveToFileForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TtsSaveToFileForm.cs" />
     <Compile Include="Forms\TtsSaveToFileForm.Designer.cs">
       <DependentUpon>TtsSaveToFileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UpdateLanesForm.cs" />
+    <Compile Include="Forms\UpdateLanesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\UpdateLanesForm.Designer.cs">
       <DependentUpon>UpdateLanesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceSettingsForm.cs" />
+    <Compile Include="Forms\RaceSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceSettingsForm.Designer.cs">
       <DependentUpon>RaceSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MaintainSoundsForm.cs" />
-    <Compile Include="Forms\MaintainSoundsForm.Designer.cs">
-      <DependentUpon>MaintainSoundsForm.cs</DependentUpon>
+    <Compile Include="Forms\MaintainCarsForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MaintainCarsForm.cs" />
     <Compile Include="Forms\MaintainCarsForm.Designer.cs">
       <DependentUpon>MaintainCarsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MaintainDriversForm.cs" />
+    <Compile Include="Forms\MaintainDriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\MaintainDriversForm.Designer.cs">
       <DependentUpon>MaintainDriversForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PauseForm.cs" />
+    <Compile Include="Forms\PauseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\PauseForm.Designer.cs">
       <DependentUpon>PauseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PortParserLogForm.cs" />
+    <Compile Include="Forms\PortParserLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\PortParserLogForm.designer.cs">
       <DependentUpon>PortParserLogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RaceLogForm.cs" />
+    <Compile Include="Forms\RaceLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RaceLogForm.designer.cs">
       <DependentUpon>RaceLogForm.cs</DependentUpon>
     </Compile>
@@ -469,9 +521,6 @@
     <EmbeddedResource Include="Forms\LoggerForm.resx">
       <DependentUpon>LoggerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MaintainSoundsForm.resx">
-      <DependentUpon>MaintainSoundsForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PauseForm.resx">
       <DependentUpon>PauseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -483,9 +532,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RaceSettingsForm.resx">
       <DependentUpon>RaceSettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SoundMixerForm.resx">
-      <DependentUpon>SoundMixerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatisticsForm.resx">
       <DependentUpon>StatisticsForm.cs</DependentUpon>
@@ -513,16 +559,15 @@
     <EmbeddedResource Include="UserControls\CtlRaceLogTable.resx">
       <DependentUpon>CtlRaceLogTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CtlSoundOption.resx">
-      <DependentUpon>CtlSoundOption.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtlSsdCtrlConfig.resx">
       <DependentUpon>CtlSsdCtrlConfig.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Batches\MergeToSingleFile.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Compile Include="Forms\CountDownForm.cs" />
+    <Compile Include="Forms\CountDownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\CountDownForm.Designer.cs">
       <DependentUpon>CountDownForm.cs</DependentUpon>
     </Compile>
@@ -533,12 +578,6 @@
     </Compile>
     <Compile Include="UserControls\CtlMockController.Designer.cs">
       <DependentUpon>CtlMockController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\CtlSoundOption.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CtlSoundOption.Designer.cs">
-      <DependentUpon>CtlSoundOption.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -597,10 +636,6 @@
     <ProjectReference Include="..\RaceOptionsService\RaceOptionsService.csproj">
       <Project>{4FD6E596-F31D-4E44-8FD6-7A782BA67C06}</Project>
       <Name>RaceOptionsService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RaceSoundService\RaceSoundService.csproj">
-      <Project>{B9B311D8-F686-478E-AFA6-4752EF2CF399}</Project>
-      <Name>RaceSoundService</Name>
     </ProjectReference>
     <ProjectReference Include="..\RaceStatisticsService\RaceStatisticsService.csproj">
       <Project>{C92263FA-5CA9-4C1B-968B-38990AFA86B9}</Project>
@@ -700,9 +735,6 @@
     <None Include="Pics\glossymetal_green.jpg" />
     <None Include="Pics\glossymetal_red.jpg" />
     <Content Include="Music\Hymns\HymnTest.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Music\Main\12 Bee Gees - Stayin%27 Alive %28Promo 12 Version%29 %28Bonus%29.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Music\Main\HymnTest.mp3">
@@ -870,24 +902,6 @@
     <Content Include="Sounds\CountDown\de\two.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\CountDown\en\five.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\CountDown\en\four.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\CountDown\en\one.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\CountDown\en\Start.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\CountDown\en\three.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\CountDown\en\two.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Sounds\Custom\Disqualified.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1022,24 +1036,6 @@
     </Content>
     <Content Include="Sounds\FinalPositions\de\FinalPosition6.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition1.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition2.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition3.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition4.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition5.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\FinalPositions\en\FinalPosition6.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sounds\LapSounds\Marimba_A2.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1413,327 +1409,6 @@
     <Content Include="Sounds\Numbers\de\99.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\Numbers\en\1.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\10.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\100.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\11.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\12.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\13.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\14.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\15.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\16.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\17.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\18.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\19.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\2.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\20.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\200.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\21.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\22.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\23.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\24.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\25.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\26.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\27.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\28.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\29.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\3.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\30.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\300.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\31.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\32.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\33.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\34.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\35.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\36.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\37.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\38.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\39.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\4.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\40.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\400.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\41.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\42.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\43.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\44.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\45.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\46.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\47.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\48.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\49.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\5.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\50.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\500.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\51.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\52.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\53.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\54.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\55.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\56.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\57.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\58.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\59.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\6.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\60.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\600.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\61.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\62.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\63.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\64.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\65.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\66.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\67.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\68.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\69.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\7.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\70.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\700.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\71.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\72.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\73.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\74.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\75.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\76.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\77.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\78.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\79.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\8.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\80.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\800.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\81.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\82.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\83.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\84.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\85.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\86.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\87.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\88.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\89.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\9.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\90.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\900.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\91.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\92.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\93.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\94.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\95.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\96.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\97.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Numbers\en\98.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Sounds\Positions\de\Position1.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1751,24 +1426,6 @@
     </Content>
     <Content Include="Sounds\Positions\de\Position6.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position1.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position2.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position3.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position4.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position5.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\Positions\en\Position6.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sounds\SpecialSounds\de\Disqualified.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1823,21 +1480,6 @@
     </Content>
     <Content Include="Sounds\SpecialSounds\de\WarningPenalty.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\SpecialSounds\en\Disqualified.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\SpecialSounds\en\Finished.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\SpecialSounds\en\InvalidLap.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\SpecialSounds\en\Penalty.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\SpecialSounds\en\PenaltyFor.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TestData\Car 1-3 Only speed.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

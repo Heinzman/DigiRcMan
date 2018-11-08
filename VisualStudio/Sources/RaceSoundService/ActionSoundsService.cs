@@ -96,8 +96,8 @@ namespace Elreg.RaceSoundService
             try
             {
                 _specialSoundHandler.AddSpecialSounds(soundOptionBufferQueue, actionSound, lane);
-                if (actionSound.BufferSound != null)
-                    soundOptionBufferQueue.Enqueue(actionSound.BufferSound);
+                if (actionSound.WaveOutEvent != null)
+                    soundOptionBufferQueue.Enqueue(actionSound.WaveOutEvent);
             }
             catch (Exception ex)
             {
@@ -224,7 +224,7 @@ namespace Elreg.RaceSoundService
                     ActionSound actionSound = new ActionSound
                                                   {
                                                       Specialsound = (Specialsound) soundOption.SpecialSound,
-                                                      BufferSound = GetActionBuffer(soundOption, soundOptionList.VaryFrequency),
+                                                      WaveOutEvent = GetActionBuffer(soundOption, soundOptionList.VaryFrequency),
                                                       VaryFrequency = soundOptionList.VaryFrequency
                                                   };
                     actionSounds.Enqueue(actionSound);
