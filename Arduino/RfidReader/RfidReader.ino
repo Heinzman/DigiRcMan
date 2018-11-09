@@ -9,14 +9,13 @@
   If using the Simultaneous RFID Tag Reader (SRTR) shield, make sure the serial slide
   switch is in the 'SW-UART' position
 */
-
 #include <SoftwareSerial.h> //Used for transmitting to the device
-
 SoftwareSerial softSerial(2, 3); //RX, TX
-
-
 #include "SparkFun_UHF_RFID_Reader.h" //Library for controlling the M6E Nano module
 RFID nano; //Create instance
+byte epcBuffer[3];
+
+const byte rfidId = 0x01; // Id of rfid reader
 
 void setup()
 {
@@ -53,38 +52,20 @@ void loop()
     }
     else if (responseType == RESPONSE_IS_TAGFOUND)
     {
-      //If we have a full record we can pull out the fun bits
-      int rssi = nano.getTagRSSI(); //Get the RSSI for this tag read
-
-      long freq = nano.getTagFreq(); //Get the frequency this tag was detected at
-
-      long timeStamp = nano.getTagTimestamp(); //Get the time this was read, (ms) since last keep-alive message
-
+      byte rssi = nano.getTagRSSI(); //Get the RSSI for this tag read
       byte tagEPCBytes = nano.getTagEPCBytes(); //Get the number of bytes of EPC from response
 
-      Serial.print(F(" rssi["));
-      Serial.print(rssi);
-      Serial.print(F("]"));
+      byte buffer[7];
+      buffer[0] = 0xFF;
+      buffer[1] = 0xEE;
+      buffer[2] = rfidId;
+      buffer[3] = rssi;
 
-      Serial.print(F(" freq["));
-      Serial.print(freq);
-      Serial.print(F("]"));
-
-      Serial.print(F(" time["));
-      Serial.print(timeStamp);
-      Serial.print(F("]"));
-
-      //Print EPC bytes, this is a subsection of bytes from the response/msg array
-      Serial.print(F(" epc["));
-      for (byte x = 0 ; x < tagEPCBytes ; x++)
-      {
-        if (nano.msg[31 + x] < 0x10) Serial.print(F("0")); //Pretty print
-        Serial.print(nano.msg[31 + x], HEX);
-        Serial.print(F(" "));
-      }
-      Serial.print(F("]"));
-
-      Serial.println();
+      for (byte i = 0; i < 3; i++) {    
+        int offset = 31 + tagEPCBytes - 3;            
+        buffer[i+4] = nano.msg[offset + i];
+      }       
+      Serial.write(buffer, sizeof(buffer));  
     }
     else if (responseType == ERROR_CORRUPT_RESPONSE)
     {
@@ -137,14 +118,6 @@ boolean setupNano(long baudRate)
 
   //Test the connection
   nano.getVersion();
-
-  /*while (1)
-  {
-    nano.getVersion();
-    Serial.print("msg[0]: 0x");
-    Serial.println(nano.msg[0], HEX);
-    delay(250);
-  }*/
 
   if (nano.msg[0] != ALL_GOOD) return (false); //Something is not right
 
