@@ -20,31 +20,19 @@ namespace Elreg.PortDataParser
         private string _textParsedAndDetected = string.Empty;
         private string _textToParse = string.Empty;
         private DateTime _timeStamp;
-        private bool _isImAliveDetected;
-        private bool _isStartStopRequested;
         private bool _isLapDetected;
         private bool _arduinoDataDetected;
 
-        // Bsp: FF D2 01 A0 BC 30
+        // Bsp: FF EE 01 20 A0 BC 30
         // FF: Startindikator
-        // D2: Mode LapDetection
+        // EE: Mode LapDetection
         // 01: künstliche Id der RfId Karte
-        // A0 BC 30: 3-stellige RfId TagId   
-        // -- 
-        // Bsp: FF DC 00 00 00 00
-        // FF: Startindikator
-        // D2: Mode StartStop
-        // 00 00 00 00: ohne Bedeutung
-        // -- 
-        // Bsp: FF E6 00 00 00 00
-        // FF: Startindikator
-        // D2: Mode ImAlive
-        // 00 00 00 00: ohne Bedeutung
-        private const int TextToParseLength = 6 * 3 - 1; 
+        // 20: Signalstärke
+        // A0 BC 30: 3-stellige RfId TagId  
+        
+        private const int TextToParseLength = 7 * 3 - 1; 
 
-        private const int ByteForLapDetection = 210; // D2
-        private const int ByteForStartStop = 220; // DC
-        private const int ByteForImAlive = 230; // E6
+        private const int ByteForLapDetection = 238; // EE
 
         public event EventHandler<PortParserEventArgs> DataReceived;
         public event EventHandler<PortParserMockEventArgs> GetControllersData
@@ -76,8 +64,6 @@ namespace Elreg.PortDataParser
                 do
                 {
                     _isLapDetected = false;
-                    _isStartStopRequested = false;
-                    _isImAliveDetected = false;
 
                     _arduinoDataDetected = false;
                     DetectArduinoData();
@@ -88,10 +74,6 @@ namespace Elreg.PortDataParser
                         ObtainTextOutstanding();
                         if (_isLapDetected)
                             RaiseLapDetected();
-                        if (_isStartStopRequested)
-                            RaiseStartStopRequested();
-                        if (_isImAliveDetected)
-                            RaiseImAliveDetected();
                     }
                 } while (_arduinoDataDetected);
             }
@@ -103,18 +85,6 @@ namespace Elreg.PortDataParser
             }
         }
 
-        private void RaiseStartStopRequested()
-        {
-            if (StartStopRequested != null)
-                StartStopRequested(this, null);
-        }
-
-        private void RaiseImAliveDetected()
-        {
-            if (ImAliveDetected != null)
-                ImAliveDetected(this, null);
-        }
-
         private void DetectArduinoData()
         {
             _indexDetected = _textToParse.IndexOf("FF");
@@ -123,13 +93,13 @@ namespace Elreg.PortDataParser
             {
                 _arduinoDataDetected = true;
                 _textParsedAndDetected = _textToParse.Substring(_indexDetected, TextToParseLength);
-                string[] bytes = _textParsedAndDetected.Split(new[] { ' ' });
+                string[] bytes = _textParsedAndDetected.Split(' ');
 
-                if (bytes.Length > 5)
+                if (bytes.Length > 6)
                 {
                     int modeByte = int.Parse(bytes[1], NumberStyles.HexNumber);
                     int rfIdCardIdByte = int.Parse(bytes[2], NumberStyles.HexNumber);
-                    string data = bytes[3] + " " + bytes[4] + " " + bytes[5];
+                    string data = bytes[4] + " " + bytes[5] + " " + bytes[6];
 
                     if (modeByte == ByteForLapDetection)
                     {
@@ -166,14 +136,6 @@ namespace Elreg.PortDataParser
                                 _lapAction.Car6 = true;
                         }
                     }
-                    else if (modeByte == ByteForStartStop)
-                    {
-                        _isStartStopRequested = true;
-                    }
-                    else if (modeByte == ByteForImAlive)
-                    {
-                        _isImAliveDetected = true;
-                    }
                 }
             }
         }
@@ -209,9 +171,8 @@ namespace Elreg.PortDataParser
 
         private void RaiseLapDetected()
         {
-            if (DataReceived != null)
-                DataReceived(this, new PortParserEventArgs(_textParsedAndDetected, _textIgnored, _textOutstanding,
-                                                           null, _lapAction));
+            DataReceived?.Invoke(this, new PortParserEventArgs(_textParsedAndDetected, _textIgnored, _textOutstanding,
+                null, _lapAction));
         }
 
     }

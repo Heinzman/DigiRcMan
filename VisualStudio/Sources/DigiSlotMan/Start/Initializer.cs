@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -190,23 +191,23 @@ namespace Elreg.DigiRcMan.Start
         {
             RfIdSettingsService = new RfIdSettingsService();
 
-            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList = new List<TagIdsOfCarId>();
-            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            //{
-            //    CarId = 1,
-            //    TagIds = new List<string> { "AA 01 01", "AA 02 02" }
-            //});
-            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            //{
-            //    CarId = 2,
-            //    TagIds = new List<string> { "BB 01 01", "BB 02 02" }
-            //});
-            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            //{
-            //    CarId = 3,
-            //    TagIds = new List<string> { "CC 01 01", "CC 02 02" }
-            //});
-            //RfIdSettingsService.Save();
+            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList = new List<TagIdsOfCarId>();
+            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            {
+                CarId = 1,
+                TagIds = new List<string> { "A0 BC 30", "AA 02 02" }
+            });
+            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            {
+                CarId = 2,
+                TagIds = new List<string> { "BB 01 01", "BB 02 02" }
+            });
+            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            {
+                CarId = 3,
+                TagIds = new List<string> { "CC 01 01", "CC 02 02" }
+            });
+            RfIdSettingsService.Save();
         }
 
         private void InitStatisticsService()

@@ -39,7 +39,11 @@ namespace Elreg.SerialPortReader.SerialPorts
 
         public string PortName
         {
-            set { _serialPort.PortName = value; }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    _serialPort.PortName = value;
+            }
             get { return _serialPort.PortName; }
         }
 
@@ -84,8 +88,7 @@ namespace Elreg.SerialPortReader.SerialPorts
         {
             try
             {
-                if (DataReceived != null)
-                    DataReceived(sender, e);
+                DataReceived?.Invoke(sender, e);
             }
             catch (Exception ex)
             {
