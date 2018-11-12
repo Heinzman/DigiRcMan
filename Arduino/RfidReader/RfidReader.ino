@@ -13,7 +13,6 @@
 SoftwareSerial softSerial(2, 3); //RX, TX
 #include "SparkFun_UHF_RFID_Reader.h" //Library for controlling the M6E Nano module
 RFID nano; //Create instance
-byte epcBuffer[3];
 
 const byte rfidId = 0x01; // Id of rfid reader
 
@@ -32,10 +31,6 @@ void setup()
 
   nano.setReadPower(2000); //20.00 dBm. Higher values may caues USB port to brown out
   //Max Read TX Power is 27.00 dBm and may cause temperature-limit throttling
-
-  Serial.println(F("Press a key to begin scanning for tags."));
-  while (!Serial.available()); //Wait for user to send a character
-  Serial.read(); //Throw away the user's character
 
   nano.startReading(); //Begin scanning for tags
 }
@@ -61,7 +56,7 @@ void loop()
       buffer[2] = rfidId;
       buffer[3] = rssi;
 
-      for (byte i = 0; i < 3; i++) {    
+      for (byte i = 0; i < 4; i++) {    
         int offset = 31 + tagEPCBytes - 3;            
         buffer[i+4] = nano.msg[offset + i];
       }       

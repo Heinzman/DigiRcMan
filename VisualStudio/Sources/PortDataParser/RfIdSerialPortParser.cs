@@ -23,14 +23,14 @@ namespace Elreg.PortDataParser
         private bool _isLapDetected;
         private bool _arduinoDataDetected;
 
-        // Bsp: FF EE 01 20 A0 BC 30
+        // Bsp: FF EE 01 20 A0 BC 30 0E
         // FF: Startindikator
         // EE: Mode LapDetection
         // 01: künstliche Id der RfId Karte
         // 20: Signalstärke
-        // A0 BC 30: 3-stellige RfId TagId  
-        
-        private const int TextToParseLength = 7 * 3 - 1; 
+        // A0 BC 30 0E: 4-stellige RfId TagId  
+
+        private const int TextToParseLength = 8 * 3 - 1; 
 
         private const int ByteForLapDetection = 238; // EE
 
@@ -95,11 +95,11 @@ namespace Elreg.PortDataParser
                 _textParsedAndDetected = _textToParse.Substring(_indexDetected, TextToParseLength);
                 string[] bytes = _textParsedAndDetected.Split(' ');
 
-                if (bytes.Length > 6)
+                if (bytes.Length > 7)
                 {
                     int modeByte = int.Parse(bytes[1], NumberStyles.HexNumber);
                     int rfIdCardIdByte = int.Parse(bytes[2], NumberStyles.HexNumber);
-                    string data = bytes[4] + " " + bytes[5] + " " + bytes[6];
+                    string data = bytes[4] + " " + bytes[5] + " " + bytes[6] + " " + bytes[7];
 
                     if (modeByte == ByteForLapDetection)
                     {
