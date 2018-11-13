@@ -38,6 +38,9 @@ namespace Elreg.BusinessObjects.Lanes
         public DateTime? LastTimeALapWasAdded { get; set; }
 
         [JsonIgnore]
+        public DateTime? LastTimeALapWasDetected { get; set; }
+
+        [JsonIgnore]
         public int Points { get; set; }
 
         public LaneId Id { get; set; }
@@ -231,6 +234,7 @@ namespace Elreg.BusinessObjects.Lanes
             CalcLapTime = true;
             Lap = -1;
             LastTimeALapWasAdded = null;
+            LastTimeALapWasDetected = null;
             LapTime = null;
             LapTimeNet = null;
             BestLapTime = null;

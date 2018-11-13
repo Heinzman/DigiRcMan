@@ -348,6 +348,10 @@
       <Project>{AC3AE743-4EB0-47F7-A8E9-09389E8B6C4B}</Project>
       <Name>WinForms Presentation Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RaceActionSpeech\RaceActionSpeech.csproj">
+      <Project>{5DBEADAD-6F5B-4AFB-83E1-947A5943FBEE}</Project>
+      <Name>RaceActionSpeech</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RaceControlService\RaceControlService.csproj">
       <Project>{62D510A4-5F11-4D5D-AFA0-350AE04911DA}</Project>
       <Name>RaceControlService</Name>

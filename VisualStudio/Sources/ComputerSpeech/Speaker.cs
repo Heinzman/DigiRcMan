@@ -15,7 +15,7 @@ namespace Elreg.ComputerSpeech
         public void Speak()
         {
             SpVoice voice = new SpVoice {Volume = 100};
-            voice.Speak(_text);
+            voice.Speak(_text, SpeechVoiceSpeakFlags.SVSFlagsAsync);
         }
 
         public void SaveTo(string fileName)

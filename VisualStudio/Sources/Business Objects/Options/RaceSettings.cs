@@ -27,6 +27,7 @@ namespace Elreg.BusinessObjects.Options
             QualificationLapBasedActivated = false;
             QualificationMaxLaps = 5;
             SecondsForValidLap = 6;
+            MilliSecForIgnoringDetections = 500;
             VolumeToAddToMaxSpeed = 1500;
             DescendingLapCount = false;
             LanguageType = LanguageType.German;
@@ -53,6 +54,8 @@ namespace Elreg.BusinessObjects.Options
         public bool DescendingLapCount { get; set; }
 
         public int SecondsForValidLap { get; set; }
+
+        public int MilliSecForIgnoringDetections { get; set; }
 
         public decimal QualificationMinutes { get; set; }
 

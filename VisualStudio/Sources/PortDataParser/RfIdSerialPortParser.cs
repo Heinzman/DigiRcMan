@@ -23,12 +23,12 @@ namespace Elreg.PortDataParser
         private bool _isLapDetected;
         private bool _arduinoDataDetected;
 
-        // Bsp: FF EE 01 20 A0 BC 30 0E
+        // Bsp: FF EE 01 20 E3 A0 BC 30
         // FF: Startindikator
         // EE: Mode LapDetection
         // 01: künstliche Id der RfId Karte
         // 20: Signalstärke
-        // A0 BC 30 0E: 4-stellige RfId TagId  
+        // E3 A0 BC 30: 4-stellige RfId TagId  
 
         private const int TextToParseLength = 8 * 3 - 1; 
 

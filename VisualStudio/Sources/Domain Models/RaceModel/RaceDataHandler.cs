@@ -61,8 +61,7 @@ namespace Elreg.DomainModels.RaceModel
             _race.RacingTime.Start();
             StartLanes();
             RaiseEventRaceChanged();
-            if (RaceStarted != null)
-                RaceStarted(this, null);
+            RaceStarted?.Invoke(this, null);
         }
 
         public void Finish()
@@ -70,8 +69,7 @@ namespace Elreg.DomainModels.RaceModel
             _race.Status = Race.StatusEnum.Finished;
             _race.RacingTime.Stop();
             RaiseEventRaceChanged();
-            if (RaceFinished != null)
-                RaceFinished(this, null);
+            RaceFinished?.Invoke(this, null);
         }
 
         public void Stop()
@@ -83,8 +81,7 @@ namespace Elreg.DomainModels.RaceModel
                 _race.Status = Race.StatusEnum.Stopped;
                 _race.RacingTime.Stop();
                 RaiseEventRaceChanged();
-                if (RaceStopped != null)
-                    RaceStopped(this, null);
+                RaceStopped?.Invoke(this, null);
             }
         }
 
@@ -201,8 +198,7 @@ namespace Elreg.DomainModels.RaceModel
 
         private void RaiseEventRaceChanged()
         {
-            if (RaceChanged != null)
-                RaceChanged(this, null);
+            RaceChanged?.Invoke(this, null);
         }
 
     }

@@ -251,10 +251,13 @@
       <HintPath>Dlls\Interop.SpeechLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Speech" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Speaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Speech.cs" />
+    <Compile Include="SpeechHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dlls\Interop.SpeechLib.dll" />

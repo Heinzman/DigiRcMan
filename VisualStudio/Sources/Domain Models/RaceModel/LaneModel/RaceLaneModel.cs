@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using Elreg.BusinessObjects;
 using Elreg.BusinessObjects.Lanes;
 using Elreg.BusinessObjects.Options;
@@ -80,10 +81,16 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
                     AddLapTime();
                 LapAppender.AddLapWithLapTime(timeStamp);
             }
-            else
+            else if (!BelongsLapDetectionToPrevious())
             {
                 RaiseEventWithLaneChanged(LapNotAddedDueMinSeconds);
             }
+            CurrentLane.LastTimeALapWasDetected = DateTime.Now;
+        }
+
+        private bool BelongsLapDetectionToPrevious()
+        {
+            return MilliSecondsSinceLastDetection < _raceSettings.MilliSecForIgnoringDetections;
         }
 
         private void AddLapTime()
@@ -105,7 +112,7 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
 
         private bool IsNormalLapAndValidDueMinSecs
         {
-            get { return CurrentLane.Lap > -1 && SecondsSinceLastDetectedLap >= _raceSettings.SecondsForValidLap; }
+            get { return CurrentLane.Lap > -1 && SecondsSinceLastAddedLap >= _raceSettings.SecondsForValidLap; }
         }
 
         public void AddLapManually()
@@ -180,7 +187,7 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
             }
         }
 
-        internal int SecondsSinceLastDetectedLap
+        internal int SecondsSinceLastAddedLap
         {
             get
             {
@@ -188,6 +195,17 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
                 if (CurrentLane.LastTimeALapWasAdded.HasValue)
                     timespan = DateTime.Now - CurrentLane.LastTimeALapWasAdded.Value - CurrentLane.PauseTimeSpan;
                 return (int)timespan.TotalSeconds;
+            }
+        }
+
+        internal int MilliSecondsSinceLastDetection
+        {
+            get
+            {
+                TimeSpan timespan = CurrentLane.RaceTimeNet;
+                if (CurrentLane.LastTimeALapWasDetected.HasValue)
+                    timespan = DateTime.Now - CurrentLane.LastTimeALapWasDetected.Value;
+                return (int)timespan.TotalMilliseconds;
             }
         }
 

@@ -45,7 +45,7 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
             {
                 var secs = _raceSettings.SecondsForValidLap*_raceSettings.DisqualificationLapSecsFactor;
                 
-                if (_raceLaneModel.SecondsSinceLastDetectedLap > secs)
+                if (_raceLaneModel.SecondsSinceLastAddedLap > secs)
                 {
                     _timer.Stop();
                     RaiseDisqualified();                    

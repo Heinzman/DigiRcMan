@@ -17,6 +17,7 @@ using Elreg.DomainModels.RaceModel;
 using Elreg.HelperLib;
 using Elreg.Log;
 using Elreg.PortDataParser;
+using Elreg.RaceActionSpeech;
 using Elreg.RaceControlService;
 using Elreg.RaceDataService.RaceData;
 using Elreg.RaceOptionsService;
@@ -74,6 +75,7 @@ namespace Elreg.DigiRcMan.Start
                 InitBufferDescription();
                 InitActionSoundsService();
                 InitRaceActionSound();
+                InitRaceActionSpeech();
                 InitLoggerModel();
                 InitCountDownSoundHandler();
                 InitPauseSoundHandler();
@@ -191,23 +193,23 @@ namespace Elreg.DigiRcMan.Start
         {
             RfIdSettingsService = new RfIdSettingsService();
 
-            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList = new List<TagIdsOfCarId>();
-            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            {
-                CarId = 1,
-                TagIds = new List<string> { "A0 BC 30", "AA 02 02" }
-            });
-            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            {
-                CarId = 2,
-                TagIds = new List<string> { "BB 01 01", "BB 02 02" }
-            });
-            RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
-            {
-                CarId = 3,
-                TagIds = new List<string> { "CC 01 01", "CC 02 02" }
-            });
-            RfIdSettingsService.Save();
+            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList = new List<TagIdsOfCarId>(); todo
+            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            //{
+            //    CarId = 1,
+            //    TagIds = new List<string> { "E3 A0 BC 30", "AA 02 02" }
+            //});
+            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            //{
+            //    CarId = 2,
+            //    TagIds = new List<string> { "C2 BB 01 01", "BB 02 02" }
+            //});
+            //RfIdSettingsService.RfIdSettings.TagIdsOfCarIdList.Add(new TagIdsOfCarId
+            //{
+            //    CarId = 3,
+            //    TagIds = new List<string> { "AA CC 01 01", "CC 02 02" }
+            //});
+            //RfIdSettingsService.Save();
         }
 
         private void InitStatisticsService()
@@ -391,6 +393,19 @@ namespace Elreg.DigiRcMan.Start
             {
             //    if (PropertySettings.SoundActivated) todo
             //        new RaceActionSoundHandler(RaceModel, _actionSoundsService, _raceSettingsService.RaceSettings);
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.LogError(false, ex);
+            }
+        }
+
+        private void InitRaceActionSpeech()
+        {
+            try
+            {
+                if (PropertySettings.SoundActivated)
+                    new RaceActionSpeechHandler(RaceModel);
             }
             catch (Exception ex)
             {
