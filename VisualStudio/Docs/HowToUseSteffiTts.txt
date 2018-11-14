@@ -1,2 +1,3 @@
 32-Bit Version der Spracheinstellung öffnen:
 C:\Windows\sysWOW64\speech\SpeechUX\SAPI.cpl
+

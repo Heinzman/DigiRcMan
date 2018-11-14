@@ -26,7 +26,7 @@ namespace ComputerSpeechTests
         [Test]
         public async Task TestSpeakThreeSentences()
         {
-            SpeechHandler speakerHandler = new SpeechHandler(3);
+            SpeechHandler speakerHandler = new SpeechHandler();
 
             speakerHandler.AddTextToQueueAndSpeak("Heinz zweiter, 1.");
             speakerHandler.AddTextToQueueAndSpeak("Mannie erster, 20.");
@@ -38,7 +38,7 @@ namespace ComputerSpeechTests
         [Test]
         public async Task TestSpeakSixSentences()
         {
-            SpeechHandler speakerHandler = new SpeechHandler(0);
+            SpeechHandler speakerHandler = new SpeechHandler();
 
             speakerHandler.AddTextToQueueAndSpeak("Heinz zweiter, 1");
             speakerHandler.AddTextToQueueAndSpeak("Mannie erster, 20");

@@ -28,8 +28,7 @@ namespace Elreg.DigiRcMan
 
         static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Exception ex = e.ExceptionObject as Exception;
-            if (ex != null)
+            if (e.ExceptionObject is Exception ex)
                 ErrorLog.LogError(false, ex);
         }
 

@@ -17,6 +17,7 @@ using Elreg.DomainModels.RaceModel;
 using Elreg.HelperLib;
 using Elreg.Log;
 using Elreg.PortDataParser;
+using Elreg.RaceActionSound;
 using Elreg.RaceActionSpeech;
 using Elreg.RaceControlService;
 using Elreg.RaceDataService.RaceData;
@@ -418,10 +419,7 @@ namespace Elreg.DigiRcMan.Start
             try
             {
                 if (PropertySettings.SoundActivated)
-                {
-                    //CountDownSoundHandler countDownSoundHandler = new CountDownSoundHandler(RaceModel, _device, SoundMixer); todo
-                    //countDownSoundHandler.Init();
-                }
+                   new CountDownSoundHandler(RaceModel); 
             }
             catch (Exception ex)
             {

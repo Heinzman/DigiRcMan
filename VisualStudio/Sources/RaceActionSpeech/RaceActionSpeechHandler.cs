@@ -9,7 +9,7 @@ namespace Elreg.RaceActionSpeech
     public class RaceActionSpeechHandler : IRaceObserver, IRaceStatusObserver
     {
         private readonly IRaceModel _raceModel;
-        private readonly SpeechHandler _speachHandler = new SpeechHandler(5);
+        private readonly SpeechHandler _speachHandler = new SpeechHandler();
 
         public RaceActionSpeechHandler(IRaceModel raceModel)
         {
@@ -28,7 +28,7 @@ namespace Elreg.RaceActionSpeech
             Lane lane = _raceModel.RaceHandler.GetLaneById(laneId);
             if (!IsLastLap(lane))
             {
-                string textToSpeak = $"{lane.Driver.Name} {GetOrdinalPosition(lane.Position)}, {lane.Lap}.";
+                string textToSpeak = $"{lane.Driver.Name} {GetOrdinalPosition(lane.Position)} Runde {lane.Lap}";
                 _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
             }
         }

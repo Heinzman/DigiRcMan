@@ -1,21 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Elreg.ComputerSpeech
 {
     public class SpeechHandler
     {
-        private readonly int _speed;
         private readonly Queue<string> _textQueue = new Queue<string>();
         private bool _inProgress;
-
-        public SpeechHandler(int speed)
-        {
-            _speed = speed;
-        }
 
         public void AddTextToQueueAndSpeak(string textToSpeak)
         {
@@ -42,7 +34,7 @@ namespace Elreg.ComputerSpeech
         {
             return Task.Factory.StartNew(() =>
             {
-                Speech speech = new Speech(textToSpeak, _speed);
+                Speech speech = new Speech(textToSpeak, 0);
                 speech.Speak();
             });
         }

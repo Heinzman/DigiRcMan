@@ -10,7 +10,7 @@ namespace Elreg.ComputerSpeech
 
         public Speech(string textToSpeak, int speed)
         {
-            _textToSpeak = textToSpeak + ",  ,   !";
+            _textToSpeak = textToSpeak;
             _speed = speed;
             InitializeVoice();
         }
