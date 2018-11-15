@@ -50,14 +50,15 @@ void loop()
       byte rssi = nano.getTagRSSI(); //Get the RSSI for this tag read
       byte tagEPCBytes = nano.getTagEPCBytes(); //Get the number of bytes of EPC from response
 
-      byte buffer[7];
+      byte buffer[8];
       buffer[0] = 0xFF;
       buffer[1] = 0xEE;
       buffer[2] = rfidId;
       buffer[3] = rssi;
 
+      int offset = 31 + tagEPCBytes - 4;  
+                   
       for (byte i = 0; i < 4; i++) {    
-        int offset = 31 + tagEPCBytes - 3;            
         buffer[i+4] = nano.msg[offset + i];
       }       
       Serial.write(buffer, sizeof(buffer));  

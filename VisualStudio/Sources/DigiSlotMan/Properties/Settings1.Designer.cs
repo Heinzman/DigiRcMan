@@ -88,7 +88,7 @@ namespace Elreg.DigiRcMan.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseMockVcuSerialPortReader {
             get {
                 return ((bool)(this["UseMockVcuSerialPortReader"]));

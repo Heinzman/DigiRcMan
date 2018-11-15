@@ -24,7 +24,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseMockVcuSerialPortReader" Type="System.Boolean" Scope="Application">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AutoPauseAfterStart" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>

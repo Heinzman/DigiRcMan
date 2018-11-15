@@ -349,7 +349,7 @@
       <Name>WinForms Presentation Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\RaceActionSound\RaceActionSound.csproj">
-      <Project>{8D094011-C8D7-48A5-A976-6DC47978A3F7}</Project>
+      <Project>{8d094011-c8d7-48a5-a976-6dc47978a3f7}</Project>
       <Name>RaceActionSound</Name>
     </ProjectReference>
     <ProjectReference Include="..\RaceActionSpeech\RaceActionSpeech.csproj">
