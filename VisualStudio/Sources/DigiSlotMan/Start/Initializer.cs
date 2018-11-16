@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -10,7 +9,6 @@ using Catel.IoC;
 using Elreg.BusinessObjectContracts;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Options;
-using Elreg.BusinessObjects.Sound;
 using Elreg.DomainModels;
 using Elreg.DomainModels.Logs;
 using Elreg.DomainModels.RaceModel;

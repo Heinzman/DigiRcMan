@@ -75,22 +75,32 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
 
         public void CheckToAddLapWithLapTime(DateTime? timeStamp)
         {
-            if (IsLapValidDueMinSecs())
+            Debug.WriteLine($"BelongsLapDetectionToPrevious(): {BelongsLapDetectionToPrevious()}");
+            Debug.WriteLine($"IsLapValidDueMinSecs(): {IsLapValidDueMinSecs()}");
+            if (!BelongsLapDetectionToPrevious())
             {
-                if (CurrentLane.Lap >= 0)
-                    AddLapTime();
-                LapAppender.AddLapWithLapTime(timeStamp);
+                if (IsLapValidDueMinSecs())
+                {
+                    if (CurrentLane.Lap >= 0)
+                        AddLapTime();
+                    LapAppender.AddLapWithLapTime(timeStamp);
+                    CurrentLane.LastTimeALapWasDetected = DateTime.Now;
+                }
+                else
+                {
+                    RaiseEventWithLaneChanged(LapNotAddedDueMinSeconds);
+                }
             }
-            else if (!BelongsLapDetectionToPrevious())
+            else
             {
-                RaiseEventWithLaneChanged(LapNotAddedDueMinSeconds);
+                CurrentLane.LastTimeALapWasDetected = DateTime.Now;
             }
-            CurrentLane.LastTimeALapWasDetected = DateTime.Now;
         }
 
         private bool BelongsLapDetectionToPrevious()
         {
-            return MilliSecondsSinceLastDetection < _raceSettings.MilliSecForIgnoringDetections;
+            return CurrentLane.Lap >= 0 && 
+                   MilliSecondsSinceLastDetection < _raceSettings.MilliSecForIgnoringDetections;
         }
 
         private void AddLapTime()
@@ -112,7 +122,10 @@ namespace Elreg.DomainModels.RaceModel.LaneModel
 
         private bool IsNormalLapAndValidDueMinSecs
         {
-            get { return CurrentLane.Lap > -1 && SecondsSinceLastAddedLap >= _raceSettings.SecondsForValidLap; }
+            get
+            {
+                return CurrentLane.Lap > -1 && MilliSecondsSinceLastDetection >= _raceSettings.SecondsForValidLap * 1000;
+            }
         }
 
         public void AddLapManually()
