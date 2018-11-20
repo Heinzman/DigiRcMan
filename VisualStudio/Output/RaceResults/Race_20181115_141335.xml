@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RaceType>Race</RaceType>
+  <CreationDateTime>2018-11-15T14:13:35.6744684+01:00</CreationDateTime>
+  <RaceResultLanes>
+    <RaceResultLane>
+      <Id>Lane1</Id>
+      <Points>12</Points>
+      <Penalties>0</Penalties>
+      <Position>1</Position>
+      <Laps>2</Laps>
+      <BestLapTime>00:00:07.0017198</BestLapTime>
+      <Driver>
+        <SoundOptionsLap>
+          <VaryFrequency>false</VaryFrequency>
+          <Activated>false</Activated>
+          <SoundOptions />
+        </SoundOptionsLap>
+        <Name>Andreas</Name>
+        <Id>7</Id>
+        <Activated>true</Activated>
+      </Driver>
+      <Car>
+        <Id>2</Id>
+        <Name>Buggy Blue</Name>
+        <PictureFilename>\Pictures\RaceBuggyBlue.jpg</PictureFilename>
+      </Car>
+      <RaceTimeNet>00:00:00</RaceTimeNet>
+      <RaceTime>00:00:00</RaceTime>
+      <IsDisqualified>false</IsDisqualified>
+    </RaceResultLane>
+    <RaceResultLane>
+      <Id>Lane2</Id>
+      <Points>9</Points>
+      <Penalties>0</Penalties>
+      <Position>2</Position>
+      <Laps>-1</Laps>
+      <BestLapTime />
+      <Driver>
+        <SoundOptionsLap>
+          <VaryFrequency>false</VaryFrequency>
+          <Activated>true</Activated>
+          <SoundOptions>
+            <SoundOption>
+              <SoundPath>\Sounds\LapSounds\Marimba_D2.wav</SoundPath>
+              <SpecialSound>0</SpecialSound>
+            </SoundOption>
+          </SoundOptions>
+        </SoundOptionsLap>
+        <Name>Danny</Name>
+        <Id>2</Id>
+        <SoundFilename>\Sounds\Drivers\Christian.wav</SoundFilename>
+        <Activated>true</Activated>
+      </Driver>
+      <Car>
+        <Id>5</Id>
+        <Name>Truggy Black</Name>
+        <PictureFilename>\Pictures\MiniTruggyBlack.jpg</PictureFilename>
+      </Car>
+      <RaceTimeNet>00:00:00</RaceTimeNet>
+      <RaceTime>00:00:00</RaceTime>
+      <IsDisqualified>false</IsDisqualified>
+    </RaceResultLane>
+    <RaceResultLane>
+      <Id>Lane3</Id>
+      <Points>6</Points>
+      <Penalties>0</Penalties>
+      <Position>3</Position>
+      <Laps>-1</Laps>
+      <BestLapTime />
+      <Driver>
+        <SoundOptionsLap>
+          <VaryFrequency>false</VaryFrequency>
+          <Activated>true</Activated>
+          <SoundOptions>
+            <SoundOption>
+              <SoundPath>\Sounds\LapSounds\Marimba_G2.wav</SoundPath>
+              <SpecialSound>0</SpecialSound>
+            </SoundOption>
+          </SoundOptions>
+        </SoundOptionsLap>
+        <Name>Mannie</Name>
+        <Id>5</Id>
+        <SoundFilename>\Sounds\Drivers\Mannie.wav</SoundFilename>
+        <Activated>true</Activated>
+      </Driver>
+      <Car>
+        <Id>3</Id>
+        <Name>Buggy Pink</Name>
+        <PictureFilename>\Pictures\RaceBuggyPink.jpg</PictureFilename>
+      </Car>
+      <RaceTimeNet>00:00:00</RaceTimeNet>
+      <RaceTime>00:00:00</RaceTime>
+      <IsDisqualified>false</IsDisqualified>
+    </RaceResultLane>
+    <RaceResultLane>
+      <Id>Lane4</Id>
+      <Points>4</Points>
+      <Penalties>0</Penalties>
+      <Position>4</Position>
+      <Laps>-1</Laps>
+      <BestLapTime />
+      <Driver>
+        <SoundOptionsLap>
+          <VaryFrequency>false</VaryFrequency>
+          <Activated>true</Activated>
+          <SoundOptions>
+            <SoundOption>
+              <SoundPath>\Sounds\LapSounds\Marimba_C2.wav</SoundPath>
+              <SpecialSound>0</SpecialSound>
+            </SoundOption>
+          </SoundOptions>
+        </SoundOptionsLap>
+        <Name>Heinz</Name>
+        <Id>1</Id>
+        <SoundFilename>\Sounds\Drivers\Heinz.wav</SoundFilename>
+        <Activated>true</Activated>
+      </Driver>
+      <Car>
+        <Id>6</Id>
+        <Name>Truggy Blue</Name>
+        <PictureFilename>\Pictures\MiniTruggyBlue.jpg</PictureFilename>
+      </Car>
+      <RaceTimeNet>00:00:00</RaceTimeNet>
+      <RaceTime>00:00:00</RaceTime>
+      <IsDisqualified>false</IsDisqualified>
+    </RaceResultLane>
+    <RaceResultLane>
+      <Id>Lane5</Id>
+      <Points>2</Points>
+      <Penalties>0</Penalties>
+      <Position>5</Position>
+      <Laps>-1</Laps>
+      <BestLapTime />
+      <Driver>
+        <SoundOptionsLap>
+          <VaryFrequency>false</VaryFrequency>
+          <Activated>false</Activated>
+          <SoundOptions />
+        </SoundOptionsLap>
+        <Name>Tom</Name>
+        <Id>6</Id>
+        <Activated>true</Activated>
+      </Driver>
+      <Car>
+        <Id>1</Id>
+        <Name>Buggy Orange</Name>
+        <PictureFilename>\Pictures\RaceBuggyOrange.jpg</PictureFilename>
+      </Car>
+      <RaceTimeNet>00:00:00</RaceTimeNet>
+      <RaceTime>00:00:00</RaceTime>
+      <IsDisqualified>false</IsDisqualified>
+    </RaceResultLane>
+  </RaceResultLanes>
+  <Name>Race_20181115_141335</Name>
+</RaceResult>

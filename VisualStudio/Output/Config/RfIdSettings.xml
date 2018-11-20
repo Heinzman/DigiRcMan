@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RfIdSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TagIdsOfCarIdList>
+    <TagIdsOfCarId>
+      <CarId>1</CarId>
+      <TagIds>
+        <string>20 00 48 04</string>
+        <string>AA 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+    <TagIdsOfCarId>
+      <CarId>2</CarId>
+      <TagIds>
+        <string>20 00 48 22</string>
+        <string>BB 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+    <TagIdsOfCarId>
+      <CarId>3</CarId>
+      <TagIds>
+        <string>CC 01 01</string>
+        <string>CC 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+  </TagIdsOfCarIdList>
+</RfIdSettings>

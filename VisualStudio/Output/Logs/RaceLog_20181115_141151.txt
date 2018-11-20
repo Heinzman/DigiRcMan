@@ -1,0 +1,11 @@
+TimeStamp: 2018-11-15 14:12:18.320; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-15 14:12:19.907; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-15 14:12:19.925; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-15 14:12:19.926; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-15 14:12:19.984; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-15 14:12:21.338; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-15 14:12:27.584; Lap added; EventId: 5; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-15 14:12:31.204; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-15 14:12:39.470; Lap added; EventId: 5; Driver: Andreas; Laps: 1; Penalties: 0; LapTime: 12:00:11.884; Position: 1; 
+TimeStamp: 2018-11-15 14:12:46.459; Lap added; EventId: 5; Driver: Andreas; Laps: 2; Penalties: 0; LapTime: 12:00:07.001; Position: 1; 
+TimeStamp: 2018-11-15 14:13:35.622; Race Status: Stopped; EventId: 2; 

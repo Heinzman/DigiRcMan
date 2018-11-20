@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>true</IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>
+  <DescendingLapCount>false</DescendingLapCount>
+  <SecondsForValidLap>7</SecondsForValidLap>
+  <MilliSecForIgnoringDetections>500</MilliSecForIgnoringDetections>
+  <QualificationMinutes>1</QualificationMinutes>
+  <QualificationBreaks>0</QualificationBreaks>
+  <CountDownCharsAnimated>false</CountDownCharsAnimated>
+  <PauseCharsAnimated>false</PauseCharsAnimated>
+  <LapsToDrive>13</LapsToDrive>
+  <StartCountDownRaceInitNo>5</StartCountDownRaceInitNo>
+  <StartCountDownRaceActivated>true</StartCountDownRaceActivated>
+  <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
+  <RestartCountDownRaceActivated>true</RestartCountDownRaceActivated>
+  <StartCountDownQualiInitNo>3</StartCountDownQualiInitNo>
+  <StartCountDownQualiActivated>true</StartCountDownQualiActivated>
+  <RestartCountDownQualiInitNo>2</RestartCountDownQualiInitNo>
+  <RestartCountDownQualiActivated>true</RestartCountDownQualiActivated>
+  <StartCountDownTrainingInitNo>3</StartCountDownTrainingInitNo>
+  <StartCountDownTrainingActivated>true</StartCountDownTrainingActivated>
+  <RestartCountDownTrainingInitNo>2</RestartCountDownTrainingInitNo>
+  <RestartCountDownTrainingActivated>true</RestartCountDownTrainingActivated>
+  <VolumeToAddToMaxSpeed>1500</VolumeToAddToMaxSpeed>
+  <LanguageType>German</LanguageType>
+  <SplittedActionSoundsActivated>false</SplittedActionSoundsActivated>
+  <AutoDisqualificationRaceActivated>false</AutoDisqualificationRaceActivated>
+  <AutoDisqualificationRaceAfterPenalties>10</AutoDisqualificationRaceAfterPenalties>
+  <DisqualificationLapSecsActivated>false</DisqualificationLapSecsActivated>
+  <DisqualificationLapSecsFactor>16</DisqualificationLapSecsFactor>
+  <DisqualificationRaceSecsActivated>false</DisqualificationRaceSecsActivated>
+  <DisqualificationRaceSecsFactor>50</DisqualificationRaceSecsFactor>
+  <BufferBytesToCutFromActionSounds>30000</BufferBytesToCutFromActionSounds>
+  <TrackName>Track1</TrackName>
+  <EventName>2018-11-15</EventName>
+  <QualificationTimeBasedActivated>true</QualificationTimeBasedActivated>
+  <QualificationLapBasedActivated>false</QualificationLapBasedActivated>
+  <QualificationMaxLaps>5</QualificationMaxLaps>
+  <PointsForPosition1>12</PointsForPosition1>
+  <PointsForPosition2>9</PointsForPosition2>
+  <PointsForPosition3>6</PointsForPosition3>
+  <PointsForPosition4>4</PointsForPosition4>
+  <PointsForPosition5>2</PointsForPosition5>
+  <PointsForPosition6>1</PointsForPosition6>
+</RaceSettings>
