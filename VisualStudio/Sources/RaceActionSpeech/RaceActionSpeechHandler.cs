@@ -28,9 +28,18 @@ namespace Elreg.RaceActionSpeech
             Lane lane = _raceModel.RaceHandler.GetLaneById(laneId);
             if (!IsLastLap(lane))
             {
-                string textToSpeak = $"{lane.Driver.Name} {GetOrdinalPosition(lane.Position)} Runde {lane.Lap}";
+                string textToSpeak;
+                if (IsInitialLap(lane))
+                    textToSpeak = $"{lane.Driver.Name}";
+                else
+                    textToSpeak = $"{lane.Driver.Name} {lane.Lap} {GetOrdinalPosition(lane.Position)}.";
                 _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
             }
+        }
+
+        private bool IsInitialLap(Lane lane)
+        {
+            return lane.Lap == 0;
         }
 
         private bool IsLastLap(Lane lane)
