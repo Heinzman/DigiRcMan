@@ -9,13 +9,14 @@ namespace Elreg.RaceActionSpeech
     public class CountDownSpeechHandler : IRaceStatusObserver
     {
         private readonly IRaceModel _raceModel;
-        private readonly SpeechHandler _speachHandler = new SpeechHandler();
+        private readonly SpeechHandler _speachHandler;
 
         public CountDownSpeechHandler(IRaceModel raceModel)
         {
             _raceModel = raceModel;
             _raceModel.CountDownModel.CountDownChanged += CountDownModelCountDownChanged;
             AttachToModelAsObserver();
+            _speachHandler = new SpeechHandler(_raceModel.RaceSettings.SpeedOfSpeech);
         }
 
         private void AttachToModelAsObserver()

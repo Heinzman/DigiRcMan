@@ -8,6 +8,12 @@ namespace Elreg.ComputerSpeech
     {
         private readonly Queue<string> _textQueue = new Queue<string>();
         private bool _inProgress;
+        private readonly Speech _speech;
+
+        public SpeechHandler(int speed)
+        {
+            _speech = new Speech(speed);
+        }
 
         public void AddTextToQueueAndSpeak(string textToSpeak)
         {
@@ -23,10 +29,22 @@ namespace Elreg.ComputerSpeech
 
                 while (_textQueue.Count > 0)
                 {
-                    await SpeakAsync(_textQueue.Dequeue());
-                    await Task.Delay(TimeSpan.FromMilliseconds(100));
+                    await SpeakAsync(AllTextToSpeak);
                 }
                 _inProgress = false;
+            }
+        }
+
+        public string AllTextToSpeak
+        {
+            get
+            {
+                var allTextToSpeak = string.Empty;
+
+                while (_textQueue.Count > 0)
+                    allTextToSpeak += _textQueue.Dequeue();
+
+                return allTextToSpeak;
             }
         }
 
@@ -34,8 +52,7 @@ namespace Elreg.ComputerSpeech
         {
             return Task.Factory.StartNew(() =>
             {
-                Speech speech = new Speech(textToSpeak, 0);
-                speech.Speak();
+                _speech.Speak(textToSpeak);
             });
         }
 

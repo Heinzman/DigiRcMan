@@ -20,4 +20,5 @@
   <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
   <RestartCountDownRaceActivated>false</RestartCountDownRaceActivated>
   <LitresRefuelingPer100ms>2</LitresRefuelingPer100ms>
+  <SpeedOfSpeech>5</SpeedOfSpeech>
 </RaceSettings>

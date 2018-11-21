@@ -33,7 +33,7 @@
       <Name>ColumnCar</Name>
       <Position>4</Position>
       <FontSize>27.75</FontSize>
-      <Width>269</Width>
+      <Width>205</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
@@ -74,8 +74,8 @@
   </GridColumnPropertiesList>
   <HeaderHeight>23</HeaderHeight>
   <HeaderFontSize>9</HeaderFontSize>
-  <RaceStatusHeight>51</RaceStatusHeight>
+  <RaceStatusHeight>30</RaceStatusHeight>
   <RaceStatusFontSize>20.25</RaceStatusFontSize>
   <PositionFontSize>38</PositionFontSize>
-  <PositionsHeight>126</PositionsHeight>
+  <PositionsHeight>74</PositionsHeight>
 </RaceGridSettings>

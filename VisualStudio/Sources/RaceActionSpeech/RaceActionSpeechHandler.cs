@@ -9,12 +9,13 @@ namespace Elreg.RaceActionSpeech
     public class RaceActionSpeechHandler : IRaceObserver, IRaceStatusObserver
     {
         private readonly IRaceModel _raceModel;
-        private readonly SpeechHandler _speachHandler = new SpeechHandler();
+        private readonly SpeechHandler _speachHandler;
 
         public RaceActionSpeechHandler(IRaceModel raceModel)
         {
             _raceModel = raceModel;
             AttachToModelAsObserver();
+            _speachHandler = new SpeechHandler(_raceModel.RaceSettings.SpeedOfSpeech);
         }
 
         private void AttachToModelAsObserver()
@@ -28,14 +29,22 @@ namespace Elreg.RaceActionSpeech
             Lane lane = _raceModel.RaceHandler.GetLaneById(laneId);
             if (!IsLastLap(lane))
             {
-                string textToSpeak;
-                if (IsInitialLap(lane))
-                    textToSpeak = $"{lane.Driver.Name}";
-                else
-                    textToSpeak = $"{lane.Driver.Name} {lane.Lap} {GetOrdinalPosition(lane.Position)}.";
+                string textToSpeak = $"{lane.Driver.Name}";
+                if (!IsInitialLap(lane) && !lane.IsFinished)
+                {
+                    if (lane.PositionOfLastLap != lane.Position)
+                        textToSpeak += $" {GetOrdinalPosition(lane.Position)}";
+
+                    if (lane.Lap % ModuloForLapSpeech == 0)
+                        textToSpeak += $" Runde {lane.Lap}";
+                }
+                textToSpeak += ".";
+
                 _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
             }
         }
+
+        public int ModuloForLapSpeech => _raceModel.RaceSettings.ModuloForLapSpeech;
 
         private bool IsInitialLap(Lane lane)
         {

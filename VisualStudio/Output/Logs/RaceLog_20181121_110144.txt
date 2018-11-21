@@ -1,0 +1,16 @@
+TimeStamp: 2018-11-21 11:02:19.959; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 11:02:22.733; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 11:02:22.753; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 11:02:22.754; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-21 11:02:22.768; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-21 11:02:51.623; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-21 11:02:53.342; Lap added; EventId: 5; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-21 11:02:55.022; Lap added; EventId: 5; Driver: Danny; Laps: 0; Penalties: 0; LapTime: ; Position: 2; 
+TimeStamp: 2018-11-21 11:02:56.251; Lap added; EventId: 5; Driver: Mannie; Laps: 0; Penalties: 0; LapTime: ; Position: 3; 
+TimeStamp: 2018-11-21 11:02:57.156; Lap added; EventId: 5; Driver: Heinz; Laps: 0; Penalties: 0; LapTime: ; Position: 4; 
+TimeStamp: 2018-11-21 11:02:58.361; Lap added; EventId: 5; Driver: Tom; Laps: 0; Penalties: 0; LapTime: ; Position: 5; 
+TimeStamp: 2018-11-21 11:03:00.553; Lap added; EventId: 5; Driver: Andreas; Laps: 1; Penalties: 0; LapTime: 12:00:07.140; Position: 1; 
+TimeStamp: 2018-11-21 11:03:00.617; Lap added; EventId: 5; Driver: Danny; Laps: 1; Penalties: 0; LapTime: 12:00:05.596; Position: 2; 
+TimeStamp: 2018-11-21 11:03:00.715; Lap added; EventId: 5; Driver: Mannie; Laps: 1; Penalties: 0; LapTime: 12:00:04.465; Position: 3; 
+TimeStamp: 2018-11-21 11:03:00.847; Lap added; EventId: 5; Driver: Heinz; Laps: 1; Penalties: 0; LapTime: 12:00:03.690; Position: 4; 
+TimeStamp: 2018-11-21 11:03:01.055; Lap added; EventId: 5; Driver: Tom; Laps: 1; Penalties: 0; LapTime: 12:00:02.694; Position: 5; 

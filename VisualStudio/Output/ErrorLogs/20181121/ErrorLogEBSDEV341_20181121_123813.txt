@@ -1,0 +1,44 @@
+Source        : System
+TargetSite        : WinIOError
+Date        : 12:38:13
+Time        : 21.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Anschluss COM6 ist nicht vorhanden.
+Stack Trace    : bei System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   bei System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   bei System.IO.Ports.SerialPort.Open()
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.Open() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 22.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReader.Start() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 43.
+   bei Elreg.DigiRcMan.Start.Initializer.StartVcuSerialPortReader() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 305.
+^^-------------------------------------------------------------------^^
+Source        : System
+TargetSite        : WinIOError
+Date        : 12:38:17
+Time        : 21.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Anschluss COM6 ist nicht vorhanden.
+Stack Trace    : bei System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   bei System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   bei System.IO.Ports.SerialPort.Open()
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.Open() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 22.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReader.Start() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 43.
+   bei Elreg.DomainModels.RaceControl.RaceControlModel.StartAndAttachVcuSerialPortReader() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\RaceControl\RaceControlModel.cs:Zeile 182.
+^^-------------------------------------------------------------------^^
+Source        : System.Xml
+TargetSite        : Deserialize
+Date        : 12:38:21
+Time        : 21.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Fehler im XML-Dokument (19,2).
+Stack Trace    : bei System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   bei System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   bei Elreg.Serialization.ObjectXmlSerializer`1.LoadFromDocumentFormat(Type[] extraTypes, String path, IsolatedStorageFile isolatedStorageFolder) in D:\Tasks\DigiRcMan\VisualStudio\Sources\Serialization\ObjectXMLSerializer.cs:Zeile 152.
+   bei Elreg.Serialization.ObjectXmlSerializer`1.Load(String path) in D:\Tasks\DigiRcMan\VisualStudio\Sources\Serialization\ObjectXMLSerializer.cs:Zeile 19.
+   bei Elreg.WindowsFormsPresenter.GridHandler.LoadGridSettings(String xmlFileName) in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\GridHandler.cs:Zeile 168.
+^^-------------------------------------------------------------------^^

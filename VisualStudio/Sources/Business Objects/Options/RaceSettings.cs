@@ -47,7 +47,13 @@ namespace Elreg.BusinessObjects.Options
             PointsForPosition4 = 4;
             PointsForPosition5 = 2;
             PointsForPosition6 = 1;
+            SpeedOfSpeech = 0;
+            ModuloForLapSpeech = 1;
         }
+
+        public int SpeedOfSpeech { get; set; }
+
+        public int ModuloForLapSpeech { get; set; }
 
         public bool IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown { get; set; }
 

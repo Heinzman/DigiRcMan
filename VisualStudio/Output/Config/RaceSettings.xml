@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RaceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpeedOfSpeech>0</SpeedOfSpeech>
+  <ModuloForLapSpeech>1</ModuloForLapSpeech>
   <IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>true</IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>
   <DescendingLapCount>false</DescendingLapCount>
-  <SecondsForValidLap>6</SecondsForValidLap>
+  <SecondsForValidLap>2</SecondsForValidLap>
   <MilliSecForIgnoringDetections>500</MilliSecForIgnoringDetections>
   <QualificationMinutes>1</QualificationMinutes>
   <QualificationBreaks>0</QualificationBreaks>
   <CountDownCharsAnimated>false</CountDownCharsAnimated>
   <PauseCharsAnimated>false</PauseCharsAnimated>
-  <LapsToDrive>24</LapsToDrive>
+  <LapsToDrive>61</LapsToDrive>
   <StartCountDownRaceInitNo>5</StartCountDownRaceInitNo>
   <StartCountDownRaceActivated>false</StartCountDownRaceActivated>
   <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
@@ -25,14 +27,14 @@
   <LanguageType>German</LanguageType>
   <SplittedActionSoundsActivated>false</SplittedActionSoundsActivated>
   <AutoDisqualificationRaceActivated>false</AutoDisqualificationRaceActivated>
-  <AutoDisqualificationRaceAfterPenalties>9</AutoDisqualificationRaceAfterPenalties>
+  <AutoDisqualificationRaceAfterPenalties>10</AutoDisqualificationRaceAfterPenalties>
   <DisqualificationLapSecsActivated>false</DisqualificationLapSecsActivated>
   <DisqualificationLapSecsFactor>16</DisqualificationLapSecsFactor>
   <DisqualificationRaceSecsActivated>false</DisqualificationRaceSecsActivated>
   <DisqualificationRaceSecsFactor>50</DisqualificationRaceSecsFactor>
   <BufferBytesToCutFromActionSounds>30000</BufferBytesToCutFromActionSounds>
   <TrackName>Track1</TrackName>
-  <EventName>2018-11-14</EventName>
+  <EventName>2018-11-21</EventName>
   <QualificationTimeBasedActivated>true</QualificationTimeBasedActivated>
   <QualificationLapBasedActivated>false</QualificationLapBasedActivated>
   <QualificationMaxLaps>5</QualificationMaxLaps>

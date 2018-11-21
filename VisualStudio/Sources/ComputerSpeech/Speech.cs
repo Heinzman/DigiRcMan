@@ -4,25 +4,23 @@ namespace Elreg.ComputerSpeech
 {
     public class Speech
     {
-        private readonly string _textToSpeak;
         private readonly int _speed;
         private readonly SpeechSynthesizer _speechSynthesizer = new SpeechSynthesizer();
 
-        public Speech(string textToSpeak, int speed)
+        public Speech(int speed)
         {
-            _textToSpeak = textToSpeak;
             _speed = speed;
             InitializeVoice();
         }
 
-        public void Speak()
+        public void Speak(string textToSpeak)
         {
-            _speechSynthesizer.Speak(_textToSpeak);
+            _speechSynthesizer.Speak(textToSpeak);
         }
 
-        public void SpeakAsync()
+        public void SpeakAsync(string textToSpeak)
         {
-            _speechSynthesizer.SpeakAsync(_textToSpeak);
+            _speechSynthesizer.SpeakAsync(textToSpeak);
         }
 
         private void InitializeVoice()

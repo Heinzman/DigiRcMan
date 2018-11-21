@@ -7,6 +7,8 @@ namespace ComputerSpeechTests
     [TestFixture]
     public class SimpleTests
     {
+        private const int Speed = 0;
+
         [Test]
         public async void TestSpeakOneSentenceWithSpeaker()
         {
@@ -18,19 +20,22 @@ namespace ComputerSpeechTests
         [Test]
         public async void TestSpeakOneSentenceWithSpeech()
         {
-            Speech speech = new Speech("Mannie erster, 20", 0);
-            speech.Speak();
+            Speech speech = new Speech(Speed);
+            speech.Speak("Mannie erster 20.");
             await Task.Delay(5000);
         }
 
         [Test]
         public async Task TestSpeakThreeSentences()
         {
-            SpeechHandler speakerHandler = new SpeechHandler();
+            SpeechHandler speakerHandler = new SpeechHandler(Speed);
 
-            speakerHandler.AddTextToQueueAndSpeak("Heinz zweiter, 1.");
-            speakerHandler.AddTextToQueueAndSpeak("Mannie erster, 20.");
-            speakerHandler.AddTextToQueueAndSpeak("Steg dritter, 15.");
+            speakerHandler.AddTextToQueueAndSpeak("Heinz zweiter Runde 1, ");
+            speakerHandler.AddTextToQueueAndSpeak("Mannie erster Runde 20, ");
+            speakerHandler.AddTextToQueueAndSpeak("Steg dritte Runde 15, ");
+            speakerHandler.AddTextToQueueAndSpeak("Danny vierter Runde 15, ");
+            speakerHandler.AddTextToQueueAndSpeak("Christoph fünfter Runde 15, ");
+            speakerHandler.AddTextToQueueAndSpeak("Kumpe sechster Runde 15, ");
 
             await Task.Delay(20000);
         }
@@ -38,7 +43,7 @@ namespace ComputerSpeechTests
         [Test]
         public async Task TestSpeakSixSentences()
         {
-            SpeechHandler speakerHandler = new SpeechHandler();
+            SpeechHandler speakerHandler = new SpeechHandler(Speed);
 
             speakerHandler.AddTextToQueueAndSpeak("Heinz zweiter, 1");
             speakerHandler.AddTextToQueueAndSpeak("Mannie erster, 20");
