@@ -11,22 +11,29 @@
     <GridColumnProperties>
       <Name>ColumnDriver</Name>
       <Position>1</Position>
-      <FontSize>33.75</FontSize>
-      <Width>115</Width>
+      <FontSize>49.75</FontSize>
+      <Width>295</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnCar</Name>
       <Position>2</Position>
       <FontSize>8</FontSize>
-      <Width>100</Width>
+      <Width>218</Width>
       <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnCarName</Name>
+      <Position>7</Position>
+      <FontSize>8</FontSize>
+      <Width>100</Width>
+      <Visible>false</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnPoints</Name>
       <Position>3</Position>
-      <FontSize>27.75</FontSize>
-      <Width>100</Width>
+      <FontSize>72.75</FontSize>
+      <Width>149</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
@@ -34,50 +41,34 @@
       <Position>4</Position>
       <FontSize>27.75</FontSize>
       <Width>78</Width>
-      <Visible>true</Visible>
+      <Visible>false</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnBestLapTime</Name>
       <Position>5</Position>
-      <FontSize>27.75</FontSize>
-      <Width>149</Width>
+      <FontSize>63.75</FontSize>
+      <Width>391</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnPenalties</Name>
       <Position>6</Position>
       <FontSize>27.75</FontSize>
-      <Width>118</Width>
+      <Width>5</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
-      <Name>ColumnPitstops</Name>
-      <Position>7</Position>
-      <FontSize>27.75</FontSize>
-      <Width>131</Width>
-      <Visible>true</Visible>
-    </GridColumnProperties>
-    <GridColumnProperties>
-      <Name>ColumnAverageFuelConsumption</Name>
+      <Name>ColumnRaceTimeNet</Name>
       <Position>8</Position>
-      <FontSize>27.75</FontSize>
-      <Width>100</Width>
-      <Visible>true</Visible>
-    </GridColumnProperties>
-    <GridColumnProperties>
-      <Name>ColumnFuelConsumptionFactor</Name>
-      <Position>9</Position>
-      <FontSize>27.75</FontSize>
-      <Width>100</Width>
-      <Visible>true</Visible>
-    </GridColumnProperties>
-    <GridColumnProperties>
-      <Name>ColumnTankMaximumInLitres</Name>
-      <Position>10</Position>
-      <FontSize>27.75</FontSize>
-      <Width>100</Width>
+      <FontSize>65.25</FontSize>
+      <Width>443</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
   </GridColumnPropertiesList>
   <HeaderHeight>93</HeaderHeight>
+  <HeaderFontSize>8</HeaderFontSize>
+  <RaceStatusHeight>20</RaceStatusHeight>
+  <RaceStatusFontSize>8</RaceStatusFontSize>
+  <PositionFontSize>22</PositionFontSize>
+  <PositionsHeight>20</PositionsHeight>
 </RaceGridSettings>

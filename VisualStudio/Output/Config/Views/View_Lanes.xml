@@ -76,6 +76,6 @@
   <HeaderFontSize>9</HeaderFontSize>
   <RaceStatusHeight>30</RaceStatusHeight>
   <RaceStatusFontSize>20.25</RaceStatusFontSize>
-  <PositionFontSize>54</PositionFontSize>
-  <PositionsHeight>252</PositionsHeight>
+  <PositionFontSize>46</PositionFontSize>
+  <PositionsHeight>282</PositionsHeight>
 </RaceGridSettings>

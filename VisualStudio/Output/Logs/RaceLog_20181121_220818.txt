@@ -1,0 +1,14 @@
+TimeStamp: 2018-11-21 22:08:30.051; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:32.239; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:32.255; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:32.255; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:32.347; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:32.526; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-21 22:08:34.641; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:34.713; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-21 22:08:37.432; Lap added; EventId: 5; Driver: Kumpe; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-21 22:08:41.407; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-21 22:08:45.132; Lap added; EventId: 5; Driver: Heinz; Laps: 0; Penalties: 0; LapTime: ; Position: 2; 
+TimeStamp: 2018-11-21 22:08:49.138; Lap added; EventId: 5; Driver: Kumpe; Laps: 1; Penalties: 0; LapTime: 12:00:11.712; Position: 1; 
+TimeStamp: 2018-11-21 22:08:54.883; Lap added; EventId: 5; Driver: Heinz; Laps: 1; Penalties: 0; LapTime: 12:00:09.750; Position: 2; 
+TimeStamp: 2018-11-21 22:09:15.311; Race Status: Stopped; EventId: 2; 

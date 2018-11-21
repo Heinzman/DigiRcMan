@@ -5,42 +5,42 @@
       <CarId>1</CarId>
       <TagIds>
         <string>20 00 48 04</string>
-        <string>AA 02 02</string>
+        <string>20 00 47 F4</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>2</CarId>
       <TagIds>
         <string>20 00 48 22</string>
-        <string>BB 02 02</string>
+        <string>20 00 47 DC</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>3</CarId>
       <TagIds>
         <string>20 00 48 02</string>
-        <string>CC 02 02</string>
+        <string>20 00 47 F2</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>4</CarId>
       <TagIds>
         <string>20 00 48 14</string>
-        <string>CC 02 02</string>
+        <string>20 00 47 DA</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>5</CarId>
       <TagIds>
         <string>20 00 48 12</string>
-        <string>CC 02 02</string>
+        <string>20 20 44 7E</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>6</CarId>
       <TagIds>
         <string>20 00 47 CC</string>
-        <string>CC 02 02</string>
+        <string>20 20 44 80</string>
       </TagIds>
     </TagIdsOfCarId>
   </TagIdsOfCarIdList>
