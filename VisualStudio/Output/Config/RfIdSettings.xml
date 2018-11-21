@@ -4,28 +4,21 @@
     <TagIdsOfCarId>
       <CarId>1</CarId>
       <TagIds>
-        <string>E3 A0 BC 30</string>
+        <string>20 00 48 04</string>
         <string>AA 02 02</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>2</CarId>
       <TagIds>
-        <string>C2 BB 01 01</string>
+        <string>20 00 48 22</string>
         <string>BB 02 02</string>
       </TagIds>
     </TagIdsOfCarId>
     <TagIdsOfCarId>
       <CarId>3</CarId>
       <TagIds>
-        <string>AA CC 01 01</string>
-        <string>CC 02 02</string>
-      </TagIds>
-    </TagIdsOfCarId>
-    <TagIdsOfCarId>
-      <CarId>4</CarId>
-      <TagIds>
-        <string>BB BB BB BB</string>
+        <string>CC 01 01</string>
         <string>CC 02 02</string>
       </TagIds>
     </TagIdsOfCarId>

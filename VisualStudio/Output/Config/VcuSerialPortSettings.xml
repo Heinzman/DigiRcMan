@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VcuSerialPortSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <WriteTimeout>500</WriteTimeout>
-  <PortName />
+  <PortName>COM6</PortName>
   <ReadTimeout>500</ReadTimeout>
   <Handshake>None</Handshake>
   <StopBits>One</StopBits>
