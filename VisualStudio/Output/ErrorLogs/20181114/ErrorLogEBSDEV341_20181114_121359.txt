@@ -1,0 +1,27 @@
+Source        : NAudio
+TargetSite        : MFCreateSourceReaderFromURL
+Date        : 12:15:15
+Time        : 14.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Wert liegt außerhalb des erwarteten Bereichs.
+Stack Trace    : bei NAudio.MediaFoundation.MediaFoundationInterop.MFCreateSourceReaderFromURL(String pwszURL, IMFAttributes pAttributes, IMFSourceReader& ppSourceReader)
+   bei NAudio.Wave.MediaFoundationReader.CreateReader(MediaFoundationReaderSettings settings)
+   bei NAudio.Wave.MediaFoundationReader.Init(MediaFoundationReaderSettings initialSettings)
+   bei NAudio.Wave.MediaFoundationReader..ctor(String file)
+   bei NAudio.Wave.AudioFileReader.CreateReaderStream(String fileName)
+   bei NAudio.Wave.AudioFileReader..ctor(String fileName)
+   bei Elreg.SoundHandling.SoundPlayer.LoadSound() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SoundHandling\SoundPlayer.cs:Zeile 37.
+^^-------------------------------------------------------------------^^
+Source        : NAudio
+TargetSite        : Play
+Date        : 12:17:00
+Time        : 14.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Must call Init first
+Stack Trace    : bei NAudio.Wave.WaveOutEvent.Play()
+   bei Elreg.SoundHandling.SoundPlayer.Play() in D:\Tasks\DigiRcMan\VisualStudio\Sources\SoundHandling\SoundPlayer.cs:Zeile 22.
+^^-------------------------------------------------------------------^^

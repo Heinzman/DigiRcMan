@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceGridSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GridColumnPropertiesList>
+    <GridColumnProperties>
+      <Name>ColumnID</Name>
+      <Position>0</Position>
+      <FontSize>30.75</FontSize>
+      <Width>66</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnDriver</Name>
+      <Position>1</Position>
+      <FontSize>39.75</FontSize>
+      <Width>237</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnGhostcar</Name>
+      <Position>3</Position>
+      <FontSize>21.75</FontSize>
+      <Width>100</Width>
+      <Visible>false</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnCar</Name>
+      <Position>2</Position>
+      <FontSize>43.75</FontSize>
+      <Width>374</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnCarPicture</Name>
+      <Position>4</Position>
+      <FontSize>14.25</FontSize>
+      <Width>326</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+  </GridColumnPropertiesList>
+  <HeaderHeight>77</HeaderHeight>
+  <HeaderFontSize>36</HeaderFontSize>
+  <RaceStatusHeight>20</RaceStatusHeight>
+  <RaceStatusFontSize>8</RaceStatusFontSize>
+  <PositionFontSize>22</PositionFontSize>
+  <PositionsHeight>20</PositionsHeight>
+</RaceGridSettings>

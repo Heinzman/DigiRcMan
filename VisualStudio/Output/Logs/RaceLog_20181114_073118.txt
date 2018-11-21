@@ -1,0 +1,9 @@
+TimeStamp: 2018-11-14 07:31:30.240; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:31.721; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:31.746; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:31.747; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:37.438; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:48.882; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-14 07:31:54.936; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-14 07:31:55.199; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2018-11-14 07:32:02.328; Race Status: Started; EventId: 1; 

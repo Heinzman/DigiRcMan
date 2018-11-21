@@ -1,0 +1,15 @@
+TimeStamp: 2018-11-16 11:35:12.827; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-16 11:35:14.603; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-16 11:35:14.626; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-16 11:35:14.627; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-16 11:35:14.640; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-16 11:35:27.988; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-16 11:36:06.749; Lap added; EventId: 5; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-16 11:36:25.161; Lap added; EventId: 5; Driver: Danny; Laps: 0; Penalties: 0; LapTime: ; Position: 2; 
+TimeStamp: 2018-11-16 11:36:31.862; Lap added; EventId: 5; Driver: Danny; Laps: 1; Penalties: 0; LapTime: 12:00:06.645; Position: 1; 
+TimeStamp: 2018-11-16 11:36:32.755; Lap detected but not added due minimum lap time; EventId: 6; Driver: Danny; Laps: 1; Penalties: 0; LapTime: 12:00:06.645; Position: 1; 
+TimeStamp: 2018-11-16 11:36:33.726; Lap detected but not added due minimum lap time; EventId: 6; Driver: Danny; Laps: 1; Penalties: 0; LapTime: 12:00:06.645; Position: 1; 
+TimeStamp: 2018-11-16 11:36:34.424; Lap detected but not added due minimum lap time; EventId: 6; Driver: Danny; Laps: 1; Penalties: 0; LapTime: 12:00:06.645; Position: 1; 
+TimeStamp: 2018-11-16 11:36:35.126; Lap added; EventId: 5; Driver: Andreas; Laps: 1; Penalties: 0; LapTime: 12:00:28.386; Position: 2; 
+TimeStamp: 2018-11-16 11:38:01.823; Lap added; EventId: 5; Driver: Mannie; Laps: 0; Penalties: 0; LapTime: ; Position: 3; 
+TimeStamp: 2018-11-16 11:38:20.373; Lap added; EventId: 5; Driver: Heinz; Laps: 0; Penalties: 0; LapTime: ; Position: 4; 

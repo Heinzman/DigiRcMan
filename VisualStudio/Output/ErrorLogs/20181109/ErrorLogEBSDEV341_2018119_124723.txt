@@ -1,0 +1,15 @@
+Source        : mscorlib
+TargetSite        : WinIOError
+Date        : 12:58:39
+Time        : 09.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Ein Teil des Pfades "D:\Tasks\DigiRcMan\VisualStudio\Output\Championships" konnte nicht gefunden werden.
+Stack Trace    : bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   bei System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   bei System.IO.Directory.GetFiles(String path, String searchPattern)
+   bei Elreg.DomainModels.Championships.ChampionshipListModel.DetermineChampionshipFileList() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\Championships\ChampionshipListModel.cs:Zeile 18.
+   bei Elreg.WindowsFormsPresenter.ChampionshipListPresenter.FillData() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\ChampionshipListPresenter.cs:Zeile 32.
+^^-------------------------------------------------------------------^^

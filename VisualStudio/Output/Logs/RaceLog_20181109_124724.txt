@@ -1,0 +1,7 @@
+TimeStamp: 2018-11-09 12:58:00.370; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-09 12:58:02.335; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-09 12:58:02.351; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-09 12:58:02.353; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-09 12:58:02.372; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-09 12:58:05.129; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-09 12:58:36.718; Race Status: Stopped; EventId: 2; 

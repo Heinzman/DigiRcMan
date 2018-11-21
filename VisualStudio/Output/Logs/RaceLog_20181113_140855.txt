@@ -1,0 +1,17 @@
+TimeStamp: 2018-11-13 14:09:02.249; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:09:03.530; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:09:03.553; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:09:03.554; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-13 14:09:03.570; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-13 14:09:04.718; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-13 14:09:51.100; Lap added; EventId: 5; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-13 14:10:00.694; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-13 14:10:12.834; Lap added; EventId: 5; Driver: Andreas; Laps: 1; Penalties: 0; LapTime: 12:00:21.712; Position: 1; 
+TimeStamp: 2018-11-13 14:10:51.682; Lap added; EventId: 5; Driver: Andreas; Laps: 2; Penalties: 0; LapTime: 12:00:38.883; Position: 1; 
+TimeStamp: 2018-11-13 14:10:53.692; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 2; Penalties: 0; LapTime: 12:00:38.883; Position: 1; 
+TimeStamp: 2018-11-13 14:10:55.780; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 2; Penalties: 0; LapTime: 12:00:38.883; Position: 1; 
+TimeStamp: 2018-11-13 14:11:03.758; Lap added; EventId: 5; Driver: Andreas; Laps: 3; Penalties: 0; LapTime: 12:00:12.077; Position: 1; 
+TimeStamp: 2018-11-13 14:11:05.674; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 3; Penalties: 0; LapTime: 12:00:12.077; Position: 1; 
+TimeStamp: 2018-11-13 14:11:17.218; Lap added; EventId: 5; Driver: Andreas; Laps: 4; Penalties: 0; LapTime: 12:00:13.457; Position: 1; 
+TimeStamp: 2018-11-13 14:11:22.314; Lap detected but not added due minimum lap time; EventId: 6; Driver: Andreas; Laps: 4; Penalties: 0; LapTime: 12:00:13.457; Position: 1; 
+TimeStamp: 2018-11-13 14:11:32.609; Lap added; EventId: 5; Driver: Andreas; Laps: 5; Penalties: 0; LapTime: 12:00:15.394; Position: 1; 

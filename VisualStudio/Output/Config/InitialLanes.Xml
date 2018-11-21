@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfInitialLane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <InitialLane>
+    <Id>Lane1</Id>
+    <Driver>
+      <SoundOptionsLap>
+        <VaryFrequency>false</VaryFrequency>
+        <Activated>false</Activated>
+        <SoundOptions />
+      </SoundOptionsLap>
+      <Name>Andreas</Name>
+      <Id>7</Id>
+      <Activated>true</Activated>
+    </Driver>
+    <Car>
+      <Id>10</Id>
+      <Name>Drift Silver</Name>
+      <PictureFilename>\Pictures\Drift_Silver.jpg</PictureFilename>
+    </Car>
+  </InitialLane>
+  <InitialLane>
+    <Id>Lane2</Id>
+    <Driver>
+      <SoundOptionsLap>
+        <VaryFrequency>false</VaryFrequency>
+        <Activated>true</Activated>
+        <SoundOptions>
+          <SoundOption>
+            <SoundPath>\Sounds\LapSounds\Marimba_D2.wav</SoundPath>
+            <SpecialSound>0</SpecialSound>
+          </SoundOption>
+        </SoundOptions>
+      </SoundOptionsLap>
+      <Name>Danny</Name>
+      <Id>2</Id>
+      <SoundFilename>\Sounds\Drivers\Christian.wav</SoundFilename>
+      <Activated>true</Activated>
+    </Driver>
+    <Car>
+      <Id>8</Id>
+      <Name>Drift Red</Name>
+      <PictureFilename>\Pictures\Drift_Red.jpg</PictureFilename>
+    </Car>
+  </InitialLane>
+  <InitialLane>
+    <Id>Lane3</Id>
+    <Driver>
+      <SoundOptionsLap>
+        <VaryFrequency>false</VaryFrequency>
+        <Activated>true</Activated>
+        <SoundOptions>
+          <SoundOption>
+            <SoundPath>\Sounds\LapSounds\Marimba_G2.wav</SoundPath>
+            <SpecialSound>0</SpecialSound>
+          </SoundOption>
+        </SoundOptions>
+      </SoundOptionsLap>
+      <Name>Mannie</Name>
+      <Id>5</Id>
+      <SoundFilename>\Sounds\Drivers\Mannie.wav</SoundFilename>
+      <Activated>true</Activated>
+    </Driver>
+    <Car>
+      <Id>9</Id>
+      <Name>Drift Red Yellow</Name>
+      <PictureFilename>\Pictures\Drift_Red_YellowStriped.jpg</PictureFilename>
+    </Car>
+  </InitialLane>
+  <InitialLane>
+    <Id>Lane4</Id>
+    <Driver>
+      <SoundOptionsLap>
+        <VaryFrequency>false</VaryFrequency>
+        <Activated>true</Activated>
+        <SoundOptions>
+          <SoundOption>
+            <SoundPath>\Sounds\LapSounds\Marimba_C2.wav</SoundPath>
+            <SpecialSound>0</SpecialSound>
+          </SoundOption>
+        </SoundOptions>
+      </SoundOptionsLap>
+      <Name>Heinz</Name>
+      <Id>1</Id>
+      <SoundFilename>\Sounds\Drivers\Heinz.wav</SoundFilename>
+      <Activated>true</Activated>
+    </Driver>
+    <Car>
+      <Id>7</Id>
+      <Name>Drift Green</Name>
+      <PictureFilename>\Pictures\Drift_Green.jpg</PictureFilename>
+    </Car>
+  </InitialLane>
+  <InitialLane>
+    <Id>Lane5</Id>
+    <Driver>
+      <SoundOptionsLap>
+        <VaryFrequency>false</VaryFrequency>
+        <Activated>false</Activated>
+        <SoundOptions />
+      </SoundOptionsLap>
+      <Name>Tom</Name>
+      <Id>6</Id>
+      <Activated>true</Activated>
+    </Driver>
+    <Car>
+      <Id>11</Id>
+      <Name>Drift Silver Blue</Name>
+      <PictureFilename>\Pictures\Drift_Silver_BlueStriped.jpg</PictureFilename>
+    </Car>
+  </InitialLane>
+  <InitialLane>
+    <Id>Lane6</Id>
+  </InitialLane>
+</ArrayOfInitialLane>

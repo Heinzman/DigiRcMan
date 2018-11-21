@@ -1,0 +1,83 @@
+Source        : mscorlib
+TargetSite        : WinIOError
+Date        : 13:24:56
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Die Datei "D:\Tasks\DigiRcMan\VisualStudio\Output\Statistics\StatisticLog.txt" konnte nicht gefunden werden.
+Stack Trace    : bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   bei System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   bei Elreg.RaceStatisticsService.StatisticParser.CopyFile() in D:\Tasks\DigiRcMan\VisualStudio\Sources\RaceStatisticsService\StatisticParser.cs:Zeile 43.
+   bei Elreg.RaceStatisticsService.StatisticParser.DoWork() in D:\Tasks\DigiRcMan\VisualStudio\Sources\RaceStatisticsService\StatisticParser.cs:Zeile 22.
+   bei Elreg.DomainModels.StatisticsModel.ParseStatisticLog() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\StatisticsModel.cs:Zeile 36.
+   bei Elreg.DomainModels.StatisticsModel..ctor(StatisticLogger statisticLogger) in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\StatisticsModel.cs:Zeile 30.
+   bei Elreg.WindowsFormsPresenter.StatisticsPresenter..ctor(IStatisticsView statisticsView, StatisticLogger statisticLogger, RaceSettings raceSettings) in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\StatisticsPresenter.cs:Zeile 29.
+^^-------------------------------------------------------------------^^
+Source        : WindowsFormsPresenter
+TargetSite        : FillComboBoxes
+Date        : 13:24:56
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+Stack Trace    : bei Elreg.WindowsFormsPresenter.StatisticsPresenter.FillComboBoxes() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\StatisticsPresenter.cs:Zeile 144.
+   bei Elreg.WindowsFormsPresenter.StatisticsPresenter.FillStaticData() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\StatisticsPresenter.cs:Zeile 82.
+^^-------------------------------------------------------------------^^
+Source        : WindowsFormsPresenter
+TargetSite        : CalcAndFillStatisticResult
+Date        : 13:24:56
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+Stack Trace    : bei Elreg.WindowsFormsPresenter.StatisticsPresenter.CalcAndFillStatisticResult() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\StatisticsPresenter.cs:Zeile 43.
+^^-------------------------------------------------------------------^^
+Source        : mscorlib
+TargetSite        : WinIOError
+Date        : 13:25:03
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Ein Teil des Pfades "D:\Tasks\DigiRcMan\VisualStudio\Output\Championships" konnte nicht gefunden werden.
+Stack Trace    : bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   bei System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   bei System.IO.Directory.GetFiles(String path, String searchPattern)
+   bei Elreg.DomainModels.Championships.ChampionshipListModel.DetermineChampionshipFileList() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\Championships\ChampionshipListModel.cs:Zeile 18.
+   bei Elreg.WindowsFormsPresenter.ChampionshipListPresenter.FillData() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\ChampionshipListPresenter.cs:Zeile 32.
+^^-------------------------------------------------------------------^^
+Source        : mscorlib
+TargetSite        : WinIOError
+Date        : 13:25:07
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Ein Teil des Pfades "D:\Tasks\DigiRcMan\VisualStudio\Output\RaceResults" konnte nicht gefunden werden.
+Stack Trace    : bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   bei System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   bei System.IO.Directory.GetFiles(String path, String searchPattern)
+   bei Elreg.DomainModels.RaceResultsListModel.DetermineRaceResultsFileList() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\RaceResultsListModel.cs:Zeile 13.
+   bei Elreg.WindowsFormsPresenter.RaceResultsListPresenter.FillData() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\RaceResultsListPresenter.cs:Zeile 37.
+^^-------------------------------------------------------------------^^
+Source        : mscorlib
+TargetSite        : WinIOError
+Date        : 13:25:09
+Time        : 08.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Ein Teil des Pfades "D:\Tasks\DigiRcMan\VisualStudio\Output\RaceResults" konnte nicht gefunden werden.
+Stack Trace    : bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   bei System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   bei System.IO.Directory.GetFiles(String path, String searchPattern)
+   bei Elreg.DomainModels.RaceResultsListModel.DetermineRaceResultsFileList() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Domain Models\RaceResultsListModel.cs:Zeile 13.
+   bei Elreg.WindowsFormsPresenter.RaceResultsListPresenter.FillData() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Presenter\RaceResultsListPresenter.cs:Zeile 37.
+^^-------------------------------------------------------------------^^

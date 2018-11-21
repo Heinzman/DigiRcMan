@@ -1,0 +1,9 @@
+TimeStamp: 2018-11-13 07:50:48.018; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 07:50:49.821; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 07:50:49.841; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 07:50:49.843; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-13 07:50:49.857; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-13 07:50:51.698; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-13 07:50:56.458; Penalty added; EventId: 8; Driver: Andreas; Laps: -1; Penalties: 1; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-13 07:51:03.097; Penalty added; EventId: 8; Driver: Danny; Laps: -1; Penalties: 1; LapTime: ; Position: 2; 
+TimeStamp: 2018-11-13 07:51:04.004; Penalty added; EventId: 8; Driver: Danny; Laps: -1; Penalties: 2; LapTime: ; Position: 2; 

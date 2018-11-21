@@ -1,0 +1,11 @@
+TimeStamp: 2018-11-13 14:23:04.874; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:23:41.566; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:23:41.589; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2018-11-13 14:23:41.590; Race Status: Started; EventId: 1; 
+TimeStamp: 2018-11-13 14:23:41.603; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2018-11-13 14:23:43.696; Race Status: Restarted; EventId: 10; 
+TimeStamp: 2018-11-13 14:23:49.126; Lap added; EventId: 5; Driver: Andreas; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2018-11-13 14:23:58.703; Lap added; EventId: 5; Driver: Heinz; Laps: 0; Penalties: 0; LapTime: ; Position: 2; 
+TimeStamp: 2018-11-13 14:24:10.598; Lap added; EventId: 5; Driver: Heinz; Laps: 1; Penalties: 0; LapTime: 12:00:11.882; Position: 1; 
+TimeStamp: 2018-11-13 14:24:21.483; Lap added; EventId: 5; Driver: Heinz; Laps: 2; Penalties: 0; LapTime: 12:00:10.898; Position: 1; 
+TimeStamp: 2018-11-13 14:25:21.949; Lap added; EventId: 5; Driver: Heinz; Laps: 3; Penalties: 0; LapTime: 12:01:00.467; Position: 1; 

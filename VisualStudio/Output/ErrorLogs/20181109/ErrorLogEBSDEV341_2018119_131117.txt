@@ -1,0 +1,41 @@
+Source        : System
+TargetSite        : set_PortName
+Date        : 13:11:18
+Time        : 09.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der PortName darf nicht leer sein.
+Parametername: PortName
+Stack Trace    : bei System.IO.Ports.SerialPort.set_PortName(String value)
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.set_PortName(String value) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 42.
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.Assign(SerialPortSettings serialPortSettings) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 65.
+   bei Elreg.DigiRcMan.Start.SerialPortCreator.CreateSerialPortEventBased() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\SerialPortCreator.cs:Zeile 28.
+   bei Elreg.DigiRcMan.Start.SerialPortCreator.DoWork() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\SerialPortCreator.cs:Zeile 21.
+   bei Elreg.DigiRcMan.Start.Initializer.InitVcuSerialPort() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 272.
+^^-------------------------------------------------------------------^^
+Source        : SerialPortReader
+TargetSite        : .ctor
+Date        : 13:11:35
+Time        : 09.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+Stack Trace    : bei Elreg.SerialPortReader.SerialPortReaders.PortReader..ctor(ISerialPort serialPort) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 26.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReaderWriter..ctor(ISerialPort serialPort) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReaderWriter.cs:Zeile 12.
+   bei Elreg.DigiRcMan.Start.Initializer.InitVcuSerialPortReaderWriter() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 285.
+^^-------------------------------------------------------------------^^
+Source        : PortDataParser
+TargetSite        : .ctor
+Date        : 13:11:37
+Time        : 09.11.2018
+Computer    : EBSDEV341
+NT-UserID    : EBASE\mpicay5
+App-UserID    : mpicay5
+Error        : Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+Stack Trace    : bei Elreg.PortDataParser.RfIdSerialPortParser..ctor(ISerialPortReader portReader, RfIdSettings rfIdSettings) in D:\Tasks\DigiRcMan\VisualStudio\Sources\PortDataParser\RfIdSerialPortParser.cs:Zeile 61.
+   bei Elreg.DigiRcMan.Start.Initializer.CreateSerialPortParser() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 344.
+   bei Elreg.DigiRcMan.Start.Initializer.Init() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 177.
+   bei Elreg.DigiRcMan.Start.Initializer.StartApp() in D:\Tasks\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 70.
+^^-------------------------------------------------------------------^^

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceProviderOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MillisecsPressedToDetectPitstopIn>400</MillisecsPressedToDetectPitstopIn>
+  <MillisecsPressedSinglePeriodForPenalty>500</MillisecsPressedSinglePeriodForPenalty>
+  <MillisecsPressedSinglePeriodForRocketLaunch>300</MillisecsPressedSinglePeriodForRocketLaunch>
+  <MillisecsPitstopNotZeroTolerance>200</MillisecsPitstopNotZeroTolerance>
+  <SpeedToDetectPitstopOut>3</SpeedToDetectPitstopOut>
+  <SpeedToDetectFalseStart>3</SpeedToDetectFalseStart>
+  <NumberOfClicksForPenalty>3</NumberOfClicksForPenalty>
+</RaceProviderOptions>
