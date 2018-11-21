@@ -3,33 +3,11 @@
   <Driver>
     <SoundOptionsLap>
       <VaryFrequency>false</VaryFrequency>
-      <Activated>true</Activated>
-      <SoundOptions>
-        <SoundOption>
-          <SoundPath>\Sounds\LapSounds\Marimba_C2.wav</SoundPath>
-          <SpecialSound>0</SpecialSound>
-        </SoundOption>
-      </SoundOptions>
+      <Activated>false</Activated>
+      <SoundOptions />
     </SoundOptionsLap>
-    <Name>Heinz</Name>
-    <Id>1</Id>
-    <SoundFilename>\Sounds\Drivers\Heinz.wav</SoundFilename>
-    <Activated>true</Activated>
-  </Driver>
-  <Driver>
-    <SoundOptionsLap>
-      <VaryFrequency>false</VaryFrequency>
-      <Activated>true</Activated>
-      <SoundOptions>
-        <SoundOption>
-          <SoundPath>\Sounds\LapSounds\Marimba_D2.wav</SoundPath>
-          <SpecialSound>0</SpecialSound>
-        </SoundOption>
-      </SoundOptions>
-    </SoundOptionsLap>
-    <Name>Danny</Name>
-    <Id>2</Id>
-    <SoundFilename>\Sounds\Drivers\Christian.wav</SoundFilename>
+    <Name>Andreas</Name>
+    <Id>7</Id>
     <Activated>true</Activated>
   </Driver>
   <Driver>
@@ -54,14 +32,30 @@
       <Activated>true</Activated>
       <SoundOptions>
         <SoundOption>
-          <SoundPath>\Sounds\LapSounds\Marimba_E2.wav</SoundPath>
+          <SoundPath>\Sounds\LapSounds\Marimba_D2.wav</SoundPath>
           <SpecialSound>0</SpecialSound>
         </SoundOption>
       </SoundOptions>
     </SoundOptionsLap>
-    <Name>Uwe</Name>
-    <Id>4</Id>
-    <SoundFilename>\Sounds\Drivers\Uwe.wav</SoundFilename>
+    <Name>Steg</Name>
+    <Id>2</Id>
+    <SoundFilename>\Sounds\Drivers\Christian.wav</SoundFilename>
+    <Activated>true</Activated>
+  </Driver>
+  <Driver>
+    <SoundOptionsLap>
+      <VaryFrequency>false</VaryFrequency>
+      <Activated>true</Activated>
+      <SoundOptions>
+        <SoundOption>
+          <SoundPath>\Sounds\LapSounds\Marimba_C2.wav</SoundPath>
+          <SpecialSound>0</SpecialSound>
+        </SoundOption>
+      </SoundOptions>
+    </SoundOptionsLap>
+    <Name>Heinz</Name>
+    <Id>1</Id>
+    <SoundFilename>\Sounds\Drivers\Heinz.wav</SoundFilename>
     <Activated>true</Activated>
   </Driver>
   <Driver>
@@ -93,11 +87,37 @@
   <Driver>
     <SoundOptionsLap>
       <VaryFrequency>false</VaryFrequency>
+      <Activated>true</Activated>
+      <SoundOptions>
+        <SoundOption>
+          <SoundPath>\Sounds\LapSounds\Marimba_E2.wav</SoundPath>
+          <SpecialSound>0</SpecialSound>
+        </SoundOption>
+      </SoundOptions>
+    </SoundOptionsLap>
+    <Name>Uwe</Name>
+    <Id>4</Id>
+    <SoundFilename>\Sounds\Drivers\Uwe.wav</SoundFilename>
+    <Activated>true</Activated>
+  </Driver>
+  <Driver>
+    <SoundOptionsLap>
+      <VaryFrequency>false</VaryFrequency>
       <Activated>false</Activated>
       <SoundOptions />
     </SoundOptionsLap>
-    <Name>Andreas</Name>
-    <Id>7</Id>
+    <Name>Kumpe</Name>
+    <Id>8</Id>
+    <Activated>true</Activated>
+  </Driver>
+  <Driver>
+    <SoundOptionsLap>
+      <VaryFrequency>false</VaryFrequency>
+      <Activated>false</Activated>
+      <SoundOptions />
+    </SoundOptionsLap>
+    <Name>Christoph</Name>
+    <Id>9</Id>
     <Activated>true</Activated>
   </Driver>
 </ArrayOfDriver>

@@ -18,7 +18,28 @@
     <TagIdsOfCarId>
       <CarId>3</CarId>
       <TagIds>
-        <string>CC 01 01</string>
+        <string>20 00 48 02</string>
+        <string>CC 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+    <TagIdsOfCarId>
+      <CarId>4</CarId>
+      <TagIds>
+        <string>20 00 48 14</string>
+        <string>CC 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+    <TagIdsOfCarId>
+      <CarId>5</CarId>
+      <TagIds>
+        <string>20 00 48 12</string>
+        <string>CC 02 02</string>
+      </TagIds>
+    </TagIdsOfCarId>
+    <TagIdsOfCarId>
+      <CarId>6</CarId>
+      <TagIds>
+        <string>20 00 47 CC</string>
         <string>CC 02 02</string>
       </TagIds>
     </TagIdsOfCarId>

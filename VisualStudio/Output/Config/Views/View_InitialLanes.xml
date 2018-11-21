@@ -4,63 +4,43 @@
     <GridColumnProperties>
       <Name>ColumnID</Name>
       <Position>0</Position>
-      <FontSize>30.75</FontSize>
+      <FontSize>27.75</FontSize>
       <Width>66</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnDriver</Name>
       <Position>1</Position>
-      <FontSize>39.75</FontSize>
-      <Width>237</Width>
+      <FontSize>27.75</FontSize>
+      <Width>172</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
-<<<<<<< HEAD
       <Name>ColumnGhostcar</Name>
-      <Position>3</Position>
+      <Position>2</Position>
       <FontSize>21.75</FontSize>
       <Width>100</Width>
       <Visible>false</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
-=======
->>>>>>> 393def5d99c32daf53d553603b32a6a931b77f1e
       <Name>ColumnCar</Name>
-      <Position>2</Position>
-      <FontSize>43.75</FontSize>
-      <Width>374</Width>
-      <Visible>true</Visible>
-    </GridColumnProperties>
-    <GridColumnProperties>
-<<<<<<< HEAD
-      <Name>ColumnCarPicture</Name>
-      <Position>4</Position>
-      <FontSize>14.25</FontSize>
-      <Width>326</Width>
-=======
-      <Name>ColumnFuelConsumptionFactor</Name>
       <Position>3</Position>
       <FontSize>27.75</FontSize>
-      <Width>100</Width>
+      <Width>290</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
-      <Name>ColumnTankMaximumInLitres</Name>
+      <Name>ColumnCarPicture</Name>
       <Position>4</Position>
-      <FontSize>27.75</FontSize>
-      <Width>100</Width>
->>>>>>> 393def5d99c32daf53d553603b32a6a931b77f1e
+      <FontSize>8</FontSize>
+      <Width>346</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
   </GridColumnPropertiesList>
   <HeaderHeight>77</HeaderHeight>
-<<<<<<< HEAD
-  <HeaderFontSize>36</HeaderFontSize>
+  <HeaderFontSize>21.75</HeaderFontSize>
   <RaceStatusHeight>20</RaceStatusHeight>
   <RaceStatusFontSize>8</RaceStatusFontSize>
   <PositionFontSize>22</PositionFontSize>
   <PositionsHeight>20</PositionsHeight>
-=======
->>>>>>> 393def5d99c32daf53d553603b32a6a931b77f1e
 </RaceGridSettings>

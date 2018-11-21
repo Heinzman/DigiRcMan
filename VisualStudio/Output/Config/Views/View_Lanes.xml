@@ -4,15 +4,15 @@
     <GridColumnProperties>
       <Name>ColumnID</Name>
       <Position>0</Position>
-      <FontSize>27.75</FontSize>
+      <FontSize>54.75</FontSize>
       <Width>66</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnDriver</Name>
       <Position>1</Position>
-      <FontSize>27.75</FontSize>
-      <Width>115</Width>
+      <FontSize>70.75</FontSize>
+      <Width>368</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
@@ -20,41 +20,41 @@
       <Position>2</Position>
       <FontSize>26.25</FontSize>
       <Width>100</Width>
-      <Visible>true</Visible>
+      <Visible>false</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnLapCount</Name>
       <Position>3</Position>
-      <FontSize>27.75</FontSize>
-      <Width>78</Width>
+      <FontSize>83.75</FontSize>
+      <Width>183</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnCar</Name>
       <Position>4</Position>
       <FontSize>27.75</FontSize>
-      <Width>205</Width>
+      <Width>240</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnPosition</Name>
       <Position>5</Position>
-      <FontSize>27.75</FontSize>
-      <Width>65</Width>
+      <FontSize>86.75</FontSize>
+      <Width>130</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnBestLapTime</Name>
       <Position>6</Position>
-      <FontSize>27.75</FontSize>
-      <Width>192</Width>
+      <FontSize>56.75</FontSize>
+      <Width>283</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnLapTime</Name>
       <Position>7</Position>
-      <FontSize>27.75</FontSize>
-      <Width>132</Width>
+      <FontSize>59.75</FontSize>
+      <Width>368</Width>
       <Visible>true</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
@@ -62,20 +62,20 @@
       <Position>8</Position>
       <FontSize>26.25</FontSize>
       <Width>100</Width>
-      <Visible>true</Visible>
+      <Visible>false</Visible>
     </GridColumnProperties>
     <GridColumnProperties>
       <Name>ColumnStatus</Name>
       <Position>9</Position>
       <FontSize>8</FontSize>
       <Width>100</Width>
-      <Visible>true</Visible>
+      <Visible>false</Visible>
     </GridColumnProperties>
   </GridColumnPropertiesList>
   <HeaderHeight>23</HeaderHeight>
   <HeaderFontSize>9</HeaderFontSize>
   <RaceStatusHeight>30</RaceStatusHeight>
   <RaceStatusFontSize>20.25</RaceStatusFontSize>
-  <PositionFontSize>38</PositionFontSize>
-  <PositionsHeight>74</PositionsHeight>
+  <PositionFontSize>54</PositionFontSize>
+  <PositionsHeight>252</PositionsHeight>
 </RaceGridSettings>

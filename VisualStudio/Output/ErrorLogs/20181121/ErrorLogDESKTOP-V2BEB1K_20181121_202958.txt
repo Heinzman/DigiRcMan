@@ -1,0 +1,14 @@
+Source        : System
+TargetSite        : set_PortName
+Date        : 20:55:02
+Time        : 21.11.2018
+Computer    : DESKTOP-V2BEB1K
+NT-UserID    : DESKTOP-V2BEB1K\Heinz
+App-UserID    : Heinz
+Error        : PortName kann nicht bei geöffnetem Anschluss festgelegt werden.
+Stack Trace    : bei System.IO.Ports.SerialPort.set_PortName(String value)
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.set_PortName(String value) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 45.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReader.set_PortName(String value) in D:\Tasks\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 80.
+   bei Elreg.WindowsFormsApplication.Forms.VcuSettingsForm.SetPortReaderAttributes() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Application\Forms\VcuSettingsForm.cs:Zeile 192.
+   bei Elreg.WindowsFormsApplication.Forms.VcuSettingsForm.StartPortReader() in D:\Tasks\DigiRcMan\VisualStudio\Sources\Windows Forms Application\Forms\VcuSettingsForm.cs:Zeile 174.
+^^-------------------------------------------------------------------^^

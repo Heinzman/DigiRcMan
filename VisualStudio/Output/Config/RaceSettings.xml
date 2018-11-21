@@ -12,9 +12,9 @@
   <PauseCharsAnimated>false</PauseCharsAnimated>
   <LapsToDrive>61</LapsToDrive>
   <StartCountDownRaceInitNo>5</StartCountDownRaceInitNo>
-  <StartCountDownRaceActivated>false</StartCountDownRaceActivated>
+  <StartCountDownRaceActivated>true</StartCountDownRaceActivated>
   <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
-  <RestartCountDownRaceActivated>false</RestartCountDownRaceActivated>
+  <RestartCountDownRaceActivated>true</RestartCountDownRaceActivated>
   <StartCountDownQualiInitNo>3</StartCountDownQualiInitNo>
   <StartCountDownQualiActivated>true</StartCountDownQualiActivated>
   <RestartCountDownQualiInitNo>2</RestartCountDownQualiInitNo>
