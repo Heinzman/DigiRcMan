@@ -38,7 +38,7 @@ namespace Elreg.RaceActionSpeech
                     if (lane.Lap % ModuloForLapSpeech == 0)
                         textToSpeak += $" Runde {lane.Lap}";
                 }
-                textToSpeak += ".";
+                textToSpeak += " ";
 
                 _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
             }

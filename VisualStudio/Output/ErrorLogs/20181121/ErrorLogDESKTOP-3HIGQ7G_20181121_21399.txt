@@ -1,0 +1,30 @@
+Source        : System
+TargetSite        : WinIOError
+Date        : 21:39:11
+Time        : 21.11.2018
+Computer    : DESKTOP-3HIGQ7G
+NT-UserID    : DESKTOP-3HIGQ7G\Heinz
+App-UserID    : Heinz
+Error        : Der Anschluss COM9 ist nicht vorhanden.
+Stack Trace    : bei System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   bei System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   bei System.IO.Ports.SerialPort.Open()
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.Open() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 22.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReader.Start() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 43.
+   bei Elreg.DigiRcMan.Start.Initializer.StartVcuSerialPortReader() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\DigiSlotMan\Start\Initializer.cs:Zeile 305.
+^^-------------------------------------------------------------------^^
+Source        : System
+TargetSite        : WinIOError
+Date        : 21:39:15
+Time        : 21.11.2018
+Computer    : DESKTOP-3HIGQ7G
+NT-UserID    : DESKTOP-3HIGQ7G\Heinz
+App-UserID    : Heinz
+Error        : Der Anschluss COM9 ist nicht vorhanden.
+Stack Trace    : bei System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   bei System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   bei System.IO.Ports.SerialPort.Open()
+   bei Elreg.SerialPortReader.SerialPorts.SerialPortFacade.Open() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPorts\SerialPortFacade.cs:Zeile 22.
+   bei Elreg.SerialPortReader.SerialPortReaders.PortReader.Start() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\SerialPortReader\SerialPortReaders\PortReader.cs:Zeile 43.
+   bei Elreg.DomainModels.RaceControl.RaceControlModel.StartAndAttachVcuSerialPortReader() in D:\Entwicklung\DigiRcMan\VisualStudio\Sources\Domain Models\RaceControl\RaceControlModel.cs:Zeile 182.
+^^-------------------------------------------------------------------^^
