@@ -310,10 +310,6 @@ namespace Elreg.DigiRcMan.Start
                     serialPortMockForm.Show();
                 }
             }
-            catch (IOException ex)
-            {
-                ErrorLog.LogError(true, ex);
-            }
             catch (Exception ex)
             {
                 ErrorLog.LogError(false, ex);

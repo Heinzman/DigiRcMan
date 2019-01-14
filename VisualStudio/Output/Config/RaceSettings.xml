@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RaceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SpeedOfSpeech>0</SpeedOfSpeech>
-  <ModuloForLapSpeech>5</ModuloForLapSpeech>
+  <ModuloForLapCountSpeech>500</ModuloForLapCountSpeech>
+  <IsUserSpeechForEveryLapActivated>false</IsUserSpeechForEveryLapActivated>
   <IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>true</IsAllowedPenaltyAdditionByThreeClicksOnlyInPauseOrCountDown>
   <DescendingLapCount>false</DescendingLapCount>
-  <SecondsForValidLap>5</SecondsForValidLap>
+  <SecondsForValidLap>2</SecondsForValidLap>
   <MilliSecForIgnoringDetections>2000</MilliSecForIgnoringDetections>
   <QualificationMinutes>1</QualificationMinutes>
   <QualificationBreaks>0</QualificationBreaks>
   <CountDownCharsAnimated>false</CountDownCharsAnimated>
   <PauseCharsAnimated>false</PauseCharsAnimated>
-  <LapsToDrive>50</LapsToDrive>
+  <LapsToDrive>3</LapsToDrive>
   <StartCountDownRaceInitNo>5</StartCountDownRaceInitNo>
-  <StartCountDownRaceActivated>true</StartCountDownRaceActivated>
+  <StartCountDownRaceActivated>false</StartCountDownRaceActivated>
   <RestartCountDownRaceInitNo>5</RestartCountDownRaceInitNo>
-  <RestartCountDownRaceActivated>true</RestartCountDownRaceActivated>
+  <RestartCountDownRaceActivated>false</RestartCountDownRaceActivated>
   <StartCountDownQualiInitNo>3</StartCountDownQualiInitNo>
   <StartCountDownQualiActivated>true</StartCountDownQualiActivated>
   <RestartCountDownQualiInitNo>2</RestartCountDownQualiInitNo>

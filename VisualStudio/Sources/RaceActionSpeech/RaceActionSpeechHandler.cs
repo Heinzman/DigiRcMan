@@ -29,22 +29,32 @@ namespace Elreg.RaceActionSpeech
             Lane lane = _raceModel.RaceHandler.GetLaneById(laneId);
             if (!IsLastLap(lane))
             {
+                bool shouldSpeak = false;
                 string textToSpeak = $"{lane.Driver.Name}";
+
                 if (!IsInitialLap(lane) && !lane.IsFinished)
                 {
                     if (lane.PositionOfLastLap != lane.Position)
+                    {
                         textToSpeak += $" {GetOrdinalPosition(lane.Position)}";
-
+                        shouldSpeak = true;
+                    }
                     if (lane.Lap % ModuloForLapSpeech == 0)
+                    {
                         textToSpeak += $" Runde {lane.Lap}";
+                        shouldSpeak = true;
+                    }
+                    if (_raceModel.RaceSettings.IsUserSpeechForEveryLapActivated)
+                        shouldSpeak = true;
                 }
                 textToSpeak += " ";
 
-                _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
+                if (shouldSpeak)
+                    _speachHandler.AddTextToQueueAndSpeak(textToSpeak);
             }
         }
 
-        public int ModuloForLapSpeech => _raceModel.RaceSettings.ModuloForLapSpeech;
+        public int ModuloForLapSpeech => _raceModel.RaceSettings.ModuloForLapCountSpeech;
 
         private bool IsInitialLap(Lane lane)
         {
@@ -100,39 +110,11 @@ namespace Elreg.RaceActionSpeech
         {
             string ordinalPositionText;
 
-            switch (position)
-            {
-                case 1:
-                    ordinalPositionText = "hat gewonnen";
-                    break;
-                case 2:
-                    ordinalPositionText = "ist zweiter";
-                    break;
-                case 3:
-                    ordinalPositionText = "ist dritter";
-                    break;
-                case 4:
-                    ordinalPositionText = "ist vierter";
-                    break;
-                case 5:
-                    ordinalPositionText = "ist fünfter";
-                    break;
-                case 6:
-                    ordinalPositionText = "ist sechster";
-                    break;
-                case 7:
-                    ordinalPositionText = "ist siebter";
-                    break;
-                case 8:
-                    ordinalPositionText = "ist achter";
-                    break;
-                case 9:
-                    ordinalPositionText = "ist neunter";
-                    break;
-                default:
-                    ordinalPositionText = "ist " + position + "ter";
-                    break;
-            }
+            if (position == 1)
+                ordinalPositionText = "hat gewonnen";
+            else
+                ordinalPositionText = $"ist {GetOrdinalPosition(position)} Sieger";
+
             return ordinalPositionText;
         }
 

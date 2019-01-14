@@ -1,0 +1,13 @@
+TimeStamp: 2019-01-14 12:48:14.422; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:15.970; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:15.989; Race Status: Initialized; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:15.990; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:16.093; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:16.295; Race Status: PausedBeforeStart; EventId: 4; 
+TimeStamp: 2019-01-14 12:48:17.288; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:17.454; Race Status: StartCountDown; EventId: 0; 
+TimeStamp: 2019-01-14 12:48:23.088; Race Status: Started; EventId: 1; 
+TimeStamp: 2019-01-14 12:48:25.856; Lap added; EventId: 5; Driver: Bernd; Laps: 0; Penalties: 0; LapTime: ; Position: 1; 
+TimeStamp: 2019-01-14 12:48:29.572; Lap added; EventId: 5; Driver: Mannie; Laps: 0; Penalties: 0; LapTime: ; Position: 2; 
+TimeStamp: 2019-01-14 12:48:30.977; Lap added; EventId: 5; Driver: Steg; Laps: 0; Penalties: 0; LapTime: ; Position: 3; 
+TimeStamp: 2019-01-14 12:49:13.793; Lap added; EventId: 5; Driver: Mannie; Laps: 1; Penalties: 0; LapTime: 12:00:12.078; Position: 1; 
