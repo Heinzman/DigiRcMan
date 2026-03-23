@@ -1,14 +1,14 @@
-using System;
-using System.Collections.Generic;
 using Elreg.BusinessObjects;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Lanes;
 using Elreg.BusinessObjects.Sound; 
+using Elreg.HelperClasses;
 using Elreg.Log;
 using Elreg.RaceOptionsService;
-using System.Windows.Forms;
-using Elreg.HelperClasses;
 using Elreg.ResourcesService;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Elreg.RaceSoundService
 {
@@ -16,12 +16,12 @@ namespace Elreg.RaceSoundService
     {
         private readonly DriversService _driversService;
         private readonly IRaceModel _raceModel;
-        private readonly Dictionary<string, BufferSound> _driverBuffers = new Dictionary<string, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _numberBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _positionBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _finalPositionBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _finishApplauseBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<Specialsound, BufferSound> _specialSoundBuffers = new Dictionary<Specialsound, BufferSound>();
+        private readonly Dictionary<string, ActionSound> _driverBuffers = new Dictionary<string, ActionSound>();
+        private readonly Dictionary<int, ActionSound> _numberBuffers = new Dictionary<int, ActionSound>();
+        private readonly Dictionary<int, ActionSound> _positionBuffers = new Dictionary<int, ActionSound>();
+        private readonly Dictionary<int, ActionSound> _finalPositionBuffers = new Dictionary<int, ActionSound>();
+        private readonly Dictionary<int, ActionSound> _finishApplauseBuffers = new Dictionary<int, ActionSound>();
+        private readonly Dictionary<Specialsound, ActionSound> _specialSoundBuffers = new Dictionary<Specialsound, ActionSound>();
         private readonly ActionSoundsService _actionSoundsService;
         private readonly List<int> _numberIndexList = new List<int>();
 
@@ -92,14 +92,14 @@ namespace Elreg.RaceSoundService
         private void AddSpecialSoundToList(Specialsound specialsound)
         {
             string fileName = SpecialSoundsPath + specialsound + ".wav";
-            BufferSound bufferSound = _actionSoundsService.GetBufferOf(fileName, false);
+            ActionSound bufferSound = _actionSoundsService.GetWaveOutEventOf(fileName, false);
             _specialSoundBuffers.Add(specialsound, bufferSound);
         }
 
-        public void AddSpecialSounds(Queue<BufferSound> soundOptionBufferQueue, ActionSound actionSound, Lane lane)
+        public void AddSpecialSounds(Queue<ActionSound> soundOptionBufferQueue, ActionSound actionSound, Lane lane)
         {
-            IEnumerable<BufferSound> bufferSounds = GetBuffersOfSpecialSound(actionSound.Specialsound, lane);
-            foreach (BufferSound bufferSound in bufferSounds)
+            IEnumerable<ActionSound> bufferSounds = GetBuffersOfSpecialSound(actionSound.Specialsound, lane);
+            foreach (ActionSound bufferSound in bufferSounds)
             {
                 if (bufferSound != null)
                 {
@@ -121,7 +121,7 @@ namespace Elreg.RaceSoundService
             try
             {
                 string soundFilename = SystemHelper.GetAbsolutePath(driver.SoundFilename);
-                BufferSound bufferSound = _actionSoundsService.GetBufferOf(soundFilename, false);
+                ActionSound bufferSound = _actionSoundsService.GetWaveOutEventOf(soundFilename, false);
                 if (bufferSound != null)
                     _driverBuffers.Add(driver.Name, bufferSound);
             }
@@ -167,14 +167,14 @@ namespace Elreg.RaceSoundService
             CreateBuffersOf(_finishApplauseBuffers, GetFinishApplauseFilenameOf);
         }
 
-        private void CreateBuffersOf(Dictionary<int, BufferSound> buffers, GetFilenameOfFunc getFilenameOfFunc)
+        private void CreateBuffersOf(Dictionary<int, ActionSound> buffers, GetFilenameOfFunc getFilenameOfFunc)
         {            
             buffers.Clear();
             foreach (LaneId laneId in Enum.GetValues(typeof (LaneId)))
                 CreateBuffer(buffers, getFilenameOfFunc, laneId);
         }
 
-        private void CreateBuffer(Dictionary<int, BufferSound> buffers, GetFilenameOfFunc getFilenameOfFunc, LaneId laneId)
+        private void CreateBuffer(Dictionary<int, ActionSound> buffers, GetFilenameOfFunc getFilenameOfFunc, LaneId laneId)
         {
             try
             {
@@ -188,11 +188,11 @@ namespace Elreg.RaceSoundService
             }
         }
 
-        private void GetAndAddBuffer(int position, string fileName, Dictionary<int, BufferSound> buffers)
+        private void GetAndAddBuffer(int position, string fileName, Dictionary<int, ActionSound> buffers)
         {
             if (!string.IsNullOrEmpty(fileName))
             {
-                BufferSound bufferSound = _actionSoundsService.GetBufferOf(fileName, false);
+                ActionSound bufferSound = _actionSoundsService.GetWaveOutEventOf(fileName, false);
                 if (bufferSound != null)
                     buffers.Add(position, bufferSound);
             }
@@ -214,9 +214,9 @@ namespace Elreg.RaceSoundService
             _numberIndexList.Add(900);
         }
 
-        private IEnumerable<BufferSound> GetBuffersOfSpecialSound(Specialsound specialSound, Lane lane)
+        private IEnumerable<ActionSound> GetBuffersOfSpecialSound(Specialsound specialSound, Lane lane)
         {
-            List<BufferSound> bufferSounds;
+            List<ActionSound> bufferSounds;
             if (specialSound == Specialsound.DriverName)
                 bufferSounds = GetDriverBuffersOf(lane);
             else if (specialSound == Specialsound.LapCount)
@@ -234,10 +234,10 @@ namespace Elreg.RaceSoundService
             return bufferSounds;
         }
 
-        private List<BufferSound> GeBufferOf(Specialsound specialSound)
+        private List<ActionSound> GeBufferOf(Specialsound specialSound)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<ActionSound> bufferSounds = new List<ActionSound>();
+            ActionSound bufferSound;
 
             if (_specialSoundBuffers.TryGetValue(specialSound, out bufferSound) && bufferSound != null)
                 bufferSounds.Add(bufferSound);
@@ -245,23 +245,23 @@ namespace Elreg.RaceSoundService
             return bufferSounds;
         }
 
-        private List<BufferSound> DriverNameWithPositionIfChangedOf(Lane lane)
+        private List<ActionSound> DriverNameWithPositionIfChangedOf(Lane lane)
         {
-            List<BufferSound> buffers = GetDriverBuffersOf(lane);
+            List<ActionSound> buffers = GetDriverBuffersOf(lane);
 
             if ((_raceModel == null || (_raceModel.Race != null && _raceModel.Race.IsCompetition)) && 
                 lane.Lap >= 2 && lane.Position != lane.PositionOfLastLap)
             {
-                List<BufferSound> positionBuffers = GetPositionBuffersOf(lane);
+                List<ActionSound> positionBuffers = GetPositionBuffersOf(lane);
                 buffers.AddRange(positionBuffers);
             }
             return buffers;
         }
 
-        private List<BufferSound> GetDriverBuffersOf(Lane lane)
+        private List<ActionSound> GetDriverBuffersOf(Lane lane)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<ActionSound> bufferSounds = new List<ActionSound>();
+            ActionSound bufferSound;
 
             if (_driverBuffers.TryGetValue(lane.Driver.Name, out bufferSound))
                 bufferSounds.Add(bufferSound);
@@ -269,7 +269,7 @@ namespace Elreg.RaceSoundService
             return bufferSounds;
         }
 
-        private List<BufferSound> GetLapBuffersOf(Lane lane)
+        private List<ActionSound> GetLapBuffersOf(Lane lane)
         {
             int lap = lane.Lap;
             if (_raceModel != null)
@@ -277,21 +277,21 @@ namespace Elreg.RaceSoundService
             return GetNumerBufferOf(lap);
         }
 
-        private List<BufferSound> GetNumerBufferOf(int count)
+        private List<ActionSound> GetNumerBufferOf(int count)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
+            List<ActionSound> bufferSounds = new List<ActionSound>();
             int preHundred = count % 100;
 
             if (count < 100 || preHundred == 0)
             {
-                BufferSound bufferSound;
+                ActionSound bufferSound;
                 _numberBuffers.TryGetValue(count, out bufferSound);
                 bufferSounds.Add(bufferSound);
             }
             else
             {
                 int postHundred = count - preHundred;
-                BufferSound bufferSound;
+                ActionSound bufferSound;
                 _numberBuffers.TryGetValue(postHundred, out bufferSound);
                 bufferSounds.Add(bufferSound);
 
@@ -306,28 +306,28 @@ namespace Elreg.RaceSoundService
             return SoundNumbersPath + number + ".wav";
         }
 
-        private List<BufferSound> GetPositionBuffersOf(Lane lane)
+        private List<ActionSound> GetPositionBuffersOf(Lane lane)
         {
             int position = lane.Position;
             return GetPositionBufferOf(position, _positionBuffers);
         }
 
-        private List<BufferSound> GetFinalPositionBuffersOf(Lane lane)
+        private List<ActionSound> GetFinalPositionBuffersOf(Lane lane)
         {
             int position = lane.Position;
             return GetPositionBufferOf(position, _finalPositionBuffers);
         }
 
-        private List<BufferSound> GetFinishApplauseBuffersOf(Lane lane)
+        private List<ActionSound> GetFinishApplauseBuffersOf(Lane lane)
         {
             int position = lane.Position;
             return GetPositionBufferOf(position, _finishApplauseBuffers);
         }
 
-        private List<BufferSound> GetPositionBufferOf(int position, Dictionary<int, BufferSound> buffers)
+        private List<ActionSound> GetPositionBufferOf(int position, Dictionary<int, ActionSound> buffers)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<ActionSound> bufferSounds = new List<ActionSound>();
+            ActionSound bufferSound;
 
             if (buffers.TryGetValue(position, out bufferSound))
                 bufferSounds.Add(bufferSound);

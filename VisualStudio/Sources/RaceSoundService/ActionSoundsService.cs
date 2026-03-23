@@ -1,25 +1,23 @@
-using System;
-using System.Collections.Generic;
 using Elreg.BusinessObjects;
 using Elreg.BusinessObjects.DerivedEventArgs;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Lanes;
 using Elreg.BusinessObjects.Sound;
-using Microsoft.DirectX.DirectSound;
+using Elreg.HelperClasses;
 using Elreg.Log;
 using Elreg.RaceOptionsService;
+using NAudio.Wave;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using Elreg.HelperClasses;
 
 namespace Elreg.RaceSoundService
 {
     public class ActionSoundsService
     {
-        public Device Device { get; private set; }        
         public SoundMixer SoundMixer { get; private set; }
         private readonly SoundOptionsService _soundOptionsService;
         private readonly DriversService _driversService;
-        private readonly BufferDescription _bufferDescription;
         private readonly Dictionary<ActionSoundType, Queue<ActionSound>> _globalActionSoundsOfTypes =
                 new Dictionary<ActionSoundType, Queue<ActionSound>>();
         private readonly Dictionary<ActionSoundType, Dictionary<string, Queue<ActionSound>>> _driverActionSoundsOfTypes =
@@ -29,22 +27,19 @@ namespace Elreg.RaceSoundService
 
         public static event EventHandler<SurroundSoundEventArgs> SoundOptionsChanged;
 
-        public ActionSoundsService(SoundOptionsService soundOptionsService, DriversService driversService, 
-                                   Device device, BufferDescription bufferDescription, SoundMixer soundMixer, IRaceModel raceModel)
+        public ActionSoundsService(SoundOptionsService soundOptionsService, DriversService driversService,SoundMixer soundMixer, IRaceModel raceModel)
         {
             _specialSoundHandler = new SpecialSoundHandler(raceModel, this, driversService);
             _soundOptionsService = soundOptionsService;
             _driversService = driversService;
-            Device = device;
-            _bufferDescription = bufferDescription;
             SoundMixer = soundMixer;
             CreateBuffers();
             AttachEventHandlers();
         }
 
-        public Queue<BufferSound> GetSoundOptionBufferQueue(ActionSoundType type, Lane lane)
+        public Queue<ActionSound> GetSoundOptionBufferQueue(ActionSoundType type, Lane lane)
         {
-            Queue<BufferSound> soundOptionBufferQueue = new Queue<BufferSound>();
+            Queue<ActionSound> soundOptionBufferQueue = new Queue<ActionSound>();
             lock (Locker)
             {
                 IEnumerable<ActionSound> actionSounds = GetActionSoundsOfTypes(type, lane);
@@ -54,50 +49,30 @@ namespace Elreg.RaceSoundService
             return soundOptionBufferQueue;
         }
 
-        public BufferDescription BufferDescription
+        public WaveOutEvent GetWaveOutEventOf(string fileName, bool varyFrequency)
         {
-            get { return _bufferDescription; }
-        }
-
-        public BufferSound GetBufferOf(string fileName, bool varyFrequency)
-        {
-            BufferSound bufferSound = null;
+            WaveOutEvent waveOutEvent = null;
             try
             {
                 if (!string.IsNullOrEmpty(fileName) && File.Exists(fileName))
                 {
-                    SecondaryBuffer secondaryBuffer = CreateSecondaryBufferOf(fileName);
-                    bufferSound = new BufferSound(secondaryBuffer, varyFrequency);
+                    waveOutEvent = new WaveOutEvent();
                 }
             }
             catch (Exception ex)
             {
                 ErrorLog.LogError(false, ex);
             }
-            return bufferSound;
+            return waveOutEvent;
         }
 
-        private SecondaryBuffer CreateSecondaryBufferOf(string fileName)
-        {
-            SecondaryBuffer secondaryBuffer = null;
-            try
-            {
-                secondaryBuffer = new SecondaryBuffer(fileName, _bufferDescription, Device);
-            }
-            catch (Exception ex)
-            {
-                ErrorLog.LogError(false, ex);
-            }
-            return secondaryBuffer;
-        }
-
-        private void AddSoundToQueue(Lane lane, Queue<BufferSound> soundOptionBufferQueue, ActionSound actionSound)
+        private void AddSoundToQueue(Lane lane, Queue<ActionSound> soundOptionBufferQueue, ActionSound actionSound)
         {
             try
             {
                 _specialSoundHandler.AddSpecialSounds(soundOptionBufferQueue, actionSound, lane);
                 if (actionSound.WaveOutEvent != null)
-                    soundOptionBufferQueue.Enqueue(actionSound.WaveOutEvent);
+                    soundOptionBufferQueue.Enqueue(actionSound);
             }
             catch (Exception ex)
             {
@@ -116,9 +91,6 @@ namespace Elreg.RaceSoundService
         {
             try
             {
-                _bufferDescription.Control3D = e.IsSurround;
-                _bufferDescription.ControlPan = !e.IsSurround;
-
                 CreateBuffers();
 
                 if (SoundOptionsChanged != null)
@@ -224,7 +196,7 @@ namespace Elreg.RaceSoundService
                     ActionSound actionSound = new ActionSound
                                                   {
                                                       Specialsound = (Specialsound) soundOption.SpecialSound,
-                                                      WaveOutEvent = GetActionBuffer(soundOption, soundOptionList.VaryFrequency),
+                                                      WaveOutEvent = GetWaveOutEvent(soundOption, soundOptionList.VaryFrequency),
                                                       VaryFrequency = soundOptionList.VaryFrequency
                                                   };
                     actionSounds.Enqueue(actionSound);
@@ -233,10 +205,10 @@ namespace Elreg.RaceSoundService
             return actionSounds;
         }
 
-        private BufferSound GetActionBuffer(SoundOption soundOption, bool varyFrequency)
+        private WaveOutEvent GetWaveOutEvent(SoundOption soundOption, bool varyFrequency)
         {
             string soundFilename = SystemHelper.GetAbsolutePath(soundOption.SoundPath);
-            return GetBufferOf(soundFilename, varyFrequency);
+            return GetWaveOutEventOf(soundFilename, varyFrequency);
         }
 
 

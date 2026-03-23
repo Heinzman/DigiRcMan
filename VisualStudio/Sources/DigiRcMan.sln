@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Business Layer", "3 Business Layer", "{35B5C15C-B33F-4EBA-8D33-CE5C17281C9D}"
 EndProject
@@ -46,8 +46,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortDataParser", "PortDataParser\SerialPortDataParser.csproj", "{4D53C762-785A-469C-9D26-14645C862CD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockObjects", "MockObjects\MockObjects.csproj", "{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceSound", "RaceSound\RaceSound.csproj", "{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceDataService", "RaceDataService\RaceDataService.csproj", "{AD0D45C2-8772-46A2-9C46-32854AB6D077}"
 EndProject
@@ -721,53 +719,6 @@ Global
 		{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}.UnitTests|x64.ActiveCfg = IsTrialVersion|x86
 		{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}.UnitTests|x86.ActiveCfg = IsTrialVersion|x86
 		{C680A515-D0CF-4FA4-8AE7-CA6973D01BED}.UnitTests|x86.Build.0 = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug_Without_Tests|Any CPU.ActiveCfg = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug_Without_Tests|x64.ActiveCfg = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug_Without_Tests|x86.ActiveCfg = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug_Without_Tests|x86.Build.0 = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|x64.ActiveCfg = Debug|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|x64.Build.0 = Debug|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|x86.ActiveCfg = Debug|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Debug|x86.Build.0 = Debug|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|Any CPU.ActiveCfg = DebugWithoutTests|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|Any CPU.Build.0 = DebugWithoutTests|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|x64.ActiveCfg = DebugWithoutTests|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|x64.Build.0 = DebugWithoutTests|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|x86.ActiveCfg = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.DebugWithoutTests|x86.Build.0 = DebugWithoutTests|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsProtectedVersion|Any CPU.ActiveCfg = IsTrialVersion|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsProtectedVersion|Any CPU.Build.0 = IsTrialVersion|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsProtectedVersion|x64.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsProtectedVersion|x86.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsProtectedVersion|x86.Build.0 = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|Any CPU.ActiveCfg = IsTrialVersion|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|Any CPU.Build.0 = IsTrialVersion|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|x64.ActiveCfg = IsTrialVersion|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|x64.Build.0 = IsTrialVersion|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|x86.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.IsTrialVersion|x86.Build.0 = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Obfuscated|Any CPU.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Obfuscated|x64.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Obfuscated|x86.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Obfuscated|x86.Build.0 = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|Any CPU.ActiveCfg = Release Public|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|Any CPU.Build.0 = Release Public|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|x64.ActiveCfg = Release Public|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|x64.Build.0 = Release Public|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|x86.ActiveCfg = Release Public|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release Public|x86.Build.0 = Release Public|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|x64.ActiveCfg = Release|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|x64.Build.0 = Release|x64
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|x86.ActiveCfg = Release|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.Release|x86.Build.0 = Release|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.UnitTests|Any CPU.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.UnitTests|x64.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.UnitTests|x86.ActiveCfg = IsTrialVersion|x86
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA}.UnitTests|x86.Build.0 = IsTrialVersion|x86
 		{AD0D45C2-8772-46A2-9C46-32854AB6D077}.Debug_Without_Tests|Any CPU.ActiveCfg = DebugWithoutTests|x86
 		{AD0D45C2-8772-46A2-9C46-32854AB6D077}.Debug_Without_Tests|x64.ActiveCfg = DebugWithoutTests|x86
 		{AD0D45C2-8772-46A2-9C46-32854AB6D077}.Debug_Without_Tests|x86.ActiveCfg = DebugWithoutTests|x86
@@ -2006,7 +1957,6 @@ Global
 		{92CAFC9B-8236-4A04-AD4E-F68500C740C3} = {2EA55063-432D-4AFB-8FD1-28E2D2BDD26B}
 		{4D53C762-785A-469C-9D26-14645C862CD7} = {316A964A-8BE0-448E-94D8-C258DCA661F2}
 		{C680A515-D0CF-4FA4-8AE7-CA6973D01BED} = {0772F37A-761D-4070-8956-789BAE5E6092}
-		{9A52A0AF-54A0-48EE-8FDC-EF47D48F91DA} = {0D10D6E9-2D55-44E8-AEA2-D775D0465807}
 		{AD0D45C2-8772-46A2-9C46-32854AB6D077} = {316A964A-8BE0-448E-94D8-C258DCA661F2}
 		{4FD6E596-F31D-4E44-8FD6-7A782BA67C06} = {316A964A-8BE0-448E-94D8-C258DCA661F2}
 		{FC501078-0372-4F5E-B919-66DB7E41C2C8} = {2EA55063-432D-4AFB-8FD1-28E2D2BDD26B}
