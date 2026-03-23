@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Elreg.BusinessObjects.Interfaces;
 using Elreg.BusinessObjects.Sound;
 using Elreg.Log;
+using NAudio.Wave;
 
 namespace Elreg.RaceSound
 {
@@ -10,18 +11,16 @@ namespace Elreg.RaceSound
     {
         private readonly IRaceModel _raceModel;
         private readonly SoundMixer _soundMixer;
-        private readonly Device _device;
-        private BufferDescription _bufferDescription;
-        private SecondaryBuffer _buffer;
+        private WaveOutEvent _waveOutEvent;
+        private AudioFileReader _audioFileReader;
 
         private const string SoundPausepath = @"\Sounds\Custom\";
         private const string SoundPause = "Pause.wav";
 
-        public PauseSoundHandler(IRaceModel raceModel, Device device, SoundMixer soundMixer)
+        public PauseSoundHandler(IRaceModel raceModel, SoundMixer soundMixer)
         {
             _raceModel = raceModel;
             _soundMixer = soundMixer;
-            _device = device;
             AttachToModelAsObserver();
         }
 
@@ -29,7 +28,7 @@ namespace Elreg.RaceSound
         {
             try
             {
-                InitBufferDescription();
+                InitWaveOutEvent();
                 CreateSoundBuffer();
             }
             catch (Exception ex)
@@ -43,21 +42,33 @@ namespace Elreg.RaceSound
             _raceModel.Attach(this);
         }
 
-        private void InitBufferDescription()
+        private void InitWaveOutEvent()
         {
-            _bufferDescription = new BufferDescription
-                                     {
-                                         Flags = BufferDescriptionFlags.ControlVolume | BufferDescriptionFlags.ControlFrequency |
-                                                 BufferDescriptionFlags.ControlPan,
-                                         GlobalFocus = true
-                                     };
+            _waveOutEvent = new WaveOutEvent();
         }
 
         private void CreateSoundBuffer()
         {
             try
             {
-                _buffer = new SecondaryBuffer(PauseSoundPath, _bufferDescription, _device);
+                DisposeAudioFileReader();
+                _audioFileReader = new AudioFileReader(PauseSoundPath);
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.LogError(false, ex);
+            }
+        }
+
+        private void DisposeAudioFileReader()
+        {
+            try
+            {
+                if (_audioFileReader != null)
+                {
+                    _audioFileReader.Dispose();
+                    _audioFileReader = null;
+                }
             }
             catch (Exception ex)
             {
@@ -74,10 +85,12 @@ namespace Elreg.RaceSound
         {
             try
             {
-                if (_buffer != null)
+                if (_audioFileReader != null && _waveOutEvent != null)
                 {
-                    _buffer.Volume = _soundMixer.CountDownVolumeAdapted;
-                    _buffer.Play(0, BufferPlayFlags.Default);
+                    _audioFileReader.Volume = _soundMixer.CountDownVolumeAdapted;
+                    _audioFileReader.Position = 0;
+                    _waveOutEvent.Init(_audioFileReader);
+                    _waveOutEvent.Play();
                 }
             }
             catch (Exception ex)

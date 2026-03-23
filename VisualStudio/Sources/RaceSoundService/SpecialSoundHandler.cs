@@ -1,4 +1,5 @@
 using System;
+using System;
 using System.Collections.Generic;
 using Elreg.BusinessObjects;
 using Elreg.BusinessObjects.Interfaces;
@@ -9,6 +10,7 @@ using Elreg.RaceOptionsService;
 using System.Windows.Forms;
 using Elreg.HelperClasses;
 using Elreg.ResourcesService;
+using NAudio.Wave;
 
 namespace Elreg.RaceSoundService
 {
@@ -16,12 +18,12 @@ namespace Elreg.RaceSoundService
     {
         private readonly DriversService _driversService;
         private readonly IRaceModel _raceModel;
-        private readonly Dictionary<string, BufferSound> _driverBuffers = new Dictionary<string, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _numberBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _positionBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _finalPositionBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<int, BufferSound> _finishApplauseBuffers = new Dictionary<int, BufferSound>();
-        private readonly Dictionary<Specialsound, BufferSound> _specialSoundBuffers = new Dictionary<Specialsound, BufferSound>();
+        private readonly Dictionary<string, AudioFileReader> _driverBuffers = new Dictionary<string, AudioFileReader>();
+        private readonly Dictionary<int, AudioFileReader> _numberBuffers = new Dictionary<int, AudioFileReader>();
+        private readonly Dictionary<int, AudioFileReader> _positionBuffers = new Dictionary<int, AudioFileReader>();
+        private readonly Dictionary<int, AudioFileReader> _finalPositionBuffers = new Dictionary<int, AudioFileReader>();
+        private readonly Dictionary<int, AudioFileReader> _finishApplauseBuffers = new Dictionary<int, AudioFileReader>();
+        private readonly Dictionary<Specialsound, AudioFileReader> _specialSoundBuffers = new Dictionary<Specialsound, AudioFileReader>();
         private readonly ActionSoundsService _actionSoundsService;
         private readonly List<int> _numberIndexList = new List<int>();
 
@@ -92,19 +94,18 @@ namespace Elreg.RaceSoundService
         private void AddSpecialSoundToList(Specialsound specialsound)
         {
             string fileName = SpecialSoundsPath + specialsound + ".wav";
-            BufferSound bufferSound = _actionSoundsService.GetBufferOf(fileName, false);
-            _specialSoundBuffers.Add(specialsound, bufferSound);
+            AudioFileReader audioFileReader = _actionSoundsService.GetAudioFileReaderOf(fileName);
+            _specialSoundBuffers.Add(specialsound, audioFileReader);
         }
 
-        public void AddSpecialSounds(Queue<BufferSound> soundOptionBufferQueue, ActionSound actionSound, Lane lane)
+        public void AddSpecialSounds(Queue<AudioFileReader> soundOptionBufferQueue, ActionSound actionSound, Lane lane)
         {
-            IEnumerable<BufferSound> bufferSounds = GetBuffersOfSpecialSound(actionSound.Specialsound, lane);
-            foreach (BufferSound bufferSound in bufferSounds)
+            IEnumerable<AudioFileReader> audioFileReaders = GetAudioFileReadersOfSpecialSound(actionSound.Specialsound, lane);
+            foreach (AudioFileReader audioFileReader in audioFileReaders)
             {
-                if (bufferSound != null)
+                if (audioFileReader != null)
                 {
-                    bufferSound.VaryFrequency = actionSound.VaryFrequency;
-                    soundOptionBufferQueue.Enqueue(bufferSound);
+                    soundOptionBufferQueue.Enqueue(audioFileReader);
                 }
             }
         }
@@ -121,9 +122,9 @@ namespace Elreg.RaceSoundService
             try
             {
                 string soundFilename = SystemHelper.GetAbsolutePath(driver.SoundFilename);
-                BufferSound bufferSound = _actionSoundsService.GetBufferOf(soundFilename, false);
-                if (bufferSound != null)
-                    _driverBuffers.Add(driver.Name, bufferSound);
+                AudioFileReader audioFileReader = _actionSoundsService.GetAudioFileReaderOf(soundFilename);
+                if (audioFileReader != null)
+                    _driverBuffers.Add(driver.Name, audioFileReader);
             }
             catch (Exception ex)
             {
@@ -167,14 +168,14 @@ namespace Elreg.RaceSoundService
             CreateBuffersOf(_finishApplauseBuffers, GetFinishApplauseFilenameOf);
         }
 
-        private void CreateBuffersOf(Dictionary<int, BufferSound> buffers, GetFilenameOfFunc getFilenameOfFunc)
+        private void CreateBuffersOf(Dictionary<int, AudioFileReader> buffers, GetFilenameOfFunc getFilenameOfFunc)
         {            
             buffers.Clear();
             foreach (LaneId laneId in Enum.GetValues(typeof (LaneId)))
                 CreateBuffer(buffers, getFilenameOfFunc, laneId);
         }
 
-        private void CreateBuffer(Dictionary<int, BufferSound> buffers, GetFilenameOfFunc getFilenameOfFunc, LaneId laneId)
+        private void CreateBuffer(Dictionary<int, AudioFileReader> buffers, GetFilenameOfFunc getFilenameOfFunc, LaneId laneId)
         {
             try
             {
@@ -188,13 +189,13 @@ namespace Elreg.RaceSoundService
             }
         }
 
-        private void GetAndAddBuffer(int position, string fileName, Dictionary<int, BufferSound> buffers)
+        private void GetAndAddBuffer(int position, string fileName, Dictionary<int, AudioFileReader> buffers)
         {
             if (!string.IsNullOrEmpty(fileName))
             {
-                BufferSound bufferSound = _actionSoundsService.GetBufferOf(fileName, false);
-                if (bufferSound != null)
-                    buffers.Add(position, bufferSound);
+                AudioFileReader audioFileReader = _actionSoundsService.GetAudioFileReaderOf(fileName);
+                if (audioFileReader != null)
+                    buffers.Add(position, audioFileReader);
             }
         }
 
@@ -214,91 +215,91 @@ namespace Elreg.RaceSoundService
             _numberIndexList.Add(900);
         }
 
-        private IEnumerable<BufferSound> GetBuffersOfSpecialSound(Specialsound specialSound, Lane lane)
+        private IEnumerable<AudioFileReader> GetAudioFileReadersOfSpecialSound(Specialsound specialSound, Lane lane)
         {
-            List<BufferSound> bufferSounds;
+            List<AudioFileReader> audioFileReaders;
             if (specialSound == Specialsound.DriverName)
-                bufferSounds = GetDriverBuffersOf(lane);
+                audioFileReaders = GetDriverAudioFileReadersOf(lane);
             else if (specialSound == Specialsound.LapCount)
-                bufferSounds = GetLapBuffersOf(lane);
+                audioFileReaders = GetLapAudioFileReadersOf(lane);
             else if (specialSound == Specialsound.Position)
-                bufferSounds = GetPositionBuffersOf(lane);
+                audioFileReaders = GetPositionAudioFileReadersOf(lane);
             else if (specialSound == Specialsound.FinalPosition)
-                bufferSounds = GetFinalPositionBuffersOf(lane);
+                audioFileReaders = GetFinalPositionAudioFileReadersOf(lane);
             else if (specialSound == Specialsound.FinishApplause)
-                bufferSounds = GetFinishApplauseBuffersOf(lane);
+                audioFileReaders = GetFinishApplauseAudioFileReadersOf(lane);
             else if (specialSound == Specialsound.DriverNameWithPositionIfChanged)
-                bufferSounds = DriverNameWithPositionIfChangedOf(lane);
+                audioFileReaders = DriverNameWithPositionIfChangedOf(lane);
             else 
-                bufferSounds = GeBufferOf(specialSound);
-            return bufferSounds;
+                audioFileReaders = GetAudioFileReaderOf(specialSound);
+            return audioFileReaders;
         }
 
-        private List<BufferSound> GeBufferOf(Specialsound specialSound)
+        private List<AudioFileReader> GetAudioFileReaderOf(Specialsound specialSound)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<AudioFileReader> audioFileReaders = new List<AudioFileReader>();
+            AudioFileReader audioFileReader;
 
-            if (_specialSoundBuffers.TryGetValue(specialSound, out bufferSound) && bufferSound != null)
-                bufferSounds.Add(bufferSound);
+            if (_specialSoundBuffers.TryGetValue(specialSound, out audioFileReader) && audioFileReader != null)
+                audioFileReaders.Add(audioFileReader);
 
-            return bufferSounds;
+            return audioFileReaders;
         }
 
-        private List<BufferSound> DriverNameWithPositionIfChangedOf(Lane lane)
+        private List<AudioFileReader> DriverNameWithPositionIfChangedOf(Lane lane)
         {
-            List<BufferSound> buffers = GetDriverBuffersOf(lane);
+            List<AudioFileReader> buffers = GetDriverAudioFileReadersOf(lane);
 
             if ((_raceModel == null || (_raceModel.Race != null && _raceModel.Race.IsCompetition)) && 
                 lane.Lap >= 2 && lane.Position != lane.PositionOfLastLap)
             {
-                List<BufferSound> positionBuffers = GetPositionBuffersOf(lane);
+                List<AudioFileReader> positionBuffers = GetPositionAudioFileReadersOf(lane);
                 buffers.AddRange(positionBuffers);
             }
             return buffers;
         }
 
-        private List<BufferSound> GetDriverBuffersOf(Lane lane)
+        private List<AudioFileReader> GetDriverAudioFileReadersOf(Lane lane)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<AudioFileReader> audioFileReaders = new List<AudioFileReader>();
+            AudioFileReader audioFileReader;
 
-            if (_driverBuffers.TryGetValue(lane.Driver.Name, out bufferSound))
-                bufferSounds.Add(bufferSound);
+            if (_driverBuffers.TryGetValue(lane.Driver.Name, out audioFileReader))
+                audioFileReaders.Add(audioFileReader);
 
-            return bufferSounds;
+            return audioFileReaders;
         }
 
-        private List<BufferSound> GetLapBuffersOf(Lane lane)
+        private List<AudioFileReader> GetLapAudioFileReadersOf(Lane lane)
         {
             int lap = lane.Lap;
             if (_raceModel != null)
                 lap = _raceModel.Race.GetLapNumberOf(lane);
-            return GetNumerBufferOf(lap);
+            return GetNumberAudioFileReadersOf(lap);
         }
 
-        private List<BufferSound> GetNumerBufferOf(int count)
+        private List<AudioFileReader> GetNumberAudioFileReadersOf(int count)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
+            List<AudioFileReader> audioFileReaders = new List<AudioFileReader>();
             int preHundred = count % 100;
 
             if (count < 100 || preHundred == 0)
             {
-                BufferSound bufferSound;
-                _numberBuffers.TryGetValue(count, out bufferSound);
-                bufferSounds.Add(bufferSound);
+                AudioFileReader audioFileReader;
+                _numberBuffers.TryGetValue(count, out audioFileReader);
+                audioFileReaders.Add(audioFileReader);
             }
             else
             {
                 int postHundred = count - preHundred;
-                BufferSound bufferSound;
-                _numberBuffers.TryGetValue(postHundred, out bufferSound);
-                bufferSounds.Add(bufferSound);
+                AudioFileReader audioFileReader;
+                _numberBuffers.TryGetValue(postHundred, out audioFileReader);
+                audioFileReaders.Add(audioFileReader);
 
-                _numberBuffers.TryGetValue(preHundred, out bufferSound);
-                bufferSounds.Add(bufferSound);
+                _numberBuffers.TryGetValue(preHundred, out audioFileReader);
+                audioFileReaders.Add(audioFileReader);
             }
-            return bufferSounds;
+            return audioFileReaders;
         }
 
         private string GetNumberFilenameOf(int number)
@@ -306,32 +307,32 @@ namespace Elreg.RaceSoundService
             return SoundNumbersPath + number + ".wav";
         }
 
-        private List<BufferSound> GetPositionBuffersOf(Lane lane)
+        private List<AudioFileReader> GetPositionAudioFileReadersOf(Lane lane)
         {
             int position = lane.Position;
-            return GetPositionBufferOf(position, _positionBuffers);
+            return GetPositionAudioFileReaderOf(position, _positionBuffers);
         }
 
-        private List<BufferSound> GetFinalPositionBuffersOf(Lane lane)
+        private List<AudioFileReader> GetFinalPositionAudioFileReadersOf(Lane lane)
         {
             int position = lane.Position;
-            return GetPositionBufferOf(position, _finalPositionBuffers);
+            return GetPositionAudioFileReaderOf(position, _finalPositionBuffers);
         }
 
-        private List<BufferSound> GetFinishApplauseBuffersOf(Lane lane)
+        private List<AudioFileReader> GetFinishApplauseAudioFileReadersOf(Lane lane)
         {
             int position = lane.Position;
-            return GetPositionBufferOf(position, _finishApplauseBuffers);
+            return GetPositionAudioFileReaderOf(position, _finishApplauseBuffers);
         }
 
-        private List<BufferSound> GetPositionBufferOf(int position, Dictionary<int, BufferSound> buffers)
+        private List<AudioFileReader> GetPositionAudioFileReaderOf(int position, Dictionary<int, AudioFileReader> buffers)
         {
-            List<BufferSound> bufferSounds = new List<BufferSound>();
-            BufferSound bufferSound;
+            List<AudioFileReader> audioFileReaders = new List<AudioFileReader>();
+            AudioFileReader audioFileReader;
 
-            if (buffers.TryGetValue(position, out bufferSound))
-                bufferSounds.Add(bufferSound);
-            return bufferSounds;
+            if (buffers.TryGetValue(position, out audioFileReader))
+                audioFileReaders.Add(audioFileReader);
+            return audioFileReaders;
         }
 
         public static string GetPositionFilenameOf(int position)
