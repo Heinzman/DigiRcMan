@@ -52,6 +52,7 @@ namespace Elreg.DigiRcMan.Start
         //private MusicHandler _musicHandler; todo
         private StatisticLogger _statisticLogger;
         private readonly Lazy<IPropertySettings> _propertySettingsLazy;
+        //private MrcBluetoothReader _mrcBluetoothReader;
 
         public Initializer()
         {
@@ -177,6 +178,7 @@ namespace Elreg.DigiRcMan.Start
             InitVcuSerialPortReaderWriter();
             InitRaceSettingsService();
             CreateSerialPortParser();
+            CreateMrcBluetoothReader();
             StartVcuSerialPortReader();
             InitRaceDataProvider();
             InitDriversService();
@@ -264,6 +266,11 @@ namespace Elreg.DigiRcMan.Start
         private void InitRaceProviderService()
         {
             _raceProviderService = new RaceProviderService();
+        }
+
+        private void CreateMrcBluetoothReader()
+        {
+            //_mrcBluetoothReader = new MrcBluetoothReader();
         }
 
         private void InitVcuSerialPort()
