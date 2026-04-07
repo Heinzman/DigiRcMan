@@ -7,7 +7,7 @@ namespace ComputerSpeechTests
     [TestFixture]
     public class SimpleTests
     {
-        private const int Speed = 0;
+        private const int Speed = 5;
 
         [Test]
         public async void TestSpeakOneSentenceWithSpeaker()

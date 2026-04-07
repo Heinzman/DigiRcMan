@@ -8,6 +8,6 @@ namespace Elreg.BusinessObjects.Sound
 
         public Specialsound Specialsound { get; set; }
 
-        public WaveOutEvent WaveOutEvent { get; set; }
+        public AudioFileReader AudioFileReader { get; set; }
     }
 }

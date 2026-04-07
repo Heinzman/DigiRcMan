@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Timers;
-using Elreg.Log;
-using Elreg.RaceSoundService;
 using NAudio.Wave;
 
 namespace Elreg.MusicPlayer
@@ -57,7 +55,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
             return ret;
         }
@@ -71,7 +69,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -83,11 +81,11 @@ namespace Elreg.MusicPlayer
                 CheckToPauseOrRestartByVolume();
                 _wasInactiveByMinVolume = HasMinVolume;
                 if (_waveOutEvent != null)
-                    _waveOutEvent.Volume = SoundHelper.LimitVolume(volume);
+                    _waveOutEvent.Volume = 1; // todo SoundHelper.LimitVolume(volume);
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -116,7 +114,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -164,7 +162,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -183,7 +181,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -195,7 +193,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 
@@ -235,7 +233,7 @@ namespace Elreg.MusicPlayer
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
     }
