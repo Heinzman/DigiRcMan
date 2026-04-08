@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using SpeechLib;
+using System.Speech.Synthesis;
 
 namespace Elreg.ComputerSpeech
 {
@@ -14,23 +14,21 @@ namespace Elreg.ComputerSpeech
 
         public void Speak()
         {
-            SpVoice voice = new SpVoice {Volume = 100};
-            voice.Speak(_text, SpeechVoiceSpeakFlags.SVSFlagsAsync);
+            using (var synth = new SpeechSynthesizer())
+            {
+                synth.Volume = 100;
+                synth.SpeakAsync(_text);
+            }
         }
 
         public void SaveTo(string fileName)
         {
-            SpVoice voice = new SpVoice { Volume = 100 };
-
-            const SpeechStreamFileMode spFileMode = SpeechStreamFileMode.SSFMCreateForWrite;
-            SpFileStream spFileStream = new SpFileStream();
-            spFileStream.Open(fileName, spFileMode);
-
-            voice.AudioOutputStream = spFileStream;
-            voice.Speak(_text);
-            voice.WaitUntilDone(Timeout.Infinite);
-
-            spFileStream.Close();
+            using (var synth = new SpeechSynthesizer())
+            {
+                synth.Volume = 100;
+                synth.SetOutputToWaveFile(fileName);
+                synth.Speak(_text);
+            }
         }
     }
 }
