@@ -33,6 +33,7 @@ bld/
 [Oo]utput/
 [Ll]og/
 [Ll]ogs/
+VisualStudio/Output/
 
 # Jetbrains Rider
 .idea/

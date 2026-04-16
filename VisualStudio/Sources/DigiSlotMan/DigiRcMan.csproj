@@ -37,7 +37,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Output\</OutputPath>
+    <OutputPath>Output\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -198,87 +198,6 @@
       <Link>Dlls\Newtonsoft.Json.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="..\..\Output\BusinessObjectContracts.dll">
-      <Link>DllsAsResource\BusinessObjectContracts.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\BusinessObjects.dll">
-      <Link>DllsAsResource\BusinessObjects.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\ComputerSpeech.dll">
-      <Link>DllsAsResource\ComputerSpeech.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Controls.dll">
-      <Link>DllsAsResource\Controls.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\DomainModels.dll">
-      <Link>DllsAsResource\DomainModels.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Exceptions.dll">
-      <Link>DllsAsResource\Exceptions.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\FrameworkContracts.dll">
-      <Link>DllsAsResource\FrameworkContracts.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\HelperClasses.dll">
-      <Link>DllsAsResource\HelperClasses.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\HelperLib.dll">
-      <Link>DllsAsResource\HelperLib.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Log.dll">
-      <Link>DllsAsResource\Log.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Logger.dll">
-      <Link>DllsAsResource\Logger.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\MockObjects.dll">
-      <Link>DllsAsResource\MockObjects.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\MouseKeyboardLibrary.dll">
-      <Link>DllsAsResource\MouseKeyboardLibrary.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Newtonsoft.Json.dll">
-      <Link>DllsAsResource\Newtonsoft.Json.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\PortDataParser.dll">
-      <Link>DllsAsResource\PortDataParser.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceConsolidationService.dll">
-      <Link>DllsAsResource\RaceConsolidationService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceControlService.dll">
-      <Link>DllsAsResource\RaceControlService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceDataService.dll">
-      <Link>DllsAsResource\RaceDataService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceOptionsService.dll">
-      <Link>DllsAsResource\RaceOptionsService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\RaceStatisticsService.dll">
-      <Link>DllsAsResource\RaceStatisticsService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\ResourcesService.dll">
-      <Link>DllsAsResource\ResourcesService.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\Serialization.dll">
-      <Link>DllsAsResource\Serialization.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\SerialPortReader.dll">
-      <Link>DllsAsResource\SerialPortReader.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\WindowsFormsApplication.dll">
-      <Link>DllsAsResource\WindowsFormsApplication.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\WindowsFormsPresenter.dll">
-      <Link>DllsAsResource\WindowsFormsPresenter.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\WindowsFormsView.dll">
-      <Link>DllsAsResource\WindowsFormsView.dll</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Output\WinFormsPresentationFramework.dll">
-      <Link>DllsAsResource\WinFormsPresentationFramework.dll</Link>
-    </EmbeddedResource>
     <Resource Include="Classic car red.ico" />
   </ItemGroup>
   <ItemGroup>

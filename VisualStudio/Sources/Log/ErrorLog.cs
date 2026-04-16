@@ -4,7 +4,6 @@ using System.Windows.Forms;
 
 namespace Elreg.Log
 {
-    // ReSharper disable EmptyGeneralCatchClause
     public class ErrorLog
     {
         private const string ErrorCaption = "An Error occurred";
