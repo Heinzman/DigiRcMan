@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.3.11520.95 d18.3
+VisualStudioVersion = 18.3.11520.95
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Business Layer", "3 Business Layer", "{35B5C15C-B33F-4EBA-8D33-CE5C17281C9D}"
 EndProject
@@ -163,8 +163,8 @@ Global
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug_Without_Tests|x64.ActiveCfg = DebugWithoutTests|x86
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug_Without_Tests|x86.ActiveCfg = DebugWithoutTests|x86
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug_Without_Tests|x86.Build.0 = DebugWithoutTests|x86
-		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|Any CPU.Build.0 = Debug|x86
+		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|x64.ActiveCfg = Debug|x64
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|x64.Build.0 = Debug|x64
 		{8CD72FF0-ECB6-4547-9DE4-AAE797958B72}.Debug|x86.ActiveCfg = Debug|x86
@@ -1788,8 +1788,8 @@ Global
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug_Without_Tests|x64.ActiveCfg = Debug|x86
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug_Without_Tests|x86.ActiveCfg = Debug|x86
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug_Without_Tests|x86.Build.0 = Debug|x86
-		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|Any CPU.Build.0 = Debug|x86
+		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|x64.ActiveCfg = Debug|x86
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|x86.ActiveCfg = Debug|x86
 		{6B4DD30C-FE5C-4AFE-9859-81A6A49C483E}.Debug|x86.Build.0 = Debug|x86
