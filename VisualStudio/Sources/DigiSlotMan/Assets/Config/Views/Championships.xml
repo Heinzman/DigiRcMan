@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RaceGridSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GridColumnPropertiesList>
+    <GridColumnProperties>
+      <Name>ColumnPosition</Name>
+      <Position>0</Position>
+      <FontSize>27.75</FontSize>
+      <Width>100</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnDriver</Name>
+      <Position>1</Position>
+      <FontSize>27.75</FontSize>
+      <Width>158</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+    <GridColumnProperties>
+      <Name>ColumnPoints</Name>
+      <Position>2</Position>
+      <FontSize>27.75</FontSize>
+      <Width>100</Width>
+      <Visible>true</Visible>
+    </GridColumnProperties>
+  </GridColumnPropertiesList>
+  <HeaderHeight>69</HeaderHeight>
+  <HeaderFontSize>21.75</HeaderFontSize>
+  <RaceStatusHeight>20</RaceStatusHeight>
+  <RaceStatusFontSize>8</RaceStatusFontSize>
+</RaceGridSettings>

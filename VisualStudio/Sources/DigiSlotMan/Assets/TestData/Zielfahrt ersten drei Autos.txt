@@ -1,0 +1,44 @@
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd cf fd fd 55 55 55 53 #1. Fahrzeug cf fd fd
+ab dd cf fd fd 55 55 55 53 
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7
+ab dd fd fd fd 55 55 55 43 
+ab dd fd fd fd 55 55 55 43
+
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd cf fd fd 55 55 55 53 
+ab dd cf fd fd 55 55 55 53 
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd fd fd 55 55 55 43 
+ab dd fd fd fd 55 55 55 43
+
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd cf fd 55 55 55 61 #2. Fahrzeug fd cf fd
+ab dd fd cf fd 55 55 55 61 
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd fd fd 55 55 55 43 
+ab dd fd fd fd 55 55 55 43
+
+ab 55 31 0d e1 e1 e1 e1 27
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd cf fd 55 55 55 61 
+ab dd fd cf fd 55 55 55 61 
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd fd fd 55 55 55 43 
+ab dd fd fd fd 55 55 55 43
+
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd cf fd 55 55 55 61 
+ab dd fd cf fd 55 55 55 61 
+ab 55 31 0d e1 e1 e1 e1 27 
+ab 55 19 0d e1 e1 e1 e1 f7 
+ab dd fd fd fd 55 55 55 43 
+ab dd fd fd fd 55 55 55 43

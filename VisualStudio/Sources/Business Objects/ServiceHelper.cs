@@ -5,6 +5,7 @@ namespace Elreg.BusinessObjects
 {
     public static class ServiceHelper
     {
+        private const string RelAssetsPathName = "Assets";
         private const string RelConfigPathName = "Config";
         private const string RelRaceResultsPathName = "RaceResults";
         private const string RelChamionshipsPathName = "Championships";
@@ -34,7 +35,7 @@ namespace Elreg.BusinessObjects
 
         public static string ConfigPath
         {
-            get { return BuildPath(Application.StartupPath, RelConfigPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelConfigPathName); }
         }
 
         public static string ConfigViewPath
@@ -44,17 +45,17 @@ namespace Elreg.BusinessObjects
 
         public static string RaceResultsPath
         {
-            get { return BuildPath(Application.StartupPath, RelRaceResultsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelRaceResultsPathName); }
         }
 
         public static string ChampionshipsPath
         {
-            get { return BuildPath(Application.StartupPath, RelChamionshipsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelChamionshipsPathName); }
         }
 
         public static string SoundsPath
         {
-            get { return BuildPath(Application.StartupPath, RelSoundsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelSoundsPathName); }
         }
 
         public static string RelSoundsPath
@@ -69,32 +70,32 @@ namespace Elreg.BusinessObjects
 
         public static string MusicPath
         {
-            get { return BuildPath(Application.StartupPath, RelMusicPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelMusicPathName); }
         }
 
         public static string RaceMusicPath
         {
-            get { return BuildPath(Application.StartupPath, RelMusicPathName, RelRaceMusicPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelMusicPathName, RelRaceMusicPathName); }
         }
 
         public static string MainMusicPath
         {
-            get { return BuildPath(Application.StartupPath, RelMusicPathName, RelMainMusicPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelMusicPathName, RelMainMusicPathName); }
         }
 
         public static string PauseMusicPath
         {
-            get { return BuildPath(Application.StartupPath, RelMusicPathName, RelPauseMusicPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelMusicPathName, RelPauseMusicPathName); }
         }
 
         public static string HymnMusicPath
         {
-            get { return BuildPath(Application.StartupPath, RelMusicPathName, RelHymnMusicPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelMusicPathName, RelHymnMusicPathName); }
         }
 
         public static string CarsPath
         {
-            get { return BuildPath(Application.StartupPath, RelSoundsPathName, RelCarsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelSoundsPathName, RelCarsPathName); }
         }
 
         public static string RelEnginePath
@@ -104,7 +105,7 @@ namespace Elreg.BusinessObjects
 
         public static string DriversPath
         {
-            get { return BuildPath(Application.StartupPath, RelSoundsPathName, RelDriversPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelSoundsPathName, RelDriversPathName); }
         }
 
         public static string BrakesPath
@@ -144,7 +145,7 @@ namespace Elreg.BusinessObjects
 
         public static string PicsPath
         {
-            get { return BuildPath(Application.StartupPath, RelPicsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelPicsPathName); }
         }
 
         public static string RelPicsPath
@@ -154,7 +155,7 @@ namespace Elreg.BusinessObjects
 
         public static string LogsPath
         {
-            get { return BuildPath(Application.StartupPath, RelLogsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelLogsPathName); }
         }
 
         public static string ConfigTextToSpeechPath
@@ -164,7 +165,7 @@ namespace Elreg.BusinessObjects
 
         public static string StatisticsPath
         {
-            get { return BuildPath(Application.StartupPath, RelStatisticsPathName); }
+            get { return BuildPath(Application.StartupPath, RelAssetsPathName, RelStatisticsPathName); }
         }
 
         public static string GetAbsolutePath(params string[] relativePaths)

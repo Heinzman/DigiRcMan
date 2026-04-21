@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChampionshipAdderMessageAddToChampionship" xml:space="preserve">
+    <value>Add to championship ?</value>
+  </data>
+  <data name="ChampionshipAdderMessageCreateChampionship" xml:space="preserve">
+    <value>Create championship\nand add race ?</value>
+  </data>
+  <data name="ChampionshipAdderMessageUseLastChampionship" xml:space="preserve">
+    <value>Use last championship ?</value>
+  </data>
+  <data name="ChampionshipFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="ChampionshipFormBtnSave" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="ChampionshipFormColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="ChampionshipFormColumnPoints" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="ChampionshipFormColumnPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ChampionshipListFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="ChampionshipListFormBtnRefresh" xml:space="preserve">
+    <value>&amp;Refresh</value>
+  </data>
+  <data name="ChampionshipListFormCaption" xml:space="preserve">
+    <value>Championships</value>
+  </data>
+  <data name="ControllerTestFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="ControllerTestFormCaption" xml:space="preserve">
+    <value>Controller Test</value>
+  </data>
+  <data name="ControllerTestFormLblButton" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="ControllerTestFormLblDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="ControllerTestFormLblLaps" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="ControllerTestFormLblSpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="CountDownFormGo" xml:space="preserve">
+    <value>Go!</value>
+  </data>
+  <data name="CtlSoundOptionChkActivate" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="CtlSoundOptionChkChangeFrequency" xml:space="preserve">
+    <value>Vary Frequency</value>
+  </data>
+  <data name="CtlSoundOptionColumnCreateWav" xml:space="preserve">
+    <value>Create Wav...</value>
+  </data>
+  <data name="CtlSoundOptionColumnCreateWavButton" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CtlSoundOptionColumnFileFind" xml:space="preserve">
+    <value>Open File...</value>
+  </data>
+  <data name="CtlSoundOptionColumnFileFindButton" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="CtlSoundOptionColumnFileName" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="CtlSoundOptionColumnPlayWav" xml:space="preserve">
+    <value>Play Wav</value>
+  </data>
+  <data name="CtlSoundOptionColumnPlayWavButton" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="CtlSoundOptionColumnSpecialSound" xml:space="preserve">
+    <value>Special Sound</value>
+  </data>
+  <data name="CtlSoundOptionFileOpenFilter" xml:space="preserve">
+    <value>Sound File|*.wav|All Files|*.*</value>
+  </data>
+  <data name="CtlSoundOptionToolStripButtonPlaySounds" xml:space="preserve">
+    <value>Play Sounds</value>
+  </data>
+  <data name="InitLanesFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="InitLanesFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="InitLanesFormBtnRandomize" xml:space="preserve">
+    <value>R&amp;andomize</value>
+  </data>
+  <data name="InitLanesFormBtnRefresh" xml:space="preserve">
+    <value>&amp;Refresh</value>
+  </data>
+  <data name="InitLanesFormBtnRotateDown" xml:space="preserve">
+    <value>Rotate &amp;Down</value>
+  </data>
+  <data name="InitLanesFormBtnRotateUp" xml:space="preserve">
+    <value>Rotate &amp;Up</value>
+  </data>
+  <data name="InitLanesFormColumnCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="InitLanesFormColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="InitLanesFormColumnId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="InitLanesFormFuelConsumptionFactor" xml:space="preserve">
+    <value>Fuel Consumption Factor</value>
+  </data>
+  <data name="InitLanesFormTankSize" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="LargeMessageBoxBtnNo" xml:space="preserve">
+    <value>&amp;No</value>
+  </data>
+  <data name="LargeMessageBoxBtnYes" xml:space="preserve">
+    <value>&amp;Yes</value>
+  </data>
+  <data name="LargeOkMessageBoxBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="LoggerFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="LoggerFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="LoggerFormBtnOpenComPortLog" xml:space="preserve">
+    <value>O&amp;pen</value>
+  </data>
+  <data name="LoggerFormBtnOpenPortParserLog" xml:space="preserve">
+    <value>O&amp;pen</value>
+  </data>
+  <data name="LoggerFormBtnOpenRaceLog" xml:space="preserve">
+    <value>O&amp;pen</value>
+  </data>
+  <data name="LoggerFormCaption" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="MaintainCarsFormBtnAccept" xml:space="preserve">
+    <value>&amp;Accept</value>
+  </data>
+  <data name="MaintainCarsFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="MaintainCarsFormBtnOK" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="MaintainCarsFormCaption" xml:space="preserve">
+    <value>Maintain Cars</value>
+  </data>
+  <data name="MaintainCarsFormChkFuelConsumptionFactorActivated" xml:space="preserve">
+    <value>Fuel Consumption (Multiplied with user fuel consumption)</value>
+  </data>
+  <data name="MaintainCarsFormChkTankSizeActivated" xml:space="preserve">
+    <value>Activate Tank Size</value>
+  </data>
+  <data name="MaintainCarsFormGridColumnName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaintainCarsFormGrpCars" xml:space="preserve">
+    <value>Cars</value>
+  </data>
+  <data name="MaintainCarsFormGrpDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="MaintainCarsFormLblFreqFactorDec" xml:space="preserve">
+    <value>Freq Factor Decrement</value>
+  </data>
+  <data name="MaintainCarsFormLblFreqFactorInc" xml:space="preserve">
+    <value>Freq Factor Increment</value>
+  </data>
+  <data name="MaintainCarsFormLblFreqFactorPerController" xml:space="preserve">
+    <value>Freq Factor Per Value</value>
+  </data>
+  <data name="MaintainCarsFormLblFuelConsumption" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="MaintainCarsFormLblInitialFreqFactor" xml:space="preserve">
+    <value>Initial Freq Factor</value>
+  </data>
+  <data name="MaintainCarsFormLblMainVolume" xml:space="preserve">
+    <value>Main Volume</value>
+  </data>
+  <data name="MaintainCarsFormLblName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaintainCarsFormLblPicture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="MaintainCarsFormLblTankSize" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="MaintainCarsFormLblWavEngine" xml:space="preserve">
+    <value>Wav Engine</value>
+  </data>
+  <data name="MaintainCarsFormLblWavIdle" xml:space="preserve">
+    <value>Wav Idle</value>
+  </data>
+  <data name="MaintainDriversFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="MaintainDriversFormBtnCreateWav" xml:space="preserve">
+    <value>Create Wav</value>
+  </data>
+  <data name="MaintainDriversFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="MaintainDriversFormCaption" xml:space="preserve">
+    <value>Maintain Drivers</value>
+  </data>
+  <data name="MaintainDriversFormChkHasFuelConsumptionFactor" xml:space="preserve">
+    <value>Activate fuel consumption  (Is multiplied with car consumption)</value>
+  </data>
+  <data name="MaintainDriversFormChkHasFuelMax" xml:space="preserve">
+    <value>Activate tank size of driver</value>
+  </data>
+  <data name="MaintainDriversFormGridColumnName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaintainDriversFormGrpDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="MaintainDriversFormGrpDrivers" xml:space="preserve">
+    <value>Drivers</value>
+  </data>
+  <data name="MaintainDriversFormLblConsumptionFactor" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="MaintainDriversFormLblHymn" xml:space="preserve">
+    <value>Hymn</value>
+  </data>
+  <data name="MaintainDriversFormLblName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaintainDriversFormLblTankSize" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="MaintainDriversFormLblWavName" xml:space="preserve">
+    <value>Wav for Name</value>
+  </data>
+  <data name="MaintainSoundsFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="MaintainSoundsFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="MaintainSoundsFormCaption" xml:space="preserve">
+    <value>Maintain Sounds</value>
+  </data>
+  <data name="MaintainSoundsFormCtlDisqualified" xml:space="preserve">
+    <value>Disqualified</value>
+  </data>
+  <data name="MaintainSoundsFormCtlFalseStart" xml:space="preserve">
+    <value>False Start</value>
+  </data>
+  <data name="MaintainSoundsFormCtlFinished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="MaintainSoundsFormCtlLap" xml:space="preserve">
+    <value>Valid Lap</value>
+  </data>
+  <data name="MaintainSoundsFormCtlLapDetectedNotAdded" xml:space="preserve">
+    <value>Invalid Lap</value>
+  </data>
+  <data name="MaintainSoundsFormCtlLowFuel" xml:space="preserve">
+    <value>Low Fuel</value>
+  </data>
+  <data name="MaintainSoundsFormCtlNoFuel" xml:space="preserve">
+    <value>No Fuel</value>
+  </data>
+  <data name="MaintainSoundsFormCtlPenalty" xml:space="preserve">
+    <value>Penalty</value>
+  </data>
+  <data name="MaintainSoundsFormCtlPitIn" xml:space="preserve">
+    <value>Pitstop In</value>
+  </data>
+  <data name="MaintainSoundsFormCtlPitOut" xml:space="preserve">
+    <value>Pitstop Out</value>
+  </data>
+  <data name="MaintainSoundsFormCtlRefueled" xml:space="preserve">
+    <value>Refueled</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormBtnSubmit" xml:space="preserve">
+    <value>&amp;Submit</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormCaption" xml:space="preserve">
+    <value>Configuration Parallel Port</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormGrpPauseData" xml:space="preserve">
+    <value>Pause Data</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormGrpPortReadingData" xml:space="preserve">
+    <value>Port Reading Data</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormLblInputPin" xml:space="preserve">
+    <value>Input Pin</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormLblPinIsOn" xml:space="preserve">
+    <value>Pin Is On</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormLblPortAddress" xml:space="preserve">
+    <value>Port Address</value>
+  </data>
+  <data name="ParallelPortReaderConfigFormLblPortStatus" xml:space="preserve">
+    <value>Port Status</value>
+  </data>
+  <data name="PauseFormBreak" xml:space="preserve">
+    <value>Break</value>
+  </data>
+  <data name="PauseFormPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="RaceControlBtnCarsOptions" xml:space="preserve">
+    <value>Cars</value>
+  </data>
+  <data name="RaceControlBtnChangeRace" xml:space="preserve">
+    <value>Change Race Data</value>
+  </data>
+  <data name="RaceControlBtnConfigureArduino" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="RaceControlBtnConfigureParallelPort" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="RaceControlBtnController" xml:space="preserve">
+    <value>Controller Test</value>
+  </data>
+  <data name="RaceControlBtnDriversOptions" xml:space="preserve">
+    <value>Drivers</value>
+  </data>
+  <data name="RaceControlBtnInit" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="RaceControlBtnLogging" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="RaceControlBtnPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="RaceControlBtnRaceSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="RaceControlBtnRestart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="RaceControlBtnShowChampionships" xml:space="preserve">
+    <value>Championships</value>
+  </data>
+  <data name="RaceControlBtnShowRaceResults" xml:space="preserve">
+    <value>Race Results</value>
+  </data>
+  <data name="RaceControlBtnShowRaceView" xml:space="preserve">
+    <value>Show Race View</value>
+  </data>
+  <data name="RaceControlBtnSoundMixer" xml:space="preserve">
+    <value>Mixer</value>
+  </data>
+  <data name="RaceControlBtnSoundOptions" xml:space="preserve">
+    <value>Sounds</value>
+  </data>
+  <data name="RaceControlBtnStartQuali" xml:space="preserve">
+    <value>Start Quali</value>
+  </data>
+  <data name="RaceControlBtnStartRace" xml:space="preserve">
+    <value>Start Race</value>
+  </data>
+  <data name="RaceControlBtnStartTraining" xml:space="preserve">
+    <value>Start Training</value>
+  </data>
+  <data name="RaceControlBtnStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="RaceControlCaption" xml:space="preserve">
+    <value>Main Window</value>
+  </data>
+  <data name="RaceControlGrpMisc" xml:space="preserve">
+    <value>Misc.</value>
+  </data>
+  <data name="RaceControlGrpOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="RaceControlGrpParallelPort" xml:space="preserve">
+    <value>Parallel Port</value>
+  </data>
+  <data name="RaceControlGrpRace" xml:space="preserve">
+    <value>Race</value>
+  </data>
+  <data name="RaceControlGrpRaceControl" xml:space="preserve">
+    <value>Race Control</value>
+  </data>
+  <data name="RaceControlGrpResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="RaceControlGrpSerialPort" xml:space="preserve">
+    <value>Arduino</value>
+  </data>
+  <data name="RaceControlMessageCloseApp" xml:space="preserve">
+    <value>Do you really want to close %Replace% ?</value>
+  </data>
+  <data name="RaceGridFormBtnShowRaceControlForm" xml:space="preserve">
+    <value>Main Window</value>
+  </data>
+  <data name="RaceGridFormColumnBestLapTime" xml:space="preserve">
+    <value>Best Lap Time</value>
+  </data>
+  <data name="RaceGridFormColumnCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="RaceGridFormColumnCarFuelLevel" xml:space="preserve">
+    <value>Fuel Level</value>
+  </data>
+  <data name="RaceGridFormColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="RaceGridFormColumnFuelConsumption" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="RaceGridFormColumnFuelConsumptionwithAverage" xml:space="preserve">
+    <value>Consumption / Average</value>
+  </data>
+  <data name="RaceGridFormColumnId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="RaceGridFormColumnLapCount" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="RaceGridFormColumnLapTime" xml:space="preserve">
+    <value>Lap Time</value>
+  </data>
+  <data name="RaceGridFormColumnLapTimeBestLapTime" xml:space="preserve">
+    <value>Lap Time / Best Lap Time</value>
+  </data>
+  <data name="RaceGridFormColumnPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="RaceGridFormColumnStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RaceResultsListFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="RaceResultsListFormBtnRefresh" xml:space="preserve">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="RaceResultsListFormCaption" xml:space="preserve">
+    <value>All Race Results</value>
+  </data>
+  <data name="RaceResultsMessageCouldNotLoad" xml:space="preserve">
+    <value>The file %Replace% could not be loaded!</value>
+  </data>
+  <data name="RaceResultsMessageReallyDelete" xml:space="preserve">
+    <value>Really delete?</value>
+  </data>
+  <data name="RaceResultsMessageWasSaved" xml:space="preserve">
+    <value>Saved!</value>
+  </data>
+  <data name="RaceSettingsFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="RaceSettingsFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="RaceSettingsFormCaption" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateCarSounds" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivatePauseByParallelPort" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateRestartCountDownQuali" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateRestartCountDownRace" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateRestartCountDownTraining" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateStartCountDownQuali" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateStartCountDownTraining" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkAutoDetectLapEnabled" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkAutoDetectZerothLapEnabled" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormChkCountDescending" xml:space="preserve">
+    <value>Descendent</value>
+  </data>
+  <data name="RaceSettingsFormChkMultiplePitstopsAllowed" xml:space="preserve">
+    <value>Refueling after Penalty Allowed</value>
+  </data>
+  <data name="RaceSettingsFormChkNegativeFuelLevelEnabled" xml:space="preserve">
+    <value>Negative Fuel Level Allowed</value>
+  </data>
+  <data name="RaceSettingsFormGrpActivateCarSounds" xml:space="preserve">
+    <value>Car Sounds</value>
+  </data>
+  <data name="RaceSettingsFormGrpGas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="RaceSettingsFormGrpLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="RaceSettingsFormGrpMinLapTime" xml:space="preserve">
+    <value>Min Lap Time</value>
+  </data>
+  <data name="RaceSettingsFormGrpNormalLap" xml:space="preserve">
+    <value>Normal Lap</value>
+  </data>
+  <data name="RaceSettingsFormGrpPenalty" xml:space="preserve">
+    <value>Penalties</value>
+  </data>
+  <data name="RaceSettingsFormGrpQualifying" xml:space="preserve">
+    <value>Qualifying</value>
+  </data>
+  <data name="RaceSettingsFormGrpRace" xml:space="preserve">
+    <value>Race</value>
+  </data>
+  <data name="RaceSettingsFormGrpRestartCountDownQuali" xml:space="preserve">
+    <value>Restart CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpRestartCountDownRace" xml:space="preserve">
+    <value>Restart CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpRestartCountDownTraining" xml:space="preserve">
+    <value>Restart CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpStartCountDownQuali" xml:space="preserve">
+    <value>Start CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpStartCountDownRace" xml:space="preserve">
+    <value>Start CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpStartCountDownTraining" xml:space="preserve">
+    <value>Start CountDown</value>
+  </data>
+  <data name="RaceSettingsFormGrpZerothLap" xml:space="preserve">
+    <value>Zeroth Lap</value>
+  </data>
+  <data name="RaceSettingsFormLblConsumptionFactor" xml:space="preserve">
+    <value>Consumption/Lap</value>
+  </data>
+  <data name="RaceSettingsFormLblGasWarning" xml:space="preserve">
+    <value>Warning at L</value>
+  </data>
+  <data name="RaceSettingsFormLblIntervalInSecsForPenalty" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="RaceSettingsFormLblLapsToDrive" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="RaceSettingsFormLblLapsToStopForPenalty" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="RaceSettingsFormLblMinLapTimeSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblQualiMinutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="RaceSettingsFormLblRefuelingSpeed" xml:space="preserve">
+    <value>Refueling Speed L/0.1s</value>
+  </data>
+  <data name="RaceSettingsFormLblRestartCountDownQualiSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblRestartCountDownRaceSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblRestartCountDownTrainingSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblSpeedSumFactorNormalLap" xml:space="preserve">
+    <value>Speed Factor</value>
+  </data>
+  <data name="RaceSettingsFormLblSpeedSumFactorZerothLap" xml:space="preserve">
+    <value>Speed Factor</value>
+  </data>
+  <data name="RaceSettingsFormLblStartCountDownQualiSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblStartCountDownRaceSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblStartCountDownTrainingSecs" xml:space="preserve">
+    <value>Sec.</value>
+  </data>
+  <data name="RaceSettingsFormLblTankSize" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="RaceSettingsFormTabGrpPauseByParallelPort" xml:space="preserve">
+    <value>Pause by Parallel Port</value>
+  </data>
+  <data name="RaceSettingsFormTabPageAutoDetection" xml:space="preserve">
+    <value>Auto Detection</value>
+  </data>
+  <data name="RaceSettingsFormTabPageCommon" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="RaceSettingsFormTabPageGas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="RaceSettingsFormTabPagePenalty" xml:space="preserve">
+    <value>Penalties</value>
+  </data>
+  <data name="RaceSettingsFormTabPageQuali" xml:space="preserve">
+    <value>Quali.</value>
+  </data>
+  <data name="RaceSettingsFormTabPageRace" xml:space="preserve">
+    <value>Race</value>
+  </data>
+  <data name="RaceSettingsFormTabPageTraining" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="SerialPortConfigFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="SerialPortConfigFormBtnReset" xml:space="preserve">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="SerialPortConfigFormBtnSave" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="SerialPortConfigFormBtnStart" xml:space="preserve">
+    <value>St&amp;art</value>
+  </data>
+  <data name="SerialPortConfigFormBtnStop" xml:space="preserve">
+    <value>St&amp;op</value>
+  </data>
+  <data name="SerialPortConfigFormCaption" xml:space="preserve">
+    <value>Serial Port Configuration</value>
+  </data>
+  <data name="SoundMixerFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="SoundMixerFormCaption" xml:space="preserve">
+    <value>Mixer</value>
+  </data>
+  <data name="SoundMixerFormGrpActionSounds" xml:space="preserve">
+    <value>Action Sounds</value>
+  </data>
+  <data name="SoundMixerFormGrpCarSounds" xml:space="preserve">
+    <value>Car Sounds</value>
+  </data>
+  <data name="SoundMixerFormGrpLoudspeakers" xml:space="preserve">
+    <value>Loudspeakers</value>
+  </data>
+  <data name="SoundMixerFormGrpMisc" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="SoundMixerFormGrpMusic" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="SoundMixerFormLblActionSoundAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="SoundMixerFormLblActionSoundFade" xml:space="preserve">
+    <value>Fade</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsBrakes" xml:space="preserve">
+    <value>Brakes</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsFadeOwnCar" xml:space="preserve">
+    <value>Lower Own</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsPitstop" xml:space="preserve">
+    <value>Pitstop</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsSpinWheel" xml:space="preserve">
+    <value>Spin Wheel</value>
+  </data>
+  <data name="SoundMixerFormLblLoudspeakerCenter" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="SoundMixerFormLblLoudspeakerFrontLeft" xml:space="preserve">
+    <value>Front Left</value>
+  </data>
+  <data name="SoundMixerFormLblLoudspeakerFrontRight" xml:space="preserve">
+    <value>Front Right</value>
+  </data>
+  <data name="SoundMixerFormLblLoudspeakerRearLeft" xml:space="preserve">
+    <value>Rear Left</value>
+  </data>
+  <data name="SoundMixerFormLblLoudspeakerRearRight" xml:space="preserve">
+    <value>Rear Right</value>
+  </data>
+  <data name="SoundMixerFormLblMiscCountDown" xml:space="preserve">
+    <value>Countdown</value>
+  </data>
+  <data name="SoundMixerFormLblMusicHymn" xml:space="preserve">
+    <value>Hymn</value>
+  </data>
+  <data name="SoundMixerFormLblMusicMain" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="SoundMixerFormLblMusicPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="SoundMixerFormLblMusicRace" xml:space="preserve">
+    <value>Race</value>
+  </data>
+  <data name="ToolStripMenuItemColumnBestLapTime" xml:space="preserve">
+    <value>Best Lap Time</value>
+  </data>
+  <data name="ToolStripMenuItemColumnCarPicture" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="ToolStripMenuItemColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="ToolStripMenuItemColumnFuelConsumption" xml:space="preserve">
+    <value>Fuel Consumption Factor</value>
+  </data>
+  <data name="ToolStripMenuItemColumnFuelConsumptionWithAverage" xml:space="preserve">
+    <value>Fuel Consumption Factor / Average</value>
+  </data>
+  <data name="ToolStripMenuItemColumnFuelLevel" xml:space="preserve">
+    <value>Fuel Level</value>
+  </data>
+  <data name="ToolStripMenuItemColumnID" xml:space="preserve">
+    <value>SCX-ID</value>
+  </data>
+  <data name="ToolStripMenuItemColumnLaps" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="ToolStripMenuItemColumnLapTime" xml:space="preserve">
+    <value>Lap Time</value>
+  </data>
+  <data name="ToolStripMenuItemColumnLapTimeBest" xml:space="preserve">
+    <value>Lap Time / Best</value>
+  </data>
+  <data name="ToolStripMenuItemColumnPos" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ToolStripMenuItemColumns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="ToolStripMenuItemColumnStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ToolStripMenuItemLargerFont" xml:space="preserve">
+    <value>Column Font Larger</value>
+  </data>
+  <data name="ToolStripMenuItemLargerHeaderFont" xml:space="preserve">
+    <value>Header Fonts larger</value>
+  </data>
+  <data name="ToolStripMenuItemLargerStatusFont" xml:space="preserve">
+    <value>Status Font Larger</value>
+  </data>
+  <data name="ToolStripMenuItemLoadSettings" xml:space="preserve">
+    <value>Load settings...</value>
+  </data>
+  <data name="ToolStripMenuItemSaveSettings" xml:space="preserve">
+    <value>Save settings as...</value>
+  </data>
+  <data name="ToolStripMenuItemSmallerFont" xml:space="preserve">
+    <value>Column Fonts smaller</value>
+  </data>
+  <data name="ToolStripMenuItemSmallerHeaderFont" xml:space="preserve">
+    <value>Header Fonts smaller</value>
+  </data>
+  <data name="ToolStripMenuItemSmallerStatusFont" xml:space="preserve">
+    <value>Status Font Smaller</value>
+  </data>
+  <data name="TtsSaveToFileFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="TtsSaveToFileFormBtnSaveAsWav" xml:space="preserve">
+    <value>&amp;Save As Wav</value>
+  </data>
+  <data name="TtsSaveToFileFormBtnSpeak" xml:space="preserve">
+    <value>S&amp;peak</value>
+  </data>
+  <data name="TtsSaveToFileFormCaption" xml:space="preserve">
+    <value>Create Wav</value>
+  </data>
+  <data name="TtsSaveToFileFormFileSaveFilter" xml:space="preserve">
+    <value>Sound File|*.wav|All Files|*.*</value>
+  </data>
+  <data name="UpdateLanesFormBtnCancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="UpdateLanesFormBtnOk" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="UpdateLanesFormBtnRefresh" xml:space="preserve">
+    <value>&amp;Refresh</value>
+  </data>
+  <data name="UpdateLanesFormCaption" xml:space="preserve">
+    <value>Update Lanes</value>
+  </data>
+  <data name="UpdateLanesFormColumnCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="UpdateLanesFormColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="UpdateLanesFormColumnFuelConsumptionFactor" xml:space="preserve">
+    <value>Fuel Consumption Factor</value>
+  </data>
+  <data name="UpdateLanesFormColumnFuelLevel" xml:space="preserve">
+    <value>Fuel Level</value>
+  </data>
+  <data name="UpdateLanesFormColumnId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="UpdateLanesFormColumnLapCount" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="UpdateLanesFormColumnCurrentPenalties" xml:space="preserve">
+    <value>Current Penalties #</value>
+  </data>
+  <data name="UpdateLanesFormColumnPenaltyLapsLeft" xml:space="preserve">
+    <value>Laps left for Penalties</value>
+  </data>
+  <data name="UpdateLanesFormColumnStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="UpdateLanesFormColumnTankMaximumInLitres" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="RaceResultsFormColumnAverageFuelConsumption" xml:space="preserve">
+    <value>Consumption Avg</value>
+  </data>
+  <data name="RaceResultsFormColumnBestLapTime" xml:space="preserve">
+    <value>Best Lap Time</value>
+  </data>
+  <data name="RaceResultsFormColumnCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="RaceResultsFormColumnDriver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="RaceResultsFormColumnFuelConsumptionFactor" xml:space="preserve">
+    <value>Fuel Consumption Factor</value>
+  </data>
+  <data name="RaceResultsFormColumnLapCount" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="RaceResultsFormColumnPenalties" xml:space="preserve">
+    <value># Penalties</value>
+  </data>
+  <data name="RaceResultsFormColumnPitstops" xml:space="preserve">
+    <value># Pitstops</value>
+  </data>
+  <data name="RaceResultsFormColumnPoints" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="RaceResultsFormColumnPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="RaceResultsFormColumnRaceTimeNet" xml:space="preserve">
+    <value>Race Time</value>
+  </data>
+  <data name="RaceResultsFormColumnTankMaximumInLitres" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsEngine" xml:space="preserve">
+    <value>Engine</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsIdle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="RaceSettingsFormLblQualiBreaks" xml:space="preserve">
+    <value>Breaks</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateSurroundSound" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormGrpActivateSurroundSound" xml:space="preserve">
+    <value>Surround Sound 5.1</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateSplittedActionSounds" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormGrpActivateSplittedActionSounds" xml:space="preserve">
+    <value>Splitted Sounds</value>
+  </data>
+  <data name="RaceSettingsFormChkResetPenaltiesAfterInvalidLap" xml:space="preserve">
+    <value>Reset Penalties</value>
+  </data>
+  <data name="RaceSettingsFormGrpPenaltiesAfterInvalidLap" xml:space="preserve">
+    <value>After Invalid Lap</value>
+  </data>
+  <data name="RaceSettingsFormLblPenaltiesToRemoveAfterInvalidLap" xml:space="preserve">
+    <value># Penalties to remove</value>
+  </data>
+  <data name="RaceControlMessageCancelRace" xml:space="preserve">
+    <value>Cancel Race ?</value>
+  </data>
+  <data name="SpecialSoundDisqualified" xml:space="preserve">
+    <value>Disqualified</value>
+  </data>
+  <data name="SpecialSoundDriverName" xml:space="preserve">
+    <value>Drivername</value>
+  </data>
+  <data name="SpecialSoundDriverNameWithPositionIfChanged" xml:space="preserve">
+    <value>Drivername with Position, if changed</value>
+  </data>
+  <data name="SpecialSoundFalseStart" xml:space="preserve">
+    <value>False Start</value>
+  </data>
+  <data name="SpecialSoundFalseStartFor" xml:space="preserve">
+    <value>False Start for</value>
+  </data>
+  <data name="SpecialSoundFinalPosition" xml:space="preserve">
+    <value>Final Position</value>
+  </data>
+  <data name="SpecialSoundFinished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="SpecialSoundFuelLevel" xml:space="preserve">
+    <value>Fuel Level</value>
+  </data>
+  <data name="SpecialSoundInvalidLap" xml:space="preserve">
+    <value>Invalid Lap</value>
+  </data>
+  <data name="SpecialSoundInvalidLapFor" xml:space="preserve">
+    <value>Invalid Lap for</value>
+  </data>
+  <data name="SpecialSoundLapCount" xml:space="preserve">
+    <value>Lap Count</value>
+  </data>
+  <data name="SpecialSoundLowFuel" xml:space="preserve">
+    <value>Low Fuel</value>
+  </data>
+  <data name="SpecialSoundLowFuelFor" xml:space="preserve">
+    <value>Low Fuel for</value>
+  </data>
+  <data name="SpecialSoundNoFuel" xml:space="preserve">
+    <value>No Fuel</value>
+  </data>
+  <data name="SpecialSoundNoFuelFor" xml:space="preserve">
+    <value>No Fuel for</value>
+  </data>
+  <data name="SpecialSoundNone" xml:space="preserve">
+    <value>--None--</value>
+  </data>
+  <data name="SpecialSoundPenalty" xml:space="preserve">
+    <value>Penalty</value>
+  </data>
+  <data name="SpecialSoundPenaltyFor" xml:space="preserve">
+    <value>Penalty for</value>
+  </data>
+  <data name="SpecialSoundPitstopIn" xml:space="preserve">
+    <value>Pitstop In</value>
+  </data>
+  <data name="SpecialSoundPitstopInFor" xml:space="preserve">
+    <value>Pitstop In for</value>
+  </data>
+  <data name="SpecialSoundPitstopOut" xml:space="preserve">
+    <value>Pitstop Out</value>
+  </data>
+  <data name="SpecialSoundPitstopOutFor" xml:space="preserve">
+    <value>Pitstop Out for</value>
+  </data>
+  <data name="SpecialSoundPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="SpecialSoundRefueled" xml:space="preserve">
+    <value>Refueled</value>
+  </data>
+  <data name="SpecialSoundRefueledFor" xml:space="preserve">
+    <value>Refueled for</value>
+  </data>
+  <data name="SpecialSoundValidLap" xml:space="preserve">
+    <value>Valid Lap</value>
+  </data>
+  <data name="SpecialSoundWarningFuelPenalty" xml:space="preserve">
+    <value>Warning Low Fuel or Penalty</value>
+  </data>
+  <data name="TextToSpeechCountDownFive" xml:space="preserve">
+    <value>Five</value>
+  </data>
+  <data name="TextToSpeechCountDownFour" xml:space="preserve">
+    <value>Four</value>
+  </data>
+  <data name="TextToSpeechCountDownOne" xml:space="preserve">
+    <value>One</value>
+  </data>
+  <data name="TextToSpeechCountDownThree" xml:space="preserve">
+    <value>Three</value>
+  </data>
+  <data name="TextToSpeechCountDownTwo" xml:space="preserve">
+    <value>Two</value>
+  </data>
+  <data name="SpecialSoundFinishApplause" xml:space="preserve">
+    <value>Finish Applause</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateAutoDisqualificationRace" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="RaceSettingsFormGrpAutoDisqualificationRace" xml:space="preserve">
+    <value>Disqualification after Penalties</value>
+  </data>
+  <data name="RaceSettingsFormLblAutoDisqualificationRace" xml:space="preserve">
+    <value>After Penalties #</value>
+  </data>
+  <data name="RaceGridFormColumnPenalties" xml:space="preserve">
+    <value>Penalties</value>
+  </data>
+  <data name="ToolStripMenuItemColumnPenalties" xml:space="preserve">
+    <value>Penalties</value>
+  </data>
+  <data name="SpecialSoundFinalPosition1" xml:space="preserve">
+    <value>Winner</value>
+  </data>
+  <data name="SpecialSoundFinalPosition2" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="SpecialSoundFinalPosition3" xml:space="preserve">
+    <value>Third</value>
+  </data>
+  <data name="SpecialSoundFinalPosition4" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+  <data name="SpecialSoundFinalPosition5" xml:space="preserve">
+    <value>Fifth</value>
+  </data>
+  <data name="SpecialSoundFinalPosition6" xml:space="preserve">
+    <value>Sixth</value>
+  </data>
+  <data name="SpecialSoundPosition1" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="SpecialSoundPosition2" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="SpecialSoundPosition3" xml:space="preserve">
+    <value>Third</value>
+  </data>
+  <data name="SpecialSoundPosition4" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+  <data name="SpecialSoundPosition5" xml:space="preserve">
+    <value>Fifth</value>
+  </data>
+  <data name="SpecialSoundPosition6" xml:space="preserve">
+    <value>Sixth</value>
+  </data>
+  <data name="SoundMixerFormLblCarSoundsFadeAllCars" xml:space="preserve">
+    <value>Lower All</value>
+  </data>
+  <data name="RaceSettingsFormGrpDistanceBetweenSounds" xml:space="preserve">
+    <value>Distance between Sounds</value>
+  </data>
+  <data name="UpdateLanesFormColumnOverallPenalties" xml:space="preserve">
+    <value>Overall Penalties #</value>
+  </data>
+  <data name="RaceResultsFormBtnClose" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="RaceResultsFormBtnDelete" xml:space="preserve">
+    <value>&amp;Delete</value>
+  </data>
+  <data name="RaceResultsFormBtnSave" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="RaceResultsFormCaption" xml:space="preserve">
+    <value>Race Result</value>
+  </data>
+  <data name="RaceSettingsFormLblIntervalInSecsForRefuelingWaiting" xml:space="preserve">
+    <value>Seconds until Refueling</value>
+  </data>
+  <data name="MaintainSoundsFormCtlPenaltiesDone" xml:space="preserve">
+    <value>Penalties Done</value>
+  </data>
+  <data name="SpecialSoundPenaltiesDone" xml:space="preserve">
+    <value>Penalties Done</value>
+  </data>
+  <data name="MaintainSoundsFormCtlEngineDamaged" xml:space="preserve">
+    <value>Engine Damage</value>
+  </data>
+  <data name="SpecialSoundEngineDamaged" xml:space="preserve">
+    <value>Engine Damage</value>
+  </data>
+  <data name="RaceSettingsFormChkActivateStartCountDownRace" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+</root>
