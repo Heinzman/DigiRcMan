@@ -118,7 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FrameworkContracts\FrameworkContracts.csproj">
-      <Project>{C56D13CB-E380-49FF-8933-E244BE884BEF}</Project>
+      <Project>{c56d13cb-e380-49ff-8933-e244be884bef}</Project>
       <Name>FrameworkContracts</Name>
     </ProjectReference>
   </ItemGroup>

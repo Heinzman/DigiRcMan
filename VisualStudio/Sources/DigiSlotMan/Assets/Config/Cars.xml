@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Car>
+    <Id>2</Id>
+    <Name>Buggy Blue</Name>
+    <PictureFilename>\Pictures\RaceBuggyBlue.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>1</Id>
+    <Name>Buggy Orange</Name>
+    <PictureFilename>\Pictures\RaceBuggyOrange.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>3</Id>
+    <Name>Buggy Pink</Name>
+    <PictureFilename>\Pictures\RaceBuggyPink.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>5</Id>
+    <Name>Truggy Black</Name>
+    <PictureFilename>\Pictures\MiniTruggyBlack.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>6</Id>
+    <Name>Truggy Blue</Name>
+    <PictureFilename>\Pictures\MiniTruggyBlue.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>4</Id>
+    <Name>Truggy Red</Name>
+    <PictureFilename>\Pictures\MiniTruggyRed.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>7</Id>
+    <Name>Drift Green</Name>
+    <PictureFilename>\Pictures\Drift_Green.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>8</Id>
+    <Name>Drift Red</Name>
+    <PictureFilename>\Pictures\Drift_Red.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>9</Id>
+    <Name>Drift Red Yellow</Name>
+    <PictureFilename>\Pictures\Drift_Red_YellowStriped.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>10</Id>
+    <Name>Drift Silver</Name>
+    <PictureFilename>\Pictures\Drift_Silver.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>11</Id>
+    <Name>Drift Silver Blue</Name>
+    <PictureFilename>\Pictures\Drift_Silver_BlueStriped.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>12</Id>
+    <Name>Drift Silver Yellow</Name>
+    <PictureFilename>\Pictures\Drift_Silver_YellowStriped.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>13</Id>
+    <Name>RealFx Orange</Name>
+    <PictureFilename>\Pictures\HotWheelsAi_Orange.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>14</Id>
+    <Name>RealFx Black</Name>
+    <PictureFilename>\Pictures\RealFx_Black.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>15</Id>
+    <Name>RealFx Blue</Name>
+    <PictureFilename>\Pictures\RealFx_Blue.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>16</Id>
+    <Name>RealFx Red</Name>
+    <PictureFilename>\Pictures\RealFx_Red.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>17</Id>
+    <Name>RealFx Red Green</Name>
+    <PictureFilename>\Pictures\RealFx_Red_Striped.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>18</Id>
+    <Name>RealFx Yellow</Name>
+    <PictureFilename>\Pictures\RealFx_Yellow.jpg</PictureFilename>
+  </Car>
+  <Car>
+    <Id>19</Id>
+    <Name>RealFx Yellow Green</Name>
+    <PictureFilename>\Pictures\RealFx_Yellow_Striped.jpg</PictureFilename>
+  </Car>
+</ArrayOfCar>

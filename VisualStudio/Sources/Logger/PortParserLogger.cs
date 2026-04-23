@@ -57,7 +57,7 @@ namespace Elreg.Logger
             }
             catch (Exception ex)
             {
-                ErrorLog.LogError(false, ex);
+                Elreg.Log.ErrorLog.LogError(false, ex);
             }
         }
 

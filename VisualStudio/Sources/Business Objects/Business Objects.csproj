@@ -400,7 +400,7 @@
       <Name>HelperClasses</Name>
     </ProjectReference>
     <ProjectReference Include="..\Log\Log.csproj">
-      <Project>{2EC1489C-0C82-401A-A86E-3FA8238629DE}</Project>
+      <Project>{162C39D1-33F8-4735-976B-C03842A17F33}</Project>
       <Name>Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\ResourcesService\ResourcesService.csproj">

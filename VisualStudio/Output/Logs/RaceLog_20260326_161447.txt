@@ -1,7 +1,0 @@
-TimeStamp: 2026-03-26 16:17:11.741; Race Status: Initialized; EventId: 0; 
-TimeStamp: 2026-03-26 16:17:13.663; Race Status: Initialized; EventId: 0; 
-TimeStamp: 2026-03-26 16:17:13.676; Race Status: Initialized; EventId: 0; 
-TimeStamp: 2026-03-26 16:17:13.677; Race Status: Started; EventId: 1; 
-TimeStamp: 2026-03-26 16:17:13.717; Race Status: PausedBeforeStart; EventId: 4; 
-TimeStamp: 2026-03-26 16:17:21.707; Race Status: Restarted; EventId: 10; 
-TimeStamp: 2026-03-26 16:17:43.920; Race Status: Stopped; EventId: 2; 
