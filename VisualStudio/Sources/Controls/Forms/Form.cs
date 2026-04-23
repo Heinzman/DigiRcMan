@@ -230,5 +230,16 @@ namespace Elreg.Controls.Forms
             public bool Maximized = true;
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Form
+            // 
+            this.ClientSize = new System.Drawing.Size(1196, 796);
+            this.Name = "Form";
+            this.ResumeLayout(false);
+
+        }
     }
 }
